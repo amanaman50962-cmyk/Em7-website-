@@ -1,57 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EM7 HOON - PRANK</title>
+<title>EM7 HOON | Cybersecurity Expert - Lucknow</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
-*{margin:0;padding:0;box-sizing:border-box;font-family:'JetBrains Mono',monospace}
-body{background:#000;color:#00ff41}
-canvas{position:fixed;top:0;left:0;z-index:-1;opacity:.4}
-.container{max-width:500px;margin:auto;padding:10px}
-.glitch{font-size:36px;text-align:center;color:#a7ff83;text-shadow:0 0 15px #00ff41;margin:15px 0}
-.sub{text-align:center;font-size:11px;letter-spacing:3px;opacity:.7;margin-bottom:15px}
-.box{border:1px solid #00ff41;border-radius:12px;padding:14px;margin:14px 0;background:rgba(0,20,0,0.95)}
-.tabs{display:flex;gap:8px}
-.tab{flex:1;padding:12px;text-align:center;border:1px solid #00ff41;border-radius:8px;background:#000;cursor:pointer}
-.tab.active{background:#00ff41;color:#000}
-.btn{width:100%;padding:14px;margin:8px 0;border:1px solid #00ff41;border-radius:10px;background:#000;color:#00ff41;font-weight:700;cursor:pointer;text-align:left}
-.btn.green{background:#00ff41;color:#000}
-input{width:100%;padding:12px;background:#000;border:1px solid #00ff41;color:#00ff41;border-radius:8px;margin:8px 0}
-.out{margin-top:10px;padding:12px;background:#001100;border-radius:8px;min-height:120px;line-height:1.8;font-size:12px}
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Space Grotesk',sans-serif}
+body{background:#070a0f;color:#fff;overflow-x:hidden}
+nav{position:fixed;top:0;width:100%;padding:15px 20px;background:rgba(7,10,15,0.9);backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;z-index:100;border-bottom:1px solid #1a2332}
+.logo{font-weight:700;font-size:20px;letter-spacing:2px} .logo span{color:#00ff88}
+.hero{padding:120px 20px 60px;text-align:center;max-width:800px;margin:auto}
+.hero h1{font-size:48px;line-height:1.1;margin-bottom:15px} .hero h1 span{color:#00ff88}
+.hero p{opacity:0.7;font-size:16px;line-height:1.6;margin-bottom:25px}
+.btn-main{padding:14px 28px;border-radius:30px;border:none;font-weight:700;cursor:pointer;background:#00ff88;color:#000;display:inline-block;text-decoration:none;margin:5px}
+.btn-sec{padding:14px 28px;border-radius:30px;border:1px solid #1a2332;background:transparent;color:#fff;font-weight:600;cursor:pointer;display:inline-block;text-decoration:none;margin:5px}
+.section{max-width:1000px;margin:auto;padding:50px 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;margin-top:20px}
+.card{border:1px solid #1a2332;background:#0e141f;border-radius:16px;padding:22px}
+.card h3{margin-bottom:8px} .card p{opacity:0.6;font-size:14px;line-height:1.6}
+input,textarea{width:100%;padding:14px;background:#0e141f;border:1px solid #1a2332;border-radius:10px;color:#fff;margin:8px 0;outline:none}
+input:focus,textarea:focus{border-color:#00ff88}
+.whatsapp-float{position:fixed;bottom:20px;right:20px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;box-shadow:0 5px 20px rgba(37,211,102,0.4);z-index:99}
+footer{text-align:center;padding:30px;opacity:0.5;border-top:1px solid #1a2332;margin-top:30px;font-size:13px}
 </style>
 </head>
 <body>
-<canvas id="matrix"></canvas>
-<div class="container">
-<h1 class="glitch">EM7 HOON</h1>
-<p class="sub">[ HACKER • LUCKNOW ]</p>
-<div class="tabs">
-<div class="tab active" onclick="showTab('contact',this)">CONTACT</div>
-<div class="tab" onclick="showTab('tools',this)">TOOLS</div>
-<div class="tab" onclick="showTab('about',this)">ABOUT</div>
+<nav><div class="logo">EM7 <span>HOON</span></div><div style="font-size:12px;opacity:0.6">LUCKNOW, INDIA</div></nav>
+
+<a class="whatsapp-float" href="https://wa.me/916394806370?text=Hi%20EM7%20I%20visited%20your%20website" target="_blank">💬</a>
+
+<div class="hero">
+<h1>Cybersecurity Expert <span>From Lucknow</span></h1>
+<p>I help businesses and individuals secure their digital presence. Penetration Testing, Security Audits & Cyber Awareness.</p>
+<a href="#contact" class="btn-main">CONTACT ME</a>
+<a href="https://instagram.com/em7_aman" class="btn-sec">INSTAGRAM</a>
 </div>
-<div id="contact" class="box">
-<a href="tel:6394806370" style="text-decoration:none"><div class="btn">📞 CALL 6394806370</div></a>
-<a href="https://wa.me/916394806370" style="text-decoration:none"><div class="btn">💬 WHATSAPP</div></a>
-<a href="https://instagram.com/em7_aman" style="text-decoration:none"><div class="btn green">📸 INSTAGRAM</div></a>
+
+<div class="section">
+<h2>Services</h2>
+<div class="grid">
+<div class="card"><h3>🛡️ Security Audit</h3><p>Complete website & app security check to find vulnerabilities before hackers do.</p></div>
+<div class="card"><h3>🔍 Penetration Testing</h3><p>Ethical hacking for your business to make it 100% secure.</p></div>
+<div class="card"><h3>🎓 Cyber Awareness</h3><p>Training for students and companies about online safety.</p></div>
 </div>
-<div id="tools" class="box" style="display:none">
-<h3>UNPAID TOOLS 😈 TAP TO HACK</h3><br>
-<input id="target" placeholder="Target ka naam / IP...">
-<button class="btn" onclick="startHack('NMAP')">📡 NMAP SCAN</button>
-<button class="btn" onclick="startHack('HYDRA')">🔑 HYDRA CRACK</button>
-<button class="btn" onclick="startHack('METASPLOIT')">💀 METASPLOIT</button>
-<button class="btn" onclick="startHack('BURP SUITE')">🔍 BURP SUITE</button>
-<div id="output" class="out">Kisi bhi tool pe tap karo, hacking start hogi!</div>
 </div>
-<div id="about" class="box" style="display:none"><p>Ye sirf PRANK hai dosto ko darane ke liye! - EM7</p></div>
+
+<div class="section" id="contact">
+<h2>Contact Me - Real Form</h2>
+<div class="grid">
+<div class="card">
+<form action="https://formsubmit.co/amanaman50962@gmail.com" method="POST">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://amanaman50962-cmyk.github.io/Em7-website-/">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+<button type="submit" class="btn-main" style="width:100%">SEND MESSAGE</button>
+</form>
+<p style="font-size:11px;opacity:0.5;margin-top:10px">* Form real hai, direct mere email pe ayega</p>
 </div>
-<script>
-var c=document.getElementById('matrix'),ctx=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;var letters="01EM7";var font=14;var cols=c.width/font;var drops=[];for(var i=0;i<cols;i++)drops[i]=1;function draw(){ctx.fillStyle="rgba(0,0,0,0.05)";ctx.fillRect(0,0,c.width,c.height);ctx.fillStyle="#00ff41";ctx.font=font+"px monospace";for(var j=0;j<drops.length;j++){var t=letters[Math.floor(Math.random()*letters.length)];ctx.fillText(t,j*font,drops[j]*font);if(drops[j]*font>c.height&&Math.random()>0.975)drops[j]=0;drops[j]++}}setInterval(draw,35);
-function showTab(id,el){document.getElementById('contact').style.display='none';document.getElementById('tools').style.display='none';document.getElementById('about').style.display='none';document.getElementById(id).style.display='block';var tabs=document.querySelectorAll('.tab');for(var k=0;k<tabs.length;k++)tabs[k].classList.remove('active');el.classList.add('active');}
-function startHack(tool){var target=document.getElementById('target').value;if(target=="")target="Victim";var out=document.getElementById('output');out.innerHTML="UNPAID TOOL: "+tool+"<br>Target: "+target;var steps=["> Connecting to "+target+"... 15%","> Bypassing Firewall... 42%","> Injecting EM7 Virus... 78%","> HACKING IN PROGRESS... 99%","HACKING SUCCESSFUL!","ROOT ACCESS GRANTED!","EM7 OWNED "+target+" 😈"];var i=0;var timer=setInterval(function(){if(i<steps.length){out.innerHTML+="<br>"+steps[i];i++;}else{clearInterval(timer);}},500);}
-</script>
+<div class="card">
+<h3>Direct Contact</h3><br>
+<p>📞 Phone: <a href="tel:6394806370" style="color:#00ff88">6394806370</a></p><br>
+<p>💬 WhatsApp: <a href="https://wa.me/916394806370" style="color:#00ff88">Chat Now</a></p><br>
+<p>📸 Instagram: <a href="https://instagram.com/em7_aman" style="color:#00ff88">@em7_aman</a></p><br>
+<p>📍 Location: Lucknow, UP</p><br>
+<iframe src="https://maps.google.com/maps?q=Lucknow&t=&z=11&ie=UTF8&iwloc=&output=embed" style="width:100%;height:150px;border:0;border-radius:10px;margin-top:10px"></iframe>
+</div>
+</div>
+</div>
+
+<footer>© 2026 EM7 HOON - All Rights Reserved | Lucknow</footer>
 </body>
 </html>
