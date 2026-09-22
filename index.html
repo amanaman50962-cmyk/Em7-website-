@@ -1,62 +1,57 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EM7 HOON</title>
+<title>EM7 HOON - PRANK</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box;font-family:'JetBrains Mono',monospace}
 body{background:#000;color:#00ff41}
-canvas{position:fixed;top:0;left:0;z-index:-1;opacity:0.4}
-.container{max-width:500px;margin:auto;padding:10px;position:relative;z-index:1}
-.top{font-size:12px;text-align:right;padding:5px}
-.glitch{font-size:48px;font-weight:800;text-align:center;color:#a7ff83;text-shadow:0 0 15px #00ff41;margin:15px 0}
-.sub{text-align:center;font-size:11px;letter-spacing:3px;opacity:0.7;margin-bottom:15px}
-.box{border:1px solid #00ff41;border-radius:12px;padding:14px;margin:14px 0;background:rgba(0,20,0,0.9);box-shadow:0 0 15px rgba(0,255,65,0.4)}
-.tabs{display:flex;gap:8px;margin:15px 0}
-.tab{flex:1;padding:12px;text-align:center;border:1px solid #00ff41;border-radius:8px;background:#000;cursor:pointer;font-weight:700;font-size:13px}
-.tab.active{background:#00ff41;color:#000;box-shadow:0 0 12px #00ff41}
-.btn{width:100%;padding:14px;margin:8px 0;border:1px solid #00ff41;border-radius:10px;background:rgba(0,0,0,0.7);color:#00ff41;font-weight:700;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
+canvas{position:fixed;top:0;left:0;z-index:-1;opacity:.4}
+.container{max-width:500px;margin:auto;padding:10px}
+.glitch{font-size:36px;text-align:center;color:#a7ff83;text-shadow:0 0 15px #00ff41;margin:15px 0}
+.sub{text-align:center;font-size:11px;letter-spacing:3px;opacity:.7;margin-bottom:15px}
+.box{border:1px solid #00ff41;border-radius:12px;padding:14px;margin:14px 0;background:rgba(0,20,0,0.95)}
+.tabs{display:flex;gap:8px}
+.tab{flex:1;padding:12px;text-align:center;border:1px solid #00ff41;border-radius:8px;background:#000;cursor:pointer}
+.tab.active{background:#00ff41;color:#000}
+.btn{width:100%;padding:14px;margin:8px 0;border:1px solid #00ff41;border-radius:10px;background:#000;color:#00ff41;font-weight:700;cursor:pointer;text-align:left}
 .btn.green{background:#00ff41;color:#000}
-a{text-decoration:none}
-.term{font-size:12px;line-height:1.8}
-.footer{text-align:center;font-size:9px;opacity:0.5;margin:20px 0}
+input{width:100%;padding:12px;background:#000;border:1px solid #00ff41;color:#00ff41;border-radius:8px;margin:8px 0}
+.out{margin-top:10px;padding:12px;background:#001100;border-radius:8px;min-height:120px;line-height:1.8;font-size:12px}
 </style>
 </head>
 <body>
 <canvas id="matrix"></canvas>
 <div class="container">
-<div class="top" id="time"></div>
 <h1 class="glitch">EM7 HOON</h1>
-<p class="sub">[ HACKER • ARTIST • LUCKNOW, UP ]</p>
-<div class="box term">
-<div>terminal — root@em7:~ zsh</div><br>
-> initizlizing secure connection..<br>
-> user: EM7 Aman | status: ONLINE<br>
-> ~$./launch_dashboard.sh --stealth
-</div>
+<p class="sub">[ HACKER • LUCKNOW ]</p>
 <div class="tabs">
-<div class="tab active" onclick="show('contact',this)">CONTACT</div>
-<div class="tab" onclick="show('tools',this)">TOOLS</div>
-<div class="tab" onclick="show('about',this)">ABOUT</div>
+<div class="tab active" onclick="showTab('contact',this)">CONTACT</div>
+<div class="tab" onclick="showTab('tools',this)">TOOLS</div>
+<div class="tab" onclick="showTab('about',this)">ABOUT</div>
 </div>
 <div id="contact" class="box">
-<h3>CONTACT // SECURE CHANNELS</h3><br>
-<a href="tel:6394806370"><div class="btn">📞 CALL 6394806370</div></a>
-<a href="https://wa.me/916394806370"><div class="btn">💬 WHATSAPP ME</div></a>
-<a href="https://instagram.com/em7_aman"><div class="btn green">📸 INSTAGRAM: @em7_aman</div></a>
+<a href="tel:6394806370" style="text-decoration:none"><div class="btn">📞 CALL 6394806370</div></a>
+<a href="https://wa.me/916394806370" style="text-decoration:none"><div class="btn">💬 WHATSAPP</div></a>
+<a href="https://instagram.com/em7_aman" style="text-decoration:none"><div class="btn green">📸 INSTAGRAM</div></a>
 </div>
-<div id="tools" class="box" style="display:none"><h3>TOOLS</h3><br><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><button class="btn" onclick="alert('NMAP Ready!')">NMAP</button><button class="btn" onclick="alert('HYDRA Ready!')">HYDRA</button><button class="btn" onclick="alert('METASPLOIT Ready!')">METASPLOIT</button><button class="btn" onclick="alert('BURP SUITE Ready!')">BURP SUITE</button></div></div>
-<div id="about" class="box" style="display:none"><h3>ABOUT</h3><br><p style="font-size:13px;color:#a7ff83">Ethical hacker & artist from Lucknow, UP. Contact: 6394806370</p></div>
-<div class="footer">© 2026 EM7 Aman | ROOT ACCESS GRANTED</div>
+<div id="tools" class="box" style="display:none">
+<h3>UNPAID TOOLS 😈 TAP TO HACK</h3><br>
+<input id="target" placeholder="Target ka naam / IP...">
+<button class="btn" onclick="startHack('NMAP')">📡 NMAP SCAN</button>
+<button class="btn" onclick="startHack('HYDRA')">🔑 HYDRA CRACK</button>
+<button class="btn" onclick="startHack('METASPLOIT')">💀 METASPLOIT</button>
+<button class="btn" onclick="startHack('BURP SUITE')">🔍 BURP SUITE</button>
+<div id="output" class="out">Kisi bhi tool pe tap karo, hacking start hogi!</div>
+</div>
+<div id="about" class="box" style="display:none"><p>Ye sirf PRANK hai dosto ko darane ke liye! - EM7</p></div>
 </div>
 <script>
-var c=document.getElementById('matrix'),ctx=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;var letters="01EM7HOON";var font=14;var cols=c.width/font;var drops=[];for(var i=0;i<cols;i++)drops[i]=1;function draw(){ctx.fillStyle="rgba(0,0,0,0.05)";ctx.fillRect(0,0,c.width,c.height);ctx.fillStyle="#00ff41";ctx.font=font+"px monospace";for(var i=0;i<drops.length;i++){var t=letters[Math.floor(Math.random()*letters.length)];ctx.fillText(t,i*font,drops[i]*font);if(drops[i]*font>c.height&&Math.random()>0.975)drops[i]=0;drops[i]++}}setInterval(draw,35);
-function show(id,el){document.getElementById('contact').style.display='none';document.getElementById('tools').style.display='none';document.getElementById('about').style.display='none';document.getElementById(id).style.display='block';document.querySelectorAll('.tab').forEach(e=>e.classList.remove('active'));el.classList.add('active')}
-setInterval(()=>{document.getElementById('time').innerText=new Date().toLocaleTimeString()},1000);
+var c=document.getElementById('matrix'),ctx=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;var letters="01EM7";var font=14;var cols=c.width/font;var drops=[];for(var i=0;i<cols;i++)drops[i]=1;function draw(){ctx.fillStyle="rgba(0,0,0,0.05)";ctx.fillRect(0,0,c.width,c.height);ctx.fillStyle="#00ff41";ctx.font=font+"px monospace";for(var j=0;j<drops.length;j++){var t=letters[Math.floor(Math.random()*letters.length)];ctx.fillText(t,j*font,drops[j]*font);if(drops[j]*font>c.height&&Math.random()>0.975)drops[j]=0;drops[j]++}}setInterval(draw,35);
+function showTab(id,el){document.getElementById('contact').style.display='none';document.getElementById('tools').style.display='none';document.getElementById('about').style.display='none';document.getElementById(id).style.display='block';var tabs=document.querySelectorAll('.tab');for(var k=0;k<tabs.length;k++)tabs[k].classList.remove('active');el.classList.add('active');}
+function startHack(tool){var target=document.getElementById('target').value;if(target=="")target="Victim";var out=document.getElementById('output');out.innerHTML="UNPAID TOOL: "+tool+"<br>Target: "+target;var steps=["> Connecting to "+target+"... 15%","> Bypassing Firewall... 42%","> Injecting EM7 Virus... 78%","> HACKING IN PROGRESS... 99%","HACKING SUCCESSFUL!","ROOT ACCESS GRANTED!","EM7 OWNED "+target+" 😈"];var i=0;var timer=setInterval(function(){if(i<steps.length){out.innerHTML+="<br>"+steps[i];i++;}else{clearInterval(timer);}},500);}
 </script>
 </body>
 </html>
-
