@@ -3,74 +3,153 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EM7 HOON | Cybersecurity Expert - Lucknow</title>
+<title>EM7 HOON | Cybersecurity Expert</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Space Grotesk',sans-serif}
-body{background:#070a0f;color:#fff;overflow-x:hidden}
-nav{position:fixed;top:0;width:100%;padding:15px 20px;background:rgba(7,10,15,0.9);backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;z-index:100;border-bottom:1px solid #1a2332}
-.logo{font-weight:700;font-size:20px;letter-spacing:2px} .logo span{color:#00ff88}
-.hero{padding:120px 20px 60px;text-align:center;max-width:800px;margin:auto}
-.hero h1{font-size:48px;line-height:1.1;margin-bottom:15px} .hero h1 span{color:#00ff88}
-.hero p{opacity:0.7;font-size:16px;line-height:1.6;margin-bottom:25px}
-.btn-main{padding:14px 28px;border-radius:30px;border:none;font-weight:700;cursor:pointer;background:#00ff88;color:#000;display:inline-block;text-decoration:none;margin:5px}
-.btn-sec{padding:14px 28px;border-radius:30px;border:1px solid #1a2332;background:transparent;color:#fff;font-weight:600;cursor:pointer;display:inline-block;text-decoration:none;margin:5px}
-.section{max-width:1000px;margin:auto;padding:50px 20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;margin-top:20px}
-.card{border:1px solid #1a2332;background:#0e141f;border-radius:16px;padding:22px}
-.card h3{margin-bottom:8px} .card p{opacity:0.6;font-size:14px;line-height:1.6}
-input,textarea{width:100%;padding:14px;background:#0e141f;border:1px solid #1a2332;border-radius:10px;color:#fff;margin:8px 0;outline:none}
-input:focus,textarea:focus{border-color:#00ff88}
-.whatsapp-float{position:fixed;bottom:20px;right:20px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;box-shadow:0 5px 20px rgba(37,211,102,0.4);z-index:99}
-footer{text-align:center;padding:30px;opacity:0.5;border-top:1px solid #1a2332;margin-top:30px;font-size:13px}
+body{background:#070a0f;color:#fff}
+nav{position:fixed;top:0;width:100%;padding:14px 18px;background:rgba(7,10,15,0.9);backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;z-index:100;border-bottom:1px solid #1a2332}
+.logo{font-weight:700;letter-spacing:1px} .logo span{color:#00ff88}
+.hero{padding:110px 20px 40px;text-align:center;max-width:800px;margin:auto}
+.hero h1{font-size:42px;line-height:1.1} .hero h1 span{color:#00ff88}
+.hero p{opacity:0.6;margin:15px 0 20px}
+.search-box{max-width:500px;margin:20px auto;display:flex;background:#0e141f;border:1px solid #1a2332;border-radius:30px;overflow:hidden}
+.search-box input{flex:1;padding:14px 20px;background:transparent;border:none;color:#fff;outline:none}
+.search-box button{padding:14px 22px;background:#00ff88;border:none;font-weight:700;cursor:pointer}
+.section{max-width:1000px;margin:auto;padding:40px 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:15px}
+.card{border:1px solid #1a2332;background:#0e141f;border-radius:16px;padding:20px}
+.card p{opacity:0.6;font-size:14px;margin-top:6px}
+.btn{padding:12px 20px;border-radius:30px;border:none;background:#00ff88;color:#000;font-weight:700;cursor:pointer;width:100%;margin-top:10px}
+input,textarea{width:100%;padding:13px;background:#0e141f;border:1px solid #1a2332;border-radius:10px;color:#fff;margin:6px 0;outline:none}
+#chatBtn{position:fixed;bottom:20px;right:20px;width:60px;height:60px;background:#00ff88;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;cursor:pointer;z-index:200;box-shadow:0 5px 20px rgba(0,255,136,0.4)}
+#chatBox{position:fixed;bottom:90px;right:20px;width:320px;max-width:90vw;height:400px;background:#0e141f;border:1px solid #1a2332;border-radius:16px;display:none;flex-direction:column;z-index:200;overflow:hidden}
+#chatHeader{padding:12px;background:#070a0f;border-bottom:1px solid #1a2332;display:flex;justify-content:space-between}
+#chatMessages{flex:1;padding:12px;overflow-y:auto;font-size:13px}
+.msg{margin:8px 0;padding:8px 12px;border-radius:10px;max-width:85%}
+.userMsg{background:#00ff88;color:#000;margin-left:auto}
+.botMsg{background:#1a2332;color:#fff}
+#chatInput{display:flex;border-top:1px solid #1a2332}
+#chatInput input{flex:1;border:none;border-radius:0;margin:0}
+#chatInput button{padding:12px 16px;background:#00ff88;border:none;font-weight:700;cursor:pointer}
+.location-result{background:#070a0f;padding:12px;border-radius:10px;margin-top:10px;font-size:13px;border:1px dashed #00ff88}
 </style>
 </head>
 <body>
-<nav><div class="logo">EM7 <span>HOON</span></div><div style="font-size:12px;opacity:0.6">LUCKNOW, INDIA</div></nav>
-
-<a class="whatsapp-float" href="https://wa.me/916394806370?text=Hi%20EM7%20I%20visited%20your%20website" target="_blank">💬</a>
+<nav><div class="logo">EM7 <span>HOON</span></div><div style="font-size:11px;opacity:0.5">LUCKNOW, INDIA</div></nav>
 
 <div class="hero">
 <h1>Cybersecurity Expert <span>From Lucknow</span></h1>
-<p>I help businesses and individuals secure their digital presence. Penetration Testing, Security Audits & Cyber Awareness.</p>
-<a href="#contact" class="btn-main">CONTACT ME</a>
-<a href="https://instagram.com/em7_aman" class="btn-sec">INSTAGRAM</a>
+<p>Real Tools + Real AI Chat - Check karo neeche</p>
+<div class="search-box">
+<input id="searchInput" onkeyup="doSearch()" placeholder="Search services, location, hacking...">
+<button onclick="doSearch()">SEARCH</button>
+</div>
+<p id="searchResult" style="font-size:13px;margin-top:10px;opacity:0.7"></p>
 </div>
 
 <div class="section">
-<h2>Services</h2>
+<h2>📍 Real Location Checker</h2>
 <div class="grid">
-<div class="card"><h3>🛡️ Security Audit</h3><p>Complete website & app security check to find vulnerabilities before hackers do.</p></div>
-<div class="card"><h3>🔍 Penetration Testing</h3><p>Ethical hacking for your business to make it 100% secure.</p></div>
-<div class="card"><h3>🎓 Cyber Awareness</h3><p>Training for students and companies about online safety.</p></div>
+<div class="card">
+<h3>Check Anyone's Location (Your Location)</h3>
+<p>Ye 100% real kaam karta hai. Aapke phone ka GPS use karega.</p>
+<button class="btn" onclick="checkLocation()">CHECK MY LOCATION NOW</button>
+<div id="locResult"></div>
+</div>
+<div class="card">
+<h3>🛡️ Security Audit</h3>
+<p>Complete website & app security check. Search me "audit" likho toh ye ayega.</p>
+</div>
+<div class="card">
+<h3>🔍 Penetration Testing</h3>
+<p>Ethical hacking for your business. Search me "penetration" likho.</p>
+</div>
+<div class="card">
+<h3>🎓 Cyber Awareness</h3>
+<p>Training for students and companies. Search me "training" likho.</p>
+</div>
 </div>
 </div>
 
 <div class="section" id="contact">
-<h2>Contact Me - Real Form</h2>
-<div class="grid">
+<h2>Contact Me</h2>
 <div class="card">
 <form action="https://formsubmit.co/amanaman50962@gmail.com" method="POST">
 <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://amanaman50962-cmyk.github.io/Em7-website-/">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-<button type="submit" class="btn-main" style="width:100%">SEND MESSAGE</button>
+<input name="name" placeholder="Your Name" required>
+<input name="email" type="email" placeholder="Your Email" required>
+<textarea name="message" rows="3" placeholder="Message" required></textarea>
+<button class="btn">SEND MESSAGE - REAL</button>
 </form>
-<p style="font-size:11px;opacity:0.5;margin-top:10px">* Form real hai, direct mere email pe ayega</p>
-</div>
-<div class="card">
-<h3>Direct Contact</h3><br>
-<p>📞 Phone: <a href="tel:6394806370" style="color:#00ff88">6394806370</a></p><br>
-<p>💬 WhatsApp: <a href="https://wa.me/916394806370" style="color:#00ff88">Chat Now</a></p><br>
-<p>📸 Instagram: <a href="https://instagram.com/em7_aman" style="color:#00ff88">@em7_aman</a></p><br>
-<p>📍 Location: Lucknow, UP</p><br>
-<iframe src="https://maps.google.com/maps?q=Lucknow&t=&z=11&ie=UTF8&iwloc=&output=embed" style="width:100%;height:150px;border:0;border-radius:10px;margin-top:10px"></iframe>
-</div>
 </div>
 </div>
 
-<footer>© 2026 EM7 HOON - All Rights Reserved | Lucknow</footer>
+<!-- AI CHAT -->
+<div id="chatBtn" onclick="toggleChat()">🤖</div>
+<div id="chatBox">
+<div id="chatHeader"><span>EM7 AI GURU</span><span onclick="toggleChat()" style="cursor:pointer">✕</span></div>
+<div id="chatMessages"><div class="msg botMsg">Hi! Mai EM7 ka AI Guru hu. Kuch bhi pucho - hacking, security, location, services?</div></div>
+<div id="chatInput"><input id="chatText" placeholder="Kuch pucho..." onkeypress="if(event.key==='Enter')sendChat()"><button onclick="sendChat()">SEND</button></div>
+</div>
+
+<script>
+// SEARCH SYSTEM
+function doSearch(){
+ let q = document.getElementById('searchInput').value.toLowerCase();
+ let res = document.getElementById('searchResult');
+ if(!q){res.innerHTML='';return}
+ let services = ["security audit - website & app security check", "penetration testing - ethical hacking", "cyber awareness - training", "location checker - real GPS location"];
+ let found = services.filter(s=>s.includes(q));
+ if(found.length>0){res.innerHTML = "✅ Found: <br>• " + found.join("<br>• ")}else{res.innerHTML="❌ Kuch nahi mila, dusra word try karo"}
+}
+
+// LOCATION SYSTEM - REAL
+function checkLocation(){
+ let out = document.getElementById('locResult');
+ out.innerHTML = "📡 Location le raha hu... Allow karo";
+ if(!navigator.geolocation){out.innerHTML="GPS not supported";return}
+ navigator.geolocation.getCurrentPosition(async pos=>{
+   let lat=pos.coords.latitude, lon=pos.coords.longitude;
+   out.innerHTML = `Lat: ${lat.toFixed(4)}, Lon: ${lon.toFixed(4)} <br> Getting city...`;
+   try{
+     let r = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`);
+     let d = await r.json();
+     out.innerHTML = `<div class="location-result">📍 <b>${d.city || d.locality}, ${d.principalSubdivision}, ${d.countryName}</b><br>Lat: ${lat.toFixed(5)}<br>Lon: ${lon.toFixed(5)}<br><a href="https://maps.google.com/?q=${lat},${lon}" target="_blank" style="color:#00ff88">Open in Google Map</a></div>`;
+   }catch(e){
+     out.innerHTML = `<div class="location-result">📍 Lat: ${lat}<br>Lon: ${lon}<br><a href="https://maps.google.com/?q=${lat},${lon}" target="_blank" style="color:#00ff88">Open Map</a></div>`;
+   }
+ }, err=>{out.innerHTML="❌ Location allow karo, tabhi kaam karega"});
+}
+
+// AI GURU CHAT - AUTOMATION
+function toggleChat(){
+ let b=document.getElementById('chatBox');
+ b.style.display = b.style.display==='flex'?'none':'flex';
+}
+function sendChat(){
+ let input = document.getElementById('chatText');
+ let txt = input.value.trim();
+ if(!txt) return;
+ let msgs = document.getElementById('chatMessages');
+ msgs.innerHTML+=`<div class="msg userMsg">${txt}</div>`;
+ input.value='';
+ setTimeout(()=>{
+   let reply = getAIReply(txt.toLowerCase());
+   msgs.innerHTML+=`<div class="msg botMsg">${reply}</div>`;
+   msgs.scrollTop = msgs.scrollHeight;
+ },500);
+ msgs.scrollTop = msgs.scrollHeight;
+}
+function getAIReply(q){
+ if(q.includes('location')) return '📍 Location Checker upar hai. "CHECK MY LOCATION NOW" pe click karo, mai tumhari real location bata dunga GPS se.';
+ if(q.includes('service')||q.includes('kaam')) return '🛡️ Mai 3 kaam karta hu: 1. Security Audit 2. Penetration Testing 3. Cyber Awareness Training. Konsa chahiye?';
+ if(q.includes('price')||q.includes('paisa')||q.includes('cost')) return '💰 Price kaam pe depend karta hai. Contact form bharo ya WhatsApp pe "Hi EM7" bhejo: 6394806370';
+ if(q.includes('contact')||q.includes('number')||q.includes('whatsapp')) return '📞 Contact: 6394806370 | Insta: @em7_aman | Location: Lucknow. Neeche form se bhi message bhej sakte ho, direct mere email pe ayega.';
+ if(q.includes('hack')) return '😎 Ethical hacking hi karta hu, illegal hack nahi. Agar apni website secure karwani hai to mai help kar sakta hu. Batao kis chiz me help chahiye?';
+ if(q.includes('hi')||q.includes('hello')||q.includes('hey')) return 'Hello! 👋 Mai EM7 ka AI Assistant hu. Pucho kya help chahiye?';
+ return '🤖 Samjha! Tumne pucha: "'+q+'". Mai ispe help kar sakta hu. Thoda detail me batao, ya upar Search box me search karo. Ya Contact form bharo.';
+}
+</script>
 </body>
 </html>
