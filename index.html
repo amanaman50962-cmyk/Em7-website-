@@ -1,33 +1,62 @@
-<!<!DOCTYPE html>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EM7 Aman Official</title>
+<title>EM7 HOON</title>
 <style>
-body{margin:0;font-family:sans-serif;background:#000;color:#fff;text-align:center}
-.hero{padding:70px 20px;background:linear-gradient(135deg,#ff004c,#1a1a1a)}
-h1{font-size:48px;margin:0;letter-spacing:2px}
-.tag{color:#ff004c;font-weight:bold;margin-top:10px}
-.btn{display:block;margin:16px auto;padding:16px;width:270px;border-radius:30px;text-decoration:none;color:#fff;font-weight:bold;font-size:18px}
-.call{background:#28a745}
-.wa{background:#25D366}
-.insta{background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)}
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:'JetBrains Mono',monospace}
+body{background:#000;color:#00ff41}
+canvas{position:fixed;top:0;left:0;z-index:-1;opacity:0.4}
+.container{max-width:500px;margin:auto;padding:10px;position:relative;z-index:1}
+.top{font-size:12px;text-align:right;padding:5px}
+.glitch{font-size:48px;font-weight:800;text-align:center;color:#a7ff83;text-shadow:0 0 15px #00ff41;margin:15px 0}
+.sub{text-align:center;font-size:11px;letter-spacing:3px;opacity:0.7;margin-bottom:15px}
+.box{border:1px solid #00ff41;border-radius:12px;padding:14px;margin:14px 0;background:rgba(0,20,0,0.9);box-shadow:0 0 15px rgba(0,255,65,0.4)}
+.tabs{display:flex;gap:8px;margin:15px 0}
+.tab{flex:1;padding:12px;text-align:center;border:1px solid #00ff41;border-radius:8px;background:#000;cursor:pointer;font-weight:700;font-size:13px}
+.tab.active{background:#00ff41;color:#000;box-shadow:0 0 12px #00ff41}
+.btn{width:100%;padding:14px;margin:8px 0;border:1px solid #00ff41;border-radius:10px;background:rgba(0,0,0,0.7);color:#00ff41;font-weight:700;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
+.btn.green{background:#00ff41;color:#000}
+a{text-decoration:none}
+.term{font-size:12px;line-height:1.8}
+.footer{text-align:center;font-size:9px;opacity:0.5;margin:20px 0}
 </style>
 </head>
 <body>
-<div class="hero">
-<h1>EM7 HOON</h1>
-<div class="tag">Lucknow, UP - Artist</div>
-<p>Official Website</p>
+<canvas id="matrix"></canvas>
+<div class="container">
+<div class="top" id="time"></div>
+<h1 class="glitch">EM7 HOON</h1>
+<p class="sub">[ HACKER • ARTIST • LUCKNOW, UP ]</p>
+<div class="box term">
+<div>terminal — root@em7:~ zsh</div><br>
+> initizlizing secure connection..<br>
+> user: EM7 Aman | status: ONLINE<br>
+> ~$./launch_dashboard.sh --stealth
 </div>
-<br>
-<h2>Contact Me Direct</h2>
-<a class="btn call" href="tel:6394806370">📞 CALL: 6394806370</a>
-<a class="btn wa" href="https://wa.me/916394806370">💬 WHATSAPP ME</a>
-<a class="btn insta" href="https://instagram.com/em7_aman">📸 INSTAGRAM: @em7_aman</a>
-<br><br>
-<p style="color:#777">© 2026 EM7 Aman. All Rights Reserved.</p>
+<div class="tabs">
+<div class="tab active" onclick="show('contact',this)">CONTACT</div>
+<div class="tab" onclick="show('tools',this)">TOOLS</div>
+<div class="tab" onclick="show('about',this)">ABOUT</div>
+</div>
+<div id="contact" class="box">
+<h3>CONTACT // SECURE CHANNELS</h3><br>
+<a href="tel:6394806370"><div class="btn">📞 CALL 6394806370</div></a>
+<a href="https://wa.me/916394806370"><div class="btn">💬 WHATSAPP ME</div></a>
+<a href="https://instagram.com/em7_aman"><div class="btn green">📸 INSTAGRAM: @em7_aman</div></a>
+</div>
+<div id="tools" class="box" style="display:none"><h3>TOOLS</h3><br><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><button class="btn" onclick="alert('NMAP Ready!')">NMAP</button><button class="btn" onclick="alert('HYDRA Ready!')">HYDRA</button><button class="btn" onclick="alert('METASPLOIT Ready!')">METASPLOIT</button><button class="btn" onclick="alert('BURP SUITE Ready!')">BURP SUITE</button></div></div>
+<div id="about" class="box" style="display:none"><h3>ABOUT</h3><br><p style="font-size:13px;color:#a7ff83">Ethical hacker & artist from Lucknow, UP. Contact: 6394806370</p></div>
+<div class="footer">© 2026 EM7 Aman | ROOT ACCESS GRANTED</div>
+</div>
+<script>
+var c=document.getElementById('matrix'),ctx=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;var letters="01EM7HOON";var font=14;var cols=c.width/font;var drops=[];for(var i=0;i<cols;i++)drops[i]=1;function draw(){ctx.fillStyle="rgba(0,0,0,0.05)";ctx.fillRect(0,0,c.width,c.height);ctx.fillStyle="#00ff41";ctx.font=font+"px monospace";for(var i=0;i<drops.length;i++){var t=letters[Math.floor(Math.random()*letters.length)];ctx.fillText(t,i*font,drops[i]*font);if(drops[i]*font>c.height&&Math.random()>0.975)drops[i]=0;drops[i]++}}setInterval(draw,35);
+function show(id,el){document.getElementById('contact').style.display='none';document.getElementById('tools').style.display='none';document.getElementById('about').style.display='none';document.getElementById(id).style.display='block';document.querySelectorAll('.tab').forEach(e=>e.classList.remove('active'));el.classList.add('active')}
+setInterval(()=>{document.getElementById('time').innerText=new Date().toLocaleTimeString()},1000);
+</script>
 </body>
 </html>
 
