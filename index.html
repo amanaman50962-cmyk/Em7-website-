@@ -5,27 +5,65 @@
 <title>EM7 HOON - Ultimate Cyber Tools</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Space Grotesk',sans-serif}
-body{background:#070a0f;color:#fff;padding-bottom:100px}
-nav{position:fixed;top:0;width:100%;padding:14px 16px;background:#070a0f;display:flex;justify-content:space-between;z-index:100;border-bottom:1px solid #1a2332}
-.logo{font-weight:700}.logo span{color:#00ff88}
-.container{max-width:700px;margin:auto;padding:70px 12px 20px}
-.card{background:#0e141f;border:1px solid #1a2332;border-radius:18px;padding:16px;margin-bottom:14px}
-.card-title{font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px;font-size:15px}
-.card-title i{color:#00ff88}
-.btn{width:100%;padding:12px;border-radius:12px;border:none;font-weight:700;cursor:pointer;margin-top:10px;display:flex;align-items:center;justify-content:center;gap:8px}
-.btn-green{background:#00ff88;color:#000}.btn-dark{background:#1a2332;color:#fff;border:1px solid #2a3a52}
-input{width:100%;padding:12px;background:#070a0f;border:1px solid #1a2332;border-radius:10px;color:#fff;margin:6px 0;outline:none}
-.resultBox{background:#070a0f;padding:12px;border-radius:12px;margin-top:10px;font-size:12px;line-height:1.6;border:1px dashed #00ff88;word-break:break-word}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.contact-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #1a2332;font-size:13px}
-.contact-row a{color:#00ff88;text-decoration:none;font-weight:600}
-#aiBtn{position:fixed;bottom:18px;right:18px;width:58px;height:58px;background:#00ff88;border-radius:50%;border:none;font-size:22px;z-index:9999;cursor:pointer}
-#aiBox{position:fixed;bottom:85px;right:10px;left:10px;max-width:400px;margin:auto;height:460px;background:#0e141f;border:1px solid #2a3a52;border-radius:18px;display:none;flex-direction:column;z-index:9999;overflow:hidden}
-#aiHead{background:#00ff88;color:#000;padding:12px 14px;font-weight:700;display:flex;justify-content:space-between}
-#aiMsgs{flex:1;padding:12px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;background:#070a0f}
-.msg{padding:10px 12px;border-radius:14px;font-size:13px;max-width:88%;line-height:1.5}
-.bot{background:#1a2332;color:#fff}.user{background:#00ff88;color:#000;margin-left:auto}
-#aiInputArea{display:flex;padding:8px;border-top:1px solid #1a2332;background:#0e141f}
-#aiInputArea input{flex:1;padding:11px 14
+body{background:#070a0f;color:#fff;font-family:sans-serif;margin:0;padding-bottom:100px}
+nav{position:fixed;top:0;width:100%;background:#0e141f;padding:12px;text-align:center;border-bottom:1px solid #1a2332;z-index:10}
+.logo{font-weight:800;letter-spacing:1px}.logo span{color:#00ff88}
+.box{max-width:600px;margin:70px auto 20px;padding:12px}
+.card{background:#0e141f;border:1px solid #1a2332;border-radius:16px;padding:15px;margin-bottom:12px}
+.btn{width:100%;padding:12px;border:none;border-radius:10px;font-weight:700;margin-top:8px;cursor:pointer}
+.btn-g{background:#00ff88;color:#000}.btn-d{background:#1a2332;color:#fff;border:1px solid #2a3a52}
+input{width:100%;padding:11px;border-radius:8px;border:1px solid #1a2332;background:#070a0f;color:#fff;margin-top:6px;outline:none}
+.res{margin-top:8px;padding:10px;background:#070a0f;border-radius:8px;border:1px dashed #00ff88;font-size:12px;word-break:break-all}
+#aiBtn{position:fixed;right:16px;bottom:16px;width:56px;height:56px;background:#00ff88;border-radius:50%;border:none;font-size:20px}
+#aiBox{position:fixed;left:10px;right:10px;bottom:80px;max-width:380px;margin:auto;height:400px;background:#0e141f;border:1px solid #333;border-radius:16px;display:none;flex-direction:column;z-index:99}
+#aiHead{background:#00ff88;color:#000;padding:10px;display:flex;justify-content:space-between;font-weight:700}
+#aiMsgs{flex:1;overflow:auto;padding:10px;display:flex;flex-direction:column;gap:6px}
+.msg{padding:8px 10px;border-radius:12px;font-size:12px;max-width:85%}.bot{background:#1a2332}.user{background:#00ff88;color:#000;margin-left:auto}
+</style>
+</head>
+<body>
+<nav><div class="logo">EM7 <span>HOON</span> - ULTIMATE</div></nav>
+<button id="aiBtn" onclick="document.getElementById('aiBox').style.display=document.getElementById('aiBox').style.display==='flex'?'none':'flex'"><i class="fa-solid fa-robot"></i></button>
+
+<div class="box">
+<div class="card"><b><i class="fa-solid fa-location-dot" style="color:#00ff88"></i> 1. GPS + IP Tracker</b>
+<button class="btn btn-g" onclick="getGPS()">CHECK MY GPS</button>
+<button class="btn btn-d" onclick="getIP()">CHECK MY IP</button>
+<div id="r1" class="res" style="display:none"></div></div>
+
+<div class="card"><b><i class="fa-solid fa-envelope" style="color:#00ff88"></i> 2. Email Breach Check</b>
+<input id="em" placeholder="your@gmail.com"><button class="btn btn-g" onclick="getBreach()">CHECK BREACH</button><div id="r2" class="res" style="display:none"></div></div>
+
+<div class="card"><b><i class="fa-solid fa-key" style="color:#00ff88"></i> 3. Password Generator + Checker</b>
+<input id="pw" placeholder="Enter password" oninput="chk(this.value)"><div id="pwbar" style="height:5px;background:#1a2332;border-radius:10px;margin-top:6px"><div id="pwfill" style="height:100%;width:0%"></div></div><div id="r3" class="res" style="display:none"></div>
+<button class="btn btn-d" onclick="genPW()">GENERATE STRONG 16 CHAR</button></div>
+
+<div class="card"><b><i class="fa-solid fa-link" style="color:#00ff88"></i> 4. Phishing Link Scanner</b>
+<input id="lk" placeholder="https:// suspicious link"><button class="btn btn-g" onclick="scanLK()">SCAN LINK</button><div id="r4" class="res" style="display:none"></div></div>
+
+<div class="card"><b><i class="fa-solid fa-qrcode" style="color:#00ff88"></i> 5. QR Generator</b>
+<input id="qr" placeholder="Enter text/link"><button class="btn btn-d" onclick="makeQR()">MAKE QR</button><div id="r5" class="res" style="display:none;text-align:center"></div></div>
+
+<div class="card" style="border-color:#00ff88"><b><i class="fa-solid fa-phone" style="color:#00ff88"></i> CONTACT REAL</b>
+<p style="font-size:13px;margin-top:8px">Phone: <a href="tel:6394806370" style="color:#00ff88">6394806370</a><br>Insta: <a href="https://instagram.com/em7_aman" style="color:#00ff88">@em7_aman</a><br>Email: amanaman50962@gmail.com</p>
+<a href="https://wa.me/916394806370" style="display:block;text-align:center;background:#25D366;color:#fff;padding:12px;border-radius:10px;text-decoration:none;margin-top:10px">WhatsApp Chat Now</a></div>
+</div>
+
+<div id="aiBox"><div id="aiHead"><span>EM7 AI GURU - REAL</span><span onclick="document.getElementById('aiBox').style.display='none'">X</span></div>
+<div id="aiMsgs"><div class="msg bot">Hi Chele! Ab site fix ho gayi hai. Kuch bhi pucho - mai real AI hu!</div></div>
+<div style="display:flex;padding:8px;gap:6px"><input id="aiIn" style="flex:1" placeholder="Kuch bhi pucho..."><button class="btn btn-g" style="width:60px;margin:0" onclick="askAI()">Send</button></div></div>
+
+<script>
+function show(id,html){let e=document.getElementById(id);e.style.display='block';e.innerHTML=html}
+function getGPS(){show('r1','Location mang raha hu...');navigator.geolocation.getCurrentPosition(p=>{show('r1',`Lat: ${p.coords.latitude}<br>Lon: ${p.coords.longitude}<br><a href='https://maps.google.com/?q=${p.coords.latitude},${p.coords.longitude}' target='_blank' style='color:#00ff88'>Open in Maps</a>` )},e=>{show('r1','Error: '+e.message)})}
+async function getIP(){show('r1','IP le raha hu...');try{let r=await fetch('https://ipwho.is/');let d=await r.json();show('r1',`IP: <b>${d.ip}</b><br>${d.city}, ${d.country} - ${d.connection.isp}`)}catch{show('r1','Fail, try again')}}
+async function getBreach(){let e=document.getElementById('em').value.trim();if(!e.includes('@')){show('r2','Sahi email likho');return}show('r2','Checking...');try{let r=await fetch('https://api.xposedornot.com/v1/check-single/'+e);let d=await r.json();if(d.breaches){show('r2',`<span style='color:red'>⚠️ LEAKED in ${d.breaches[0][0]}</span><br>Password change karo!`)}else show('r2',`<span style='color:#00ff88'>✅ SAFE - No Leak</span>`)}catch{show('r2','Check on haveibeenpwned.com')}}
+function chk(v){let s=0;if(v.length>5)s+=25;if(v.length>8)s+=25;if(/[A-Z]/.test(v))s+=10;if(/[0-9]/.test(v))s+=20;if(/[^A-Za-z0-9]/.test(v))s+=20;let f=document.getElementById('pwfill');f.style.width=s+'%';f.style.background=s<40?'red':s<70?'orange':'#00ff88';show('r3',s<40?'Weak':s<70?'Medium':'Strong - Safe!')}
+function genPW(){let c="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789@#$%";let p="";for(let i=0;i<16;i++)p+=c[Math.floor(Math.random()*c.length)];document.getElementById('pw').value=p;chk(p);show('r3',`Generated: <b style='color:#00ff88'>${p}</b>`)}
+function scanLK(){let u=document.getElementById('lk').value.trim();if(!u){show('r4','Link daalo');return}let d=0,m=[];if(u.includes('@')){d+=30;m.push('❌ @ symbol = Phishing')}if(u.startsWith('http://')){d+=30;m.push('❌ http not https')}if(u.length>80){d+=20;m.push('⚠️ Too long')}if(m.length==0)m.push('✅ Looks Safe but be careful');show('r4',m.join('<br>')+`<br><b>${d>50?'DANGER':d>20?'SUSPICIOUS':'SAFE'}</b>`)}
+function makeQR(){let t=document.getElementById('qr').value.trim();if(!t)return;show('r5',`<img src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(t)}' style='border-radius:10px'><br>${t}`)}
+async function askAI(){let inp=document.getElementById('aiIn'),txt=inp.value.trim();if(!txt)return;let box=document.getElementById('aiMsgs');box.innerHTML+=`<div class="msg user">${txt}</div>`;inp.value='';box.scrollTop=box.scrollHeight;box.innerHTML+=`<div class="msg bot" id="typ">Soch raha hu...</div>`;box.scrollTop=box.scrollHeight;try{let r=await fetch(`https://text.pollinations.ai/${encodeURIComponent(txt)}?system=${encodeURIComponent('You are EM7 AI GURU, Lucknow cyber expert Aman, friendly Hinglish, short 3 lines, contact 6394806370 @em7_aman')}`);let a=await r.text();document.getElementById('typ').remove();box.innerHTML+=`<div class="msg bot">${a.substring(0,600).replace(/\n/g,'<br>')}</div>`;box.scrollTop=box.scrollHeight}catch{document.getElementById('typ').remove();box.innerHTML+=`<div class="msg bot">Net slow, fir se pucho</div>`}}
+document.getElementById('aiIn').addEventListener('keypress',e=>{if(e.key==='Enter')askAI()});
+</script>
+</body>
+  </html>
