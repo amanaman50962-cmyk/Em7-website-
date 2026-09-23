@@ -1,47 +1,31 @@
-<script>
-// --- UPGRADED EM7 AI - REAL CHATGPT LIKE ENGINE ---
-async function toggleAI(){ let b=document.getElementById('aiBox'); b.style.display=b.style.display==='flex'?'none':'flex'; }
-
-async function sendAI(){
-  let inp = document.getElementById('aiInput');
-  let txt = inp.value.trim();
-  if(!txt) return;
-  let box = document.getElementById('aiMsgs');
-  
-  // User ka message dikhao
-  box.innerHTML += `<div class="msg user">${txt}</div>`;
-  inp.value = '';
-  box.scrollTop = box.scrollHeight;
-
-  // Typing dikhao
-  box.innerHTML += `<div class="msg bot" id="typing">EM7 AI soch raha hai... <i class="fa-solid fa-spinner fa-spin"></i></div>`;
-  box.scrollTop = box.scrollHeight;
-
-  try{
-    // Real AI API call - ye mere jaisa jawab dega
-    let systemPrompt = `You are EM7 AI GURU. You are a Cybersecurity Expert from Lucknow, India. Your name is Aman, brand EM7 HOON. Contact 6394806370, Insta @em7_aman. You answer in Hinglish (Hindi + English mix) friendly style like a pro hacker friend. You help with hacking, security, coding, life, anything. Keep answers short (2-3 lines) for mobile.`;
-    
-    let response = await fetch(`https://text.pollinations.ai/${encodeURIComponent(txt)}?system=${encodeURIComponent(systemPrompt)}`);
-    let aiReply = await response.text();
-
-    // Typing hatao aur real jawab dikhao
-    document.getElementById('typing').remove();
-    
-    // Agar reply bahut lamba hai to chota karo
-    if(aiReply.length > 600) aiReply = aiReply.substring(0, 600) + "...";
-
-    box.innerHTML += `<div class="msg bot">${aiReply}<br><br><span style="font-size:10px;opacity:0.5">📞 6394806370 | @em7_aman</span></div>`;
-    box.scrollTop = box.scrollHeight;
-
-  }catch(err){
-    document.getElementById('typing')?.remove();
-    box.innerHTML += `<div class="msg bot">Net slow hai Chele, ek baar fir se pucho. Ya direct WhatsApp karo 6394806370 pe.<br>Error: ${err.message}</div>`;
-    box.scrollTop = box.scrollHeight;
-  }
-}
-
-// Enter se bhi bheje
-document.getElementById('aiInput')?.addEventListener('keypress', function(e){
-  if(e.key === 'Enter') sendAI();
-});
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EM7 HOON - Ultimate Cyber Tools</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Space Grotesk',sans-serif}
+body{background:#070a0f;color:#fff;padding-bottom:100px}
+nav{position:fixed;top:0;width:100%;padding:14px 16px;background:#070a0f;display:flex;justify-content:space-between;z-index:100;border-bottom:1px solid #1a2332}
+.logo{font-weight:700}.logo span{color:#00ff88}
+.container{max-width:700px;margin:auto;padding:70px 12px 20px}
+.card{background:#0e141f;border:1px solid #1a2332;border-radius:18px;padding:16px;margin-bottom:14px}
+.card-title{font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px;font-size:15px}
+.card-title i{color:#00ff88}
+.btn{width:100%;padding:12px;border-radius:12px;border:none;font-weight:700;cursor:pointer;margin-top:10px;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-green{background:#00ff88;color:#000}.btn-dark{background:#1a2332;color:#fff;border:1px solid #2a3a52}
+input{width:100%;padding:12px;background:#070a0f;border:1px solid #1a2332;border-radius:10px;color:#fff;margin:6px 0;outline:none}
+.resultBox{background:#070a0f;padding:12px;border-radius:12px;margin-top:10px;font-size:12px;line-height:1.6;border:1px dashed #00ff88;word-break:break-word}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.contact-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #1a2332;font-size:13px}
+.contact-row a{color:#00ff88;text-decoration:none;font-weight:600}
+#aiBtn{position:fixed;bottom:18px;right:18px;width:58px;height:58px;background:#00ff88;border-radius:50%;border:none;font-size:22px;z-index:9999;cursor:pointer}
+#aiBox{position:fixed;bottom:85px;right:10px;left:10px;max-width:400px;margin:auto;height:460px;background:#0e141f;border:1px solid #2a3a52;border-radius:18px;display:none;flex-direction:column;z-index:9999;overflow:hidden}
+#aiHead{background:#00ff88;color:#000;padding:12px 14px;font-weight:700;display:flex;justify-content:space-between}
+#aiMsgs{flex:1;padding:12px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;background:#070a0f}
+.msg{padding:10px 12px;border-radius:14px;font-size:13px;max-width:88%;line-height:1.5}
+.bot{background:#1a2332;color:#fff}.user{background:#00ff88;color:#000;margin-left:auto}
+#aiInputArea{display:flex;padding:8px;border-top:1px solid #1a2332;background:#0e141f}
+#aiInputArea input{flex:1;padding:11px 14
