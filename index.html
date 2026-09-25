@@ -32,10 +32,10 @@ canvas{display:none}
 </style>
 </head>
 <body>
-<div class="top"><h1>EM7 HOON v35 FINAL - CLICK 100% FIXED - Syntax Fixed</h1><p style="font-size:10px;opacity:.6">v31 EXACT - Single Backslash Fixed - const $ - let el - bind() - Click 100% - All Working</p></div>
+<div class="top"><h1>EM7 HOON v35 FINAL - CLICK 100% FIXED</h1><p style="font-size:10px;opacity:.6">v31 EXACT - Single Backslash Fixed - Click 100% - All Working</p></div>
 <div class="grid">
 <div class="card"><h3>WhatsApp Direct</h3><input id="wa" placeholder="91XXXXXXXXXX"><input id="waMsg" placeholder="Message"><button class="btn" id="btnWa">Open Instant</button><div id="waR" class="res"></div></div>
-<div class="card"><h3>GPS Tracker</h3><button class="btn" id="btnGps">Get Exact Location</button><div id="gpsR" class="res">v35 - Click 100% Fixed - Syntax Fixed</div></div>
+<div class="card"><h3>GPS Tracker</h3><button class="btn" id="btnGps">Get Exact Location</button><div id="gpsR" class="res">v35 - Click 100% Fixed</div></div>
 <div class="card"><h3>IP Tracker</h3><button class="btn" id="btnIp">Get IP + City + ISP</button><div id="ipR" class="res"></div></div>
 <div class="card"><h3>Number Info</h3><input id="mob" placeholder="10 digit"><button class="btn" id="btnMob">Get Truecaller Real</button><div id="mobR" class="res"></div></div>
 <div class="card" style="border:2px solid #f59e0b"><h3>AI Image Maker - FIXED HD</h3>
@@ -43,14 +43,14 @@ canvas{display:none}
 <textarea id="imgP" rows="2">Make a cat wearing hacker hoodie, Lucknow background</textarea>
 <div style="display:flex;gap:6px;margin-bottom:8px"><select id="imgRatio"><option value="1024x1024">1:1 Square HD</option><option value="1024x1792">9:16 Portrait HD</option><option value="1792x1024">16:9 Landscape HD</option></select><select id="imgCount"><option value="1">1 Image HD</option><option value="2" selected>2 Images HD</option></select></div>
 <button class="btn" id="btnImg" style="background:linear-gradient(90deg,#f59e0b,#8b5cf6)">Generate Real HD Image - FIXED</button>
-<div id="imgR" class="res">FIXED HD: Click working - v35 Syntax Fixed - Single Backslash</div>
+<div id="imgR" class="res">FIXED HD: Click working - v35</div>
 </div>
 <div class="card"><h3>Vehicle Info</h3><input id="veh" placeholder="UP32AB1234"><button class="btn" id="btnVeh">Get RTO Real</button><div id="vehR" class="res"></div></div>
 <div class="card" style="border:2px solid #8b5cf6"><h3>Mega AI Hub 5-in-1 - FIXED</h3>
 <div style="margin-bottom:8px">
 <button class="tabBtn active" data-tab="tts">TTS Real</button><button class="tabBtn" data-tab="bg">BG Real FIXED</button><button class="tabBtn" data-tab="face">Face HD</button><button class="tabBtn" data-tab="bio">Bio</button><button class="tabBtn" data-tab="code">Code</button>
 </div>
-<div id="tab-tts"><textarea id="tts" rows="2"></textarea><select id="ttsVoice" style="margin-bottom:6px"><option value="hi-IN">Hindi - Male</option><option value="en-IN">English India</option></select><button class="btn" id="btnTts">Speak Real Voice</button><div id="ttsR" class="res"></div></div>
+<div id="tab-tts"><textarea id="tts" rows="2"></textarea><select id="ttsVoice" style="margin-bottom:6px"><option value="hi-IN">Hindi</option><option value="en-IN">English</option></select><button class="btn" id="btnTts">Speak Real Voice</button><div id="ttsR" class="res"></div></div>
 <div id="tab-bg" style="display:none"><input type="file" id="bgFile" accept="image/*"><select id="bgMode" style="margin-top:6px"><option value="green">Green Screen Remove</option><option value="white">White Remove</option><option value="auto">Auto</option></select><button class="btn" id="btnBg">Remove BG - Real Working - FIXED</button><canvas id="bgCanvas"></canvas><div id="bgR" class="res">FIXED: Green photo - Real transparent - Canvas</div></div>
 <div id="tab-face" style="display:none"><input type="file" id="faceFile" accept="image/*"><button class="btn" id="btnFace">Enhance 4K Real</button><div id="faceR" class="res"></div></div>
 <div id="tab-bio" style="display:none"><input id="bioTopic" placeholder="Topic: attitude"><select id="bioStyle"><option value="attitude">Attitude</option><option value="hacker">Hacker</option></select><button class="btn" id="btnBio">Generate Bios</button><div id="bioR" class="res"></div></div>
@@ -75,7 +75,7 @@ canvas{display:none}
 <div id="aiB">🤖</div>
 <div id="aiW">
 <div class="aiH"><span>EM7 AI Max - No Credit Error - v35 FIXED</span><span id="aiClose" style="cursor:pointer">X</span></div>
-<div class="aiBody" id="aiBody"><div class="m a">Guru v35 FINAL - Syntax Fixed! v31 EXACT - Ab sab chalega! EMI BMI Age - Offline - Image HD - BG Real - Contact - AI Max - No credit error - Click 100%</div></div>
+<div class="aiBody" id="aiBody"><div class="m a">Guru v35 FINAL - Syntax Fixed! v31 EXACT - Ab sab chalega!</div></div>
 <div class="aiIn"><input id="aiI" placeholder="EM7 AI Max - No Credit Error"><button id="btnSend" style="background:#8b5cf6;border:none;width:38px;height:38px;border-radius:50%;color:#fff">></button></div>
 </div>
 <script>
@@ -95,7 +95,7 @@ bind('btnIp', async function(){let r=$('ipR');r.innerHTML='IP...';try{let ipD=aw
 bind('btnMob', function(){let n=$('mob').value.replace(/[^0-9]/g,'');let r=$('mobR');if(n.length<10){r.innerHTML='10 digit';return}r.innerHTML='Number: '+n.slice(-10)+'<br><a href="https://www.truecaller.com/search/in/'+n.slice(-10)+'" target="_blank" class="btnSmall">Truecaller Real</a>';});
 bind('btnVeh', function(){let v=$('veh').value.trim().toUpperCase(),r=$('vehR');if(v.length<5){r.innerHTML='UP32AB1234 daalo';return}r.innerHTML='Vehicle: <b>'+v+'</b><br><a href="https://vahan.parivahan.gov.in/nrservices/faces/user/citizen/citizenlogin.xhtml" target="_blank" class="btnSmall">Parivahan Govt</a>';});
 bind('btnTts', function(){let t=$('tts').value,r=$('ttsR');let voiceSel=$('ttsVoice')?$('ttsVoice').value:'hi-IN';if(!t){r.innerHTML='Text likho';return}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(t);u.lang=voiceSel;speechSynthesis.speak(u);r.innerHTML='Speaking: '+t.substring(0,40);});
-bind('btnBg', function(){
+  bind('btnBg', function(){
 let f=$('bgFile').files[0],r=$('bgR'),mode=$('bgMode')?$('bgMode').value:'green',canvas=$('bgCanvas');
 if(!f){r.innerHTML='File choose karo';return}
 r.innerHTML='Real BG Remove ho raha hai... Mode: '+mode+'...';
@@ -181,4 +181,30 @@ if(l==='hi' || l==='hello'){ return 'Hi Guru! Main EM7 AI Max - No credit error!
 return 'EM7 AI Max: "'+q+'" - Time: '+timeStr+' - '+dateStr+' - No credit error';
 }
 async function sendMsg(){
-let i=$('aiI'),t=i.val
+let i=$('aiI'),t=i.value.trim();if(!t)return;
+let b=$('aiBody');
+if(t.toLowerCase().indexOf('/image ')===0){
+let imgPrompt=t.substring(7).trim()||'cute cat';
+let d1=document.createElement('div');d1.className='m u';d1.innerHTML=' /image '+imgPrompt;b.appendChild(d1);i.value='';b.scrollTop=b.scrollHeight;
+let ty=document.createElement('div');ty.className='m a';ty.id='typing';ty.innerHTML='Generating HD Image...';b.appendChild(ty);b.scrollTop=b.scrollHeight;
+let seed=Math.floor(Math.random()*999999);
+let url='https://image.pollinations.ai/p/'+encodeURIComponent(imgPrompt+', ultra realistic, 8k')+'?width=1024&height=1024&seed='+seed+'&model=flux&nologo=true&enhance=true';
+setTimeout(function(){let el=$('typing');if(el)el.remove();let d2=document.createElement('div');d2.className='m a';d2.innerHTML='<b>Image:</b> '+imgPrompt+'<br><img src="'+url+'" style="width:100%;border-radius:12px"><br><a href="'+url+'" target="_blank" class="btnSmall">Download HD</a>';b.appendChild(d2);b.scrollTop=b.scrollHeight;},2000);
+return;
+}
+let d1=document.createElement('div');d1.className='m u';d1.innerHTML=t;b.appendChild(d1);i.value='';b.scrollTop=b.scrollHeight;
+let ty=document.createElement('div');ty.className='m a';ty.id='typing';ty.innerHTML='Thinking...';b.appendChild(ty);b.scrollTop=b.scrollHeight;
+setTimeout(function(){
+let ans=getLocalAIAnswer(t);
+let el=$('typing');if(el)el.remove();
+let d2=document.createElement('div');d2.className='m a';d2.innerHTML=ans;b.appendChild(d2);b.scrollTop=b.scrollHeight;
+},600);
+}
+bind('btnSend', sendMsg);
+$('aiI').addEventListener('keypress', function(e){if(e.key==='Enter') sendMsg();});
+bind('aiB', function(){let w=$('aiW');w.style.display=w.style.display==='flex'?'none':'flex';});
+bind('aiClose', function(){ $('aiW').style.display='none'; });
+});
+</script>
+</body>
+</html>
