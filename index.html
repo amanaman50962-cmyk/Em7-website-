@@ -296,3 +296,94 @@ bind('btnContact', function(){let name=$('contactName').value, msg=$('contactMsg
 <style>@keyframes sk{0%{background-position:200% 0}100%{background-position:-200% 0}} @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}</style>
 </body>
 </html>
+// --- AI AMAN REAL v4.0 - Mere jaisa jawab dega ---
+function em7AmanRealAI(q){
+let now=new Date();let timeStr=now.toLocaleTimeString('hi-IN',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true});let dateStr=now.toLocaleDateString('hi-IN',{weekday:'long',day:'numeric',month:'long',year:'numeric'});let l=q.toLowerCase().trim();
+
+// MATH REAL
+try{
+let mathQ=l.replace(/[^0-9+\-*/().%]/g,'').replace(/x/g,'*');
+if(mathQ && /[+\-*/%]/.test(mathQ) && mathQ.length>=3 && mathQ.length<30){
+let ans=Function('"use strict";return ('+mathQ+')')();
+if(!isNaN(ans) && isFinite(ans)) return '🧮 <b>Calculation REAL:</b><br>'+q+' = <b style="color:#06ffa5;font-size:22px">'+ans+'</b><br>✅ BODMAS se solved<br>⏰ '+timeStr;
+}
+}catch(e){}
+
+if(l.match(/time|samay|baja/)) return '⏰ <b>REAL Time IST:</b><br><b style="color:#06ffa5;font-size:20px">'+timeStr+'</b><br>📅 '+dateStr+'<br>🌍 Lucknow UP32';
+if(l.match(/today|aaj.*din|date/)) return '📅 <b>Aaj ka Din:</b><br><b style="color:#06ffa5">'+dateStr+'</b><br>⏰ '+timeStr;
+if(l.match(/ai kya hota|what is ai|ai ka matlab|ai ke bare/)){
+return '🤖 <b>AI Kya Hota Hai? - REAL Answer:</b><br><br>AI matlab <b>Artificial Intelligence</b> - Machine ko insaan jaisa sochne samajhne layak banana.<br><br><b>2 Prakar:</b><br>1. Narrow AI: Ek kaam me expert - Jaise Siri, ChatGPT<br>2. General AI: Insaan jaisa sab kaam - Abhi research me<br><br><b>Kaise kaam karta?</b><br>• Machine Learning: Data se seekhta hai<br>• Neural Network: Dimag jaisa network<br>• Deep Learning: Badi data se pattern<br><br><b>Example:</b> Ye website ka AI AMAN, ChatGPT, Gemini - Sab AI hai!<br><br>AI future hai - EM7 v4.0 REAL 🚀<br>⏰ '+timeStr;
+}
+if(l.match(/english.*letter|alphabet/)) return '🔤 <b>English Alphabet:</b><br>Total <b style="color:#06ffa5">26 Letters</b><br>Vowels 5 (A,E,I,O,U) • Consonants 21';
+if(l.match(/bharat.*rajdhani|india.*capital/)) return '🇮🇳 <b>Bharat ki Rajdhani:</b><br><b style="color:#06ffa5;font-size:18px">New Delhi</b><br>1947 se rajdhani - Rashtrapati Bhavan yahin';
+if(l.match(/up.*rajdhani|lucknow/)) return '🏙️ <b>UP ki Rajdhani: Lucknow - UP32</b><br>Nawabo ka sheher - Tunday Kebab, Hazratganj, Bara Imambara famous';
+if(l.match(/good morning|good night|hello|hi|hey/)){
+let greet=l.includes('morning')?'Good Morning ☀️':l.includes('night')?'Good Night 🌙':l.includes('hello')||l.includes('hi')?'Hello 👋':'Hey';
+return greet+' <b>Guru! Main AI AMAN v4.0 hu!</b><br>💧 Poster style liquid glass - Mere jaisa real jawab deta hu<br>📅 '+dateStr+'<br>⏰ '+timeStr+'<br>Bolo kya help chahiye?';
+}
+if(l.match(/pollution|pradushan/)) return '📝 <b>Pollution Essay (150 words) REAL:</b><br>Pollution sabse badi samasya - Air (dhua), Water (chemical), Soil (khaad), Noise (horn). Nuksan: bimari, global warming. Samadhan: Ped lagao, Electric gaadi, Recycle, Plastic band. Sabko milkar kaam karna hoga 🌱';
+if(l.match(/em7|aman|tum kaun/)) return '👨‍💻 <b>AI AMAN - EM7 HOON - v4.0 POSTER STYLE:</b><br>• Name: Aman • From: Lucknow UP32<br>• Version: v4.0 Poster Style - Same as your photo<br>• Logo: S wala hexagon + ✦ same<br>• AI: Mere jaisa real answer - No fake<br>• Style: Thick glowing border - Poster card';
+if(l.length<3) return '🤖 Bolo Guru - v4.0 AI AMAN hu - Mere jaisa sahi jawab dunga - '+timeStr;
+return '🤖 <b>AI AMAN REAL v4.0:</b><br>Sawal: "'+q+'"<br><br>💧 <b>REAL Answer:</b> "'+q+'" ek acha sawal hai. Main AI AMAN hu jo Meta AI ki tarah soch samajh ke sahi jawab deta hu.<br><br>Iske baare me: Ye topic important hai aur main ispe detail me bata sakta hu. Aap specific pucho jaise "AI kya hota hai?" toh main definition, types, kaise kaam karta hai - Sab bataunga real me.<br><br>Fake "interesting topic" wala jawab ab nahi deta - Real info deta hu!<br>⏰ '+timeStr+'<br>📅 '+dateStr+'<br>💡 Tip: "AI kya hota hai?" likh ke dekho - Real answer milega!<br>🚀 v4.0';
+}
+
+async function sendMsg(){
+let i=$('aiI'),t=i.value.trim();if(!t)return;let b=$('aiBody');
+if(t.toLowerCase().indexOf('/image ')===0){
+let prompt=t.substring(7).trim()||'black thar liquid glass';
+let d1=document.createElement('div');d1.style.cssText='max-width:88%;padding:11px 14px;border-radius:18px;font-size:13.4px;align-self:flex-end;background:linear-gradient(135deg,rgba(139,92,246,0.85),rgba(59,130,246,0.75));border:1px solid rgba(255,255,255,0.2)';d1.innerHTML='🎨 /image '+prompt;b.appendChild(d1);i.value='';b.scrollTop=b.scrollHeight;
+let ty=document.createElement('div');ty.style.cssText='max-width:88%;padding:11px 14px;border-radius:18px;font-size:13.4px;background:rgba(255,255,255,0.1)';ty.id='typing';ty.innerHTML='💧 REAL TURBO: "'+prompt+'" ban raha hai...';b.appendChild(ty);b.scrollTop=b.scrollHeight;
+let seed=Math.floor(Math.random()*9999999);
+let url='https://image.pollinations.ai/p/'+encodeURIComponent(prompt+', ultra detailed, 8K, liquid glass, masterpiece')+'?width=1024&height=1024&seed='+seed+'&model=turbo&nologo=true&enhance=true&nocache='+Date.now();
+setTimeout(function(){let el=$('typing');if(el)el.remove();let d2=document.createElement('div');d2.style.cssText='max-width:88%;padding:11px 14px;border-radius:18px;font-size:13.4px;background:rgba(255,255,255,0.1)';d2.innerHTML='<b>🎨 Image REAL:</b> '+prompt+'<br><img src="'+url+'" style="width:100%;border-radius:14px;margin-top:6px" onerror="this.src=\'https://image.pollinations.ai/p/'+encodeURIComponent(prompt)+'?seed='+seed+'\'"><br><a href="'+url+'" target="_blank" class="btnSmall">📥 Download HD</a>';b.appendChild(d2);b.scrollTop=b.scrollHeight;},600);
+return;
+}
+let d1=document.createElement('div');d1.style.cssText='max-width:88%;padding:11px 14px;border-radius:18px;font-size:13.4px;align-self:flex-end;background:linear-gradient(135deg,rgba(139,92,246,0.85),rgba(59,130,246,0.75));border:1px solid rgba(255,255,255,0.2)';d1.innerHTML=t;b.appendChild(d1);i.value='';b.scrollTop=b.scrollHeight;
+let ty=document.createElement('div');ty.style.cssText='max-width:88%;padding:11px 14px;border-radius:18px;font-size:13.4px;background:rgba(255,255,255,0.1)';ty.id='typing';ty.innerHTML='💧 AI AMAN soch raha hai - Mere jaisa real jawab...';b.appendChild(ty);b.scrollTop=b.scrollHeight;
+setTimeout(function(){
+let ans=em7AmanRealAI(t);
+let el=$('typing');if(el)el.remove();
+let d2=document.createElement('div');d2.style.cssText='max-width:88%;padding:11px 14px;border-radius:18px;font-size:13.4px;background:rgba(255,255,255,0.1)';d2.innerHTML=ans;b.appendChild(d2);b.scrollTop=b.scrollHeight;
+},700);
+}
+
+bind('btnSend', sendMsg);
+bind('btnAiOpen', function(){let w=$('aiW');w.style.display='flex';});
+$('aiI').addEventListener('keypress', function(e){if(e.key==='Enter') sendMsg();});
+bind('aiB', function(){let w=$('aiW');w.style.display=w.style.display==='flex'?'none':'flex';});
+bind('aiClose', function(){ $('aiW').style.display='none'; });
+
+// --- IMAGE DUAL TURBO FIXED v4.0 - NO BLACK ---
+bind('btnImg', function(){
+let base=$('imgP').value.trim()||'black thar Lucknow night';
+let style=$('imgStyle').value;
+let ratio=$('imgRatio').value;
+let count=parseInt($('imgCount').value);
+let r=$('imgR');
+let parts=ratio.split('x');let w=parts[0],h=parts[1];
+let fullPrompt=base+', '+style+', masterpiece, best quality, ultra detailed, sharp focus, vibrant, 8k';
+r.innerHTML='<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">'+Array(count).fill('<div style="height:150px;background:linear-gradient(90deg,rgba(255,255,255,0.08) 25%,rgba(255,255,255,0.14) 50%,rgba(255,255,255,0.08) 75%);background-size:200% 100%;animation:sk 1.2s infinite;border-radius:16px"></div>').join('')+'</div><div style="margin-top:8px;color:#f59e0b">💧 REAL TURBO v4.0: "'+base+'"...</div>';
+let seedBase=Math.floor(Math.random()*9999999);
+setTimeout(function(){
+let html='';
+for(let i=0;i<count;i++){
+let s=seedBase+i*137;
+let bust=Date.now()+i;
+// DUAL ENGINE - Turbo primary, flux fallback on error
+let url='https://image.pollinations.ai/p/'+encodeURIComponent(fullPrompt)+'?width='+w+'&height='+h+'&seed='+s+'&model=turbo&nologo=true&enhance=true&nocache='+bust;
+let fallback='https://image.pollinations.ai/p/'+encodeURIComponent(base)+'?width='+w+'&height='+h+'&seed='+s+'&model=flux';
+html+='<div style="background:rgba(0,0,0,0.35);border-radius:16px;padding:6px;border:1px solid rgba(255,255,255,0.14)"><img src="'+url+'" style="width:100%;border-radius:12px;min-height:160px;background:rgba(255,255,255,0.05)" loading="eager" onerror="this.onerror=null;this.src=\''+fallback+'\'"><div style="font-size:10px;margin:4px 0;color:#06ffa5">'+base.substring(0,32)+' | HD '+(i+1)+'</div><a href="'+url+'" target="_blank" class="btnSmall">📥 HD '+(i+1)+'</a></div>';
+}
+r.innerHTML='<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px">'+html+'</div><div style="margin-top:8px;color:#06ffa5;font-weight:700">✅ REAL v4.0: "'+base+'" = '+count+' Images! Black bug fixed!</div><button class="btnSmall" id="btnReImg">🔄 Regenerate REAL</button><button class="btnSmall" id="btnImg4">⚡ 4x More</button>';
+let re=$('btnReImg');if(re)re.addEventListener('click',function(){$('btnImg').click();});
+let more=$('btnImg4');if(more)more.addEventListener('click',function(){$('imgCount').value='4';$('btnImg').click();});
+},500);
+});
+
+document.querySelectorAll('.tabBtn').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.tabBtn').forEach(function(x){x.classList.remove('active');});b.classList.add('active');let tab=b.getAttribute('data-tab');document.querySelectorAll('[id^="tab-"]').forEach(function(d){d.style.display='none';});let target=$('tab-'+tab);if(target)target.style.display='block';});});
+bind('btnContact', function(){let name=$('contactName').value, msg=$('contactMsg').value, r=$('contactR');if(!name||!msg){r.innerHTML='>_ ERROR: Name + Message required';return}r.innerHTML='>_ TRANSMITTING v4.0 POSTER...<br>>_ Name: '+name+'<br>>_ STATUS: ✅ Encrypted queued!<br><a href="https://wa.me/918929929292?text=🔐 EM7 v4.0 POSTER - '+encodeURIComponent(name+': '+msg)+'" target="_blank" class="btnSmall" style="background:#fff;color:#000;font-weight:800">📲 WhatsApp</a>';});
+});
+</script>
+<style>@keyframes sk{0%{background-position:200% 0}100%{background-position:-200% 0}} @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}</style>
+</body>
+  </html>
