@@ -2,363 +2,224 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>EM7 HOON v6.0 LIQUID BLACKHOLE GALAXY - PHOTO STYLE 100% - EM7 AMAN</title>
+<title>EM7 HOON v4.0 LIQUID GLASS - POSTER STYLE</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Outfit',sans-serif}
-body{background:#010208;color:#fff;overflow-x:hidden;min-height:100vh}
-#bgMesh{position:fixed;inset:0;z-index:-3;background:radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0.9) 0%, #020412 60%, #040612 100%)}
-#bgBlackhole{position:fixed;inset:0;z-index:-2}
-#bgWater{position:fixed;inset:0;z-index:-1;opacity:0.35;mix-blend-mode:screen}
-.top{padding:14px;text-align:center;position:sticky;top:0;z-index:99;background:rgba(2,4,12,0.75);backdrop-filter:blur(32px) saturate(200%);border-bottom:1px solid rgba(139,92,246,0.3);box-shadow:0 4px 30px rgba(0,0,0,0.5)}
-.top h1{font-size:27px;font-weight:900;letter-spacing:-0.5px;background:linear-gradient(90deg,#fff,#c4b5fd,#6ee7b7,#fff,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 15px rgba(139,92,246,0.5))}
-.top p{font-family:'JetBrains Mono';font-size:11px;opacity:0.85;letter-spacing:1.2px;margin-top:3px;color:#a78bfa}
-.logoHex{width:115px;height:115px;margin:0 auto 14px;background:radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4), rgba(139,92,246,0.7) 30%, rgba(6,255,165,0.5) 70%, rgba(0,0,0,0.8));border-radius:24px;clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);display:flex;align-items:center;justify-content:center;font-size:54px;font-weight:900;border:2px solid rgba(255,255,255,0.5);box-shadow:0 0 50px rgba(139,92,246,0.7), 0 0 80px rgba(6,255,165,0.3), inset 0 3px 0 rgba(255,255,255,0.6), inset 0 -2px 10px rgba(0,0,0,0.8);animation:floatBlackhole 4s ease-in-out infinite, rotateGlow 8s linear infinite}
-@keyframes floatBlackhole{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-10px) scale(1.05)}}
-@keyframes rotateGlow{0%{filter:hue-rotate(0deg) drop-shadow(0 0 20px rgba(139,92,246,0.6))}100%{filter:hue-rotate(60deg) drop-shadow(0 0 25px rgba(6,255,165,0.5))}}
+body{background:#040612;color:#fff;overflow-x:hidden;min-height:100vh}
+#bgMesh{position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 15% 10%, rgba(139,92,246,0.45) 0%, transparent 50%),radial-gradient(ellipse at 85% 15%, rgba(6,255,165,0.35) 0%, transparent 50%),radial-gradient(ellipse at 50% 90%, rgba(59,130,246,0.3) 0%, transparent 60%),linear-gradient(135deg,#040612,#0e0c22 45%,#0a1a24 85%)}
+#bgAnim{position:fixed;inset:0;z-index:-1}
+.top{padding:12px;text-align:center;position:sticky;top:0;z-index:99;background:rgba(8,10,24,0.7);backdrop-filter:blur(30px) saturate(180%);border-bottom:1px solid rgba(255,255,255,0.14)}
+.top h1{background:linear-gradient(90deg,#fff,#c4b5fd,#6ee7b7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:22px;font-weight:800}
+.top p{font-size:10.5px;opacity:0.8;font-family:'JetBrains Mono'}
 .posterCard{
-background:linear-gradient(180deg, rgba(12,16,38,0.88) 0%, rgba(6,10,28,0.92) 100%);
-backdrop-filter:blur(36px) saturate(200%) contrast(1.1);-webkit-backdrop-filter:blur(36px) saturate(200%);
-border:1px solid rgba(139,92,246,0.4);
-border-top:1px solid rgba(255,255,255,0.3);
-border-radius:22px;padding:16px;position:relative;overflow:hidden;transition:0.4s;
-box-shadow:0 12px 50px rgba(0,0,0,0.8), inset 0 1.5px 0 rgba(255,255,255,0.25), 0 0 0 1px rgba(139,92,246,0.25), 0 0 35px rgba(139,92,246,0.2), inset 0 -1px 5px rgba(0,0,0,0.5);
+background:linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 100%);
+backdrop-filter:blur(28px) saturate(190%);-webkit-backdrop-filter:blur(28px) saturate(190%);
+border:1px solid rgba(255,255,255,0.24);
+border-top:1px solid rgba(255,255,255,0.42);
+border-radius:22px;padding:16px;position:relative;overflow:hidden;transition:0.35s;
+box-shadow:0 12px 45px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.28), 0 0 0 1px rgba(139,92,246,0.2);
 }
-.posterCard::before{content:'';position:absolute;inset:0;background:linear-gradient(110deg, rgba(255,255,255,0.22) 0%, transparent 25%, transparent 75%, rgba(6,255,165,0.12) 100%);pointer-events:none;border-radius:22px}
-.posterCard::after{content:'';position:absolute;inset:-1.5px;border-radius:22px;padding:1.8px;background:linear-gradient(110deg,#8b5cf6,#06ffa5,#3b82f6,#ec4899,#8b5cf6);-webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0.8;pointer-events:none;animation: borderRotate 6s linear infinite}
-@keyframes borderRotate{0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(360deg)}}
-.posterCard:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 18px 60px rgba(0,0,0,0.9), 0 0 45px rgba(139,92,246,0.4), 0 0 80px rgba(6,255,165,0.15)}
-.posterRow{display:flex;align-items:center;gap:16px}
-.posterIconLiquid{width:64px;height:64px;border-radius:18px;background:linear-gradient(135deg, rgba(139,92,246,0.45), rgba(6,255,165,0.35), rgba(59,130,246,0.3), rgba(236,72,153,0.2));backdrop-filter:blur(18px) saturate(180%);display:flex;align-items:center;justify-content:center;font-size:31px;border:1.5px solid rgba(255,255,255,0.35);box-shadow:inset 0 1.5px 0 rgba(255,255,255,0.5), 0 0 22px rgba(139,92,246,0.6), 0 0 35px rgba(6,255,165,0.2), inset 0 -1.5px 8px rgba(0,0,0,0.4);position:relative;overflow:hidden;animation: iconLiquid 3s ease-in-out infinite}
-.posterIconLiquid::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg, rgba(255,255,255,0.4) 0%, transparent 40%, rgba(6,255,165,0.2) 100%);border-radius:18px;animation: waterFlow 2.5s ease-in-out infinite}
-@keyframes iconLiquid{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-@keyframes waterFlow{0%{transform:translateX(-10%) translateY(-10%)}50%{transform:translateX(10%) translateY(5%)}100%{transform:translateX(-10%) translateY(-10%)}}
-.posterText b{font-size:22px;font-weight:800;letter-spacing:-0.4px;text-shadow:0 0 15px rgba(139,92,246,0.4)}
-.posterText span{display:block;font-size:13px;opacity:0.75;margin-top:2px;font-family:'JetBrains Mono';color:#8affff;text-shadow:0 0 10px rgba(6,255,165,0.5)}
-.posterFooter{margin-top:13px;padding-top:11px;border-top:1px solid rgba(139,92,246,0.2);display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:10.5px;opacity:0.9;letter-spacing:0.4px}
-.grid{max-width:1380px;margin:auto;padding:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(368px,1fr));gap:15px}
-.posterCard input,.posterCard select,.posterCard textarea{width:100%;padding:13px 15px;border-radius:15px;background:rgba(0,0,0,0.5);border:1px solid rgba(139,92,246,0.3);color:#fff;margin-bottom:9px;outline:none;font-size:13px;backdrop-filter:blur(12px);transition:0.3s}
-.posterCard input:focus{border-color:#8b5cf6;box-shadow:0 0 20px rgba(139,92,246,0.4), inset 0 0 10px rgba(139,92,246,0.1)}
-.btn{width:100%;padding:13px;border:none;border-radius:15px;background:linear-gradient(135deg, rgba(139,92,246,0.35), rgba(59,130,246,0.3));border:1px solid rgba(255,255,255,0.25);color:#fff;font-weight:700;cursor:pointer;backdrop-filter:blur(12px);transition:0.3s;box-shadow:0 4px 15px rgba(0,0,0,0.3)}
-.btn:hover{background:linear-gradient(135deg, rgba(139,92,246,0.55), rgba(59,130,246,0.45));transform:translateY(-2px);box-shadow:0 8px 25px rgba(139,92,246,0.4)}
-.btnPrimary{background:linear-gradient(135deg,#8b5cf6,#3b82f6,#06ffa5,#ec4899);background-size:300% 300%;border-color:rgba(255,255,255,0.45);box-shadow:0 8px 30px rgba(139,92,246,0.6);font-weight:900;animation: gradientShift 4s ease infinite}
-@keyframes gradientShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-.res{margin-top:11px;padding:13px;background:rgba(0,0,0,0.55);border-radius:15px;font-size:12.5px;border:1px solid rgba(139,92,246,0.25);min-height:18px;line-height:1.65;word-break:break-word;backdrop-filter:blur(12px)}
-.tabBtn{padding:7px 14px;border-radius:22px;border:1px solid rgba(139,92,246,0.3);background:rgba(255,255,255,0.07);color:#fff;font-size:11px;cursor:pointer;margin:3px;display:inline-block;transition:0.3s;backdrop-filter:blur(8px)}
-.tabBtn.active{background:linear-gradient(135deg,rgba(139,92,246,0.95),rgba(6,255,165,0.6));border-color:rgba(255,255,255,0.5);box-shadow:0 0 20px rgba(139,92,246,0.5);transform:scale(1.05)}
-.dot{width:8px;height:8px;border-radius:50%;background:#06ffa5;box-shadow:0 0 12px #06ffa5, 0 0 20px #06ffa5;display:inline-block;margin-right:7px;animation:blink 1.3s infinite}
-@keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.8)}}
-.btnSmall{padding:7px 12px;border-radius:11px;border:1px solid rgba(139,92,246,0.35);background:rgba(139,92,246,0.18);color:#fff;font-size:11px;cursor:pointer;margin:3px;display:inline-block;text-decoration:none;transition:0.3s;backdrop-filter:blur(6px)}
-.btnSmall:hover{background:rgba(139,92,246,0.35);transform:translateY(-1px);box-shadow:0 4px 12px rgba(139,92,246,0.3)}
+.posterCard::before{content:'';position:absolute;inset:0;background:linear-gradient(110deg, rgba(255,255,255,0.24) 0%, transparent 38%, transparent 100%);pointer-events:none;border-radius:22px}
+.posterCard::after{content:'';position:absolute;inset:-1px;border-radius:22px;padding:1.2px;background:linear-gradient(90deg,#8b5cf6,#06ffa5,#3b82f6,#f59e0b,#8b5cf6);-webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0.55;pointer-events:none}
+.posterCard:hover{transform:translateY(-3px) scale(1.01)}
+.posterRow{display:flex;align-items:center;gap:14px}
+.posterIcon{width:58px;height:58px;border-radius:16px;background:linear-gradient(135deg, rgba(139,92,246,0.4), rgba(6,255,165,0.28));backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;font-size:28px;border:1px solid rgba(255,255,255,0.24);box-shadow:inset 0 1px 0 rgba(255,255,255,0.35), 0 0 20px rgba(139,92,246,0.4)}
+.posterText b{font-size:19px;font-weight:800;letter-spacing:-0.2px}
+.posterText span{display:block;font-size:12px;opacity:0.72;margin-top:1px}
+.posterFooter{margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.15);display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:10px;opacity:0.9}
+.dot{width:7px;height:7px;border-radius:50%;background:#06ffa5;box-shadow:0 0 8px #06ffa5;display:inline-block;margin-right:5px;animation:blink 1.4s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+.grid{max-width:1320px;margin:auto;padding:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(370px,1fr));gap:14px}
+.posterCard input,.posterCard select,.posterCard textarea{width:100%;padding:12px 14px;border-radius:14px;background:rgba(0,0,0,0.36);border:1px solid rgba(255,255,255,0.16);color:#fff;margin-bottom:8px;outline:none;font-size:13px}
+.btn{width:100%;padding:13px;border:none;border-radius:14px;background:linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.08));border:1px solid rgba(255,255,255,0.24);color:#fff;font-weight:700;cursor:pointer}
+.btnPrimary{background:linear-gradient(135deg,#8b5cf6,#3b82f6);border-color:rgba(255,255,255,0.35);box-shadow:0 6px 22px rgba(139,92,246,0.42)}
+.btnSmall{padding:7px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.1);color:#fff;font-size:11px;cursor:pointer;margin:3px;display:inline-block;text-decoration:none}
+.res{margin-top:10px;padding:12px;background:rgba(0,0,0,0.42);border-radius:14px;font-size:12.5px;border:1px solid rgba(255,255,255,0.13);min-height:18px;line-height:1.6;word-break:break-word}
+.tabBtn{padding:7px 12px;border-radius:20px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:11px;cursor:pointer;margin:3px;display:inline-block}
+.tabBtn.active{background:rgba(139,92,246,0.9);border-color:rgba(255,255,255,0.3)}
 </style>
 </head>
 <body>
-<canvas id="bgBlackhole"></canvas><canvas id="bgWater"></canvas><div id="bgMesh"></div>
-<div class="top"><h1>EM7 HOON v6.0 LIQUID BLACKHOLE GALAXY</h1><p>PHOTO STYLE 100% • BLACKHOLE + NEBULA STARS • WATER FLOW GLASS • EM7 AMAN • 40 TOOLS • 1000+ Q&A</p></div>
-<div style="max-width:1380px;margin:18px auto;padding:0 12px">
-<div class="posterCard" style="text-align:center;padding:30px 20px;background:linear-gradient(180deg, rgba(14,18,42,0.92) 0%, rgba(6,10,28,0.95) 100%)">
-<div class="logoHex">S</div>
-<b style="font-size:34px;letter-spacing:-1.2px;font-weight:900;text-shadow:0 0 20px rgba(139,92,246,0.6)">EM7 HOON</b><div style="font-family:'JetBrains Mono';font-size:13.5px;margin-top:7px;letter-spacing:2.5px;opacity:0.95;color:#a78bfa;text-shadow:0 0 15px rgba(139,92,246,0.5)">• LIQUID GLASS • LIQUID BLACKHOLE • AI Faster on Google</div>
-<div class="posterFooter" style="justify-content:center;gap:22px;margin-top:16px;font-size:11.5px"><span><span class="dot"></span>v6.0 BLACKHOLE GALAXY - Liquid water flow - Nebula stars rotating - Patch OK</span><span>REGION: Lucknow • UP32 • ONLINE • READY • BLACKHOLE ACTIVE</span></div>
+<div id="bgMesh"></div><canvas id="bgAnim"></canvas>
+<div class="top"><h1>EM7 HOON v4.0 LIQUID GLASS</h1><p>POSTER STYLE • AI AMAN • MEGA 7P • REAL ANSWER • TURBO FIXED • UP32</p></div>
+<div style="max-width:1320px;margin:14px auto;padding:0 12px">
+<div class="posterCard" style="text-align:center;padding:24px 16px">
+<div style="width:90px;height:90px;margin:0 auto 12px;background:linear-gradient(135deg, rgba(139,92,246,0.5), rgba(6,255,165,0.35));border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:42px;border:1px solid rgba(255,255,255,0.3);box-shadow:0 0 30px rgba(139,92,246,0.5), inset 0 1px 0 rgba(255,255,255,0.4)">S</div>
+<b style="font-size:26px;letter-spacing:-0.5px">EM7 HOON</b><div style="font-family:'JetBrains Mono';font-size:12px;margin-top:4px;letter-spacing:2px;opacity:0.9">• LIQUID GLASS • AI Faster on Google</div>
+<div class="posterFooter" style="justify-content:center;gap:18px;margin-top:12px"><span><span class="dot"></span>v4.0 REAL AI - Mere Jaisa - Thinking Mode</span><span>REGION: Lucknow • CODE: UP32 • ONLINE • READY</span></div>
 </div></div>
 <div class="grid">
-<div class="posterCard" onclick="document.getElementById('sec-aman').scrollIntoView({behavior:'smooth'})" style="border-color:rgba(168,85,247,0.6);box-shadow:0 0 35px rgba(168,85,247,0.4)">
-<div class="posterRow"><div class="posterIconLiquid" style="background:radial-gradient(circle at 30% 30%, rgba(255,255,255,0.5), rgba(168,85,247,0.6) 30%, rgba(6,255,165,0.4) 70%)">♊</div><div class="posterText"><b>EM7 AMAN</b><span>Multimodal / Reasoning • Blackhole AI • Mere Jaisa</span></div></div><div class="posterFooter"><span>} response: 0.6s • 99% accuracy • 1000+ Q&A • Blackhole Thinking</span><span>●● BLACKHOLE</span></div>
-</div>
-<div class="posterCard" onclick="document.getElementById('sec-veo').scrollIntoView({behavior:'smooth'})"><div class="posterRow"><div class="posterIconLiquid">🎬</div><div class="posterText"><b>Veo</b><span>Video Generation • EMI/BMI • Galaxy Speed</span></div></div><div class="posterFooter"><span>} 1080p • 8s sample • Real-time • Galaxy</span><span>●●</span></div></div>
-<div class="posterCard" onclick="document.getElementById('sec-mega').scrollIntoView({behavior:'smooth'})"><div class="posterRow"><div class="posterIconLiquid">🎵</div><div class="posterText"><b>Lyria</b><span>Music & Audio • 10 AI Tools • Nebula Sound</span></div></div><div class="posterFooter"><span>} Text → Music • High-fidelity • Nebula • 10P</span><span>●●</span></div></div>
-<div class="posterCard" onclick="document.getElementById('sec-nano').scrollIntoView({behavior:'smooth'})"><div class="posterRow"><div class="posterIconLiquid">🍌</div><div class="posterText"><b>Nano Banana</b><span>Nano Model / On-device • TURBO • Blackhole Fast</span></div></div><div class="posterFooter"><span>} Ultra-fast • &lt;200ms • Real Prompt • Blackhole</span><span>●●</span></div></div>
-<div class="posterCard" id="sec-aman"><div class="posterRow"><div class="posterIconLiquid">✦</div><div class="posterText"><b>EM7 AMAN REAL v6.0 - BLACKHOLE GALAXY</b><span>Logo ✦ same - Liquid blackhole thinking - Photo style 100%</span></div></div><div style="margin-top:12px"><button class="btn btnPrimary" id="btnAiOpen">✦ Open EM7 AMAN - Blackhole Thinking - 1000+ Q&A - Galaxy</button><div id="amanR" class="res">v6.0 BLACKHOLE GALAXY - EM7 AMAN - 1000+ Q&A - Liquid blackhole background ghum raha hai - Nebula stars - Water flow glass - Mere jaisa jawab - Photo style 100%!</div></div><div class="posterFooter"><span>} AI Model: EM7-META-v6.0 • Blackhole • 1000+ Q&A • Galaxy</span><span>UP32 • BLACKHOLE</span></div></div>
-<div class="posterCard" id="sec-nano"><div class="posterRow"><div class="posterIconLiquid">🎨</div><div class="posterText"><b>Nano Banana - TURBO v6.0 Blackhole</b><span>Jo likhoge wahi banega - Galaxy style</span></div></div>
+<div class="posterCard" onclick="document.getElementById('sec-aman').scrollIntoView({behavior:'smooth'})"><div class="posterRow"><div class="posterIcon">♊</div><div class="posterText"><b>AI AMAN</b><span>Multimodal / Reasoning • Real Answer • Mere Jaisa</span></div></div><div class="posterFooter"><span>} response: REAL API • Thinking</span><span>●●</span></div></div>
+<div class="posterCard" onclick="document.getElementById('sec-veo').scrollIntoView({behavior:'smooth'})"><div class="posterRow"><div class="posterIcon">🎬</div><div class="posterText"><b>Veo</b><span>Video Generation • EMI/BMI Engine</span></div></div><div class="posterFooter"><span>} 1080p • 8s sample • Real-time</span><span>●●</span></div></div>
+<div class="posterCard" onclick="document.getElementById('sec-mega').scrollIntoView({behavior:'smooth'})"><div class="posterRow"><div class="posterIcon">🧠</div><div class="posterText"><b>MEGA 7P TOOLS</b><span>Music & Audio • 7 AI Photo Tools</span></div></div><div class="posterFooter"><span>} Text → Music • High-fidelity • 7P</span><span>●●</span></div></div>
+<div class="posterCard" onclick="document.getElementById('sec-nano').scrollIntoView({behavior:'smooth'})"><div class="posterRow"><div class="posterIcon">🍌</div><div class="posterText"><b>Nano Banana</b><span>Nano Model / On-device • TURBO FIXED</span></div></div><div class="posterFooter"><span>} Ultra-fast • &lt;300ms • Real Prompt</span><span>●●</span></div></div>
+<div class="posterCard" id="sec-aman"><div class="posterRow"><div class="posterIcon">✦</div><div class="posterText"><b>AI AMAN - REAL v4.0 - Mere Jaisa</b><span>Logo same ✦ - Real answer - Meta AI jaisa thinking</span></div></div><div style="margin-top:12px"><button class="btn btnPrimary" id="btnAiOpen">✦ Open AI AMAN REAL - Thinking Mode</button><div id="amanR" class="res">v4.0 AI AMAN - Mere jaisa jawab dega - REAL API - Har sawal ka sahi uttar - Thinking mode ON!</div></div><div class="posterFooter"><span>} AI Model: EM7-META-v4.0 • REAL API • Thinking</span><span>UP32</span></div></div>
+<div class="posterCard" id="sec-nano"><div class="posterRow"><div class="posterIcon">🎨</div><div class="posterText"><b>Nano Banana - TURBO FIXED v4.0</b><span>Jo likhoge wahi banega - No black bug</span></div></div>
 <div style="margin-top:12px">
-<select id="imgStyle"><option value="ultra realistic, 8K, photorealistic, liquid glass, blackhole galaxy, nebula, masterpiece">1. Real 8K Blackhole Galaxy</option><option value="3D render, Pixar, liquid glass, blackhole, vibrant, nebula" selected>2. 3D Pixar Blackhole</option><option value="anime, Ghibli, liquid glass, galaxy, nebula stars">3. Anime Galaxy</option><option value="cyberpunk, neon, blackhole, dark, liquid glass, galaxy">4. Cyberpunk Blackhole</option></select>
-<textarea id="imgP" rows="2">A black Thar in Lucknow Hazratganj at night, liquid blackhole galaxy background, nebula stars rotating, water flow glass, ultra HD</textarea>
-<div style="display:flex;gap:8px;margin-bottom:8px"><select id="imgRatio"><option value="1024x1024">1:1 Square</option><option value="1024x1792">9:16 Story</option><option value="1792x1024" selected>16:9 Wide Galaxy</option></select><select id="imgCount"><option value="2" selected>2 Turbo Blackhole</option><option value="4">4 Pro Galaxy</option></select></div>
-<button class="btn btnPrimary" id="btnImg">⚡ Generate REAL Blackhole Galaxy v6.0</button>
-<div id="imgR" class="res">BLACKHOLE GALAXY v6.0: Nebula stars rotating - Water flow glass - Jo likhoge wahi banega!</div>
-</div><div class="posterFooter"><span>} Flux-Turbo • Blackhole Galaxy • v6.0</span><span>v6.0 • BLACKHOLE</span></div></div>
-<div class="posterCard"><div class="posterRow"><div class="posterIconLiquid">📱</div><div class="posterText"><b>WhatsApp Direct v6.0</b><span>Instant • Blackhole Fast • Galaxy</span></div></div><input id="wa" placeholder="91XXXXXXXXXX"><input id="waMsg" placeholder="Message - Blackhole fast"><button class="btn" id="btnWa">Open Instant Blackhole ⚡</button><div id="waR" class="res"></div></div>
-<div class="posterCard"><div class="posterRow"><div class="posterIconLiquid">📍</div><div class="posterText"><b>GPS ULTRA v6.0 Blackhole</b><span>Altitude + Speed + Galaxy Map</span></div></div><button class="btn" id="btnGps">Get Location ULTRA Blackhole 📍</button><div id="gpsR" class="res">GPS High Accuracy - Blackhole Galaxy</div></div>
-<div class="posterCard"><div class="posterRow"><div class="posterIconLiquid">🌐</div><div class="posterText"><b>IP Tracker ULTRA Blackhole</b><span>IP + City + ISP + VPN • Galaxy</span></div></div><button class="btn" id="btnIp">Get IP + Map Blackhole 🌐</button><div id="ipR" class="res">IP + ISP + VPN Detect - Galaxy</div></div>
-<div class="posterCard"><div class="posterRow"><div class="posterIconLiquid">📞</div><div class="posterText"><b>Number Info Pro Blackhole</b><span>Truecaller + Carrier • Galaxy</span></div></div><input id="mob" placeholder="10 digit"><button class="btn" id="btnMob">Get Info Blackhole 📞</button><div id="mobR" class="res"></div></div>
-<div class="posterCard"><div class="posterRow"><div class="posterIconLiquid">🚗</div><div class="posterText"><b>Vehicle RTO Pro Blackhole</b><span>RTO + Parivahan • Galaxy</span></div></div><input id="veh" placeholder="UP32AB1234"><button class="btn" id="btnVeh">Get RTO Blackhole 🚗</button><div id="vehR" class="res"></div></div>
-<div class="posterCard"><div class="posterRow"><div class="posterIconLiquid">🛡️</div><div class="posterText"><b>Hacking Lab v6.0 Blackhole</b><span>WiFi QR + Hash • Galaxy</span></div></div>
-<input id="wifiSSID" placeholder="WiFi: EM7-BLACKHOLE"><input id="wifiPass" placeholder="Pass: 12345678"><button class="btn" id="btnWifiQR">📶 WiFi QR Blackhole</button><div id="wifiR" class="res"></div>
-<input id="hashText" placeholder="Text: admin123"><select id="hashType"><option value="sha256" selected>SHA256 Blackhole</option><option value="base64">Base64 Galaxy</option><option value="md5">MD5 Nebula</option></select><button class="btn" id="btnHash">🔐 Hash Generate Blackhole</button><div id="hashR" class="res"></div>
-</div>
-<div class="posterCard"><div class="posterRow"><div class="posterIconLiquid">📸</div><div class="posterText"><b>Insta Tools v6.0 Blackhole NEW</b><span>DP + Hashtag 30 • Galaxy</span></div></div>
-<input id="instaUser" placeholder="Username: em7hoon"><button class="btn" id="btnInsta">View Tools Blackhole 📸</button><div id="instaR" class="res"></div>
-<input id="hashTagTopic" placeholder="Topic: attitude"><button class="btn" id="btnHashTag">Generate 30 Hashtags Galaxy #️⃣</button><div id="hashtagR" class="res"></div>
-</div>
-<div class="posterCard"><div class="posterRow"><div class="posterIconLiquid">🎥</div><div class="posterText"><b>YouTube Tools v6.0 Blackhole NEW</b><span>Title + Tags 10 • Galaxy</span></div></div>
-<input id="ytTitle" placeholder="Video Title: My Thar Blackhole Vlog"><button class="btn" id="btnYt">Generate Titles + Tags Galaxy 🎥</button><div id="ytR" class="res"></div>
-</div>
-<div class="posterCard"><div class="posterRow"><div class="posterIconLiquid">💬</div><div class="posterText"><b>Text Magic v6.0 Blackhole NEW</b><span>Binary • Morse • Leet • Galaxy</span></div></div>
-<textarea id="textMagicIn" rows="2" placeholder="Hello EM7 Blackhole"></textarea><select id="textMagicType"><option value="binary">Binary Galaxy</option><option value="morse">Morse Nebula</option><option value="reverse">Reverse Blackhole</option><option value="upper">UPPER Galaxy</option><option value="leet">Leet Blackhole</option></select><button class="btn" id="btnTextMagic">Magic Convert Blackhole ✨</button><div id="textMagicR" class="res"></div>
-</div>
-<div class="posterCard"><div class="posterRow"><div class="posterIconLiquid">🧮</div><div class="posterText"><b>Math Master v6.0 Blackhole NEW</b><span>GST • % • Love • Galaxy</span></div></div>
-<input id="gstAmt" placeholder="Amount: 1000"><input id="gstPer" placeholder="GST %: 18" value="18"><button class="btn" id="btnGst">GST Calc Blackhole 💰</button><div id="gstR" class="res"></div>
-<input id="perVal" placeholder="Value: 500" style="margin-top:6px"><input id="perPer" placeholder="%: 20" value="20"><button class="btn" id="btnPer">% Calc Galaxy 📊</button><div id="perR" class="res"></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px"><input id="love1" placeholder="Your Name: Aman"><input id="love2" placeholder="Crush: Neha"></div><button class="btn" id="btnLove">Love % Calc Blackhole ❤️</button><div id="loveR" class="res"></div>
-</div>
-</div>
-<div class="grid">
-<div class="posterCard" id="sec-mega"><div class="posterRow"><div class="posterIconLiquid">🧠</div><div class="posterText"><b>MEGA TOOLS v6.0 Blackhole - 12 Tools</b><span>Photo Style + Blackhole Galaxy Icons</span></div></div>
+<select id="imgStyle"><option value="ultra realistic, 8K, photorealistic, liquid glass, masterpiece">1. Real 8K Liquid</option><option value="3D render, Pixar, liquid glass, vibrant" selected>2. 3D Pixar Glass</option><option value="anime, Ghibli, liquid glass">3. Anime Glass</option><option value="cyberpunk, neon, dark, liquid glass">4. Cyberpunk</option></select>
+<textarea id="imgP" rows="2">A black Thar in Lucknow Hazratganj at night, liquid glass, neon, ultra HD</textarea>
+<div style="display:flex;gap:8px;margin-bottom:8px"><select id="imgRatio"><option value="1024x1024">1:1 Square</option><option value="1024x1792">9:16 Story</option><option value="1792x1024" selected>16:9 Wide</option></select><select id="imgCount"><option value="1">1 Fast</option><option value="2" selected>2 Turbo</option><option value="4">4 Pro</option></select></div>
+<button class="btn btnPrimary" id="btnImg">⚡ Generate REAL TURBO v4.0</button>
+<div id="imgR" class="res">FIXED v4.0: Dual engine - Ab black nahi - Jo likhoge wahi banega!</div>
+</div><div class="posterFooter"><span>} Flux-Turbo • Real Prompt • v4.0 Fixed</span><span>v4.0</span></div></div>
+<div class="posterCard"><div class="posterRow"><div class="posterIcon">📱</div><div class="posterText"><b>WhatsApp Direct</b><span>Instant open • No save</span></div></div><input id="wa" placeholder="91XXXXXXXXXX"><input id="waMsg" placeholder="Message"><button class="btn" id="btnWa">Open Instant</button><div id="waR" class="res"></div><div class="posterFooter"><span>} wa.me • Instant</span><span>OK</span></div></div>
+<div class="posterCard"><div class="posterRow"><div class="posterIcon">📍</div><div class="posterText"><b>GPS ULTRA v4.0</b><span>Altitude + Speed + Accuracy</span></div></div><button class="btn" id="btnGps">Get Location ULTRA</button><div id="gpsR" class="res">GPS High Accuracy</div><div class="posterFooter"><span>} High Accuracy • Map</span><span>GPS</span></div></div>
+<div class="posterCard"><div class="posterRow"><div class="posterIcon">🌐</div><div class="posterText"><b>IP Tracker ULTRA</b><span>IP + City + ISP + VPN</span></div></div><button class="btn" id="btnIp">Get IP + Map</button><div id="ipR" class="res">IP + ISP + VPN Detect</div><div class="posterFooter"><span>} VPN Detect • Real IP</span><span>NET</span></div></div>
+<div class="posterCard"><div class="posterRow"><div class="posterIcon">📞</div><div class="posterText"><b>Number Info</b><span>Truecaller + Carrier</span></div></div><input id="mob" placeholder="10 digit"><button class="btn" id="btnMob">Get Info</button><div id="mobR" class="res"></div><div class="posterFooter"><span>} OSINT • Lookup</span><span>SEC</span></div></div>
+<div class="posterCard"><div class="posterRow"><div class="posterIcon">🚗</div><div class="posterText"><b>Vehicle RTO Pro</b><span>RTO + Parivahan Link</span></div></div><input id="veh" placeholder="UP32AB1234"><button class="btn" id="btnVeh">Get RTO</button><div id="vehR" class="res"></div><div class="posterFooter"><span>} Vahan • Govt</span><span>RTO</span></div></div>
+<div class="posterCard" style="border-color:rgba(245,158,11,0.35)"><div class="posterRow"><div class="posterIcon">🛡️</div><div class="posterText"><b>Hacking Lab v4.0</b><span>WiFi QR + Hash + Pass</span></div></div>
+<div style="margin-top:10px">
+<input id="wifiSSID" placeholder="WiFi: EM7-HACK"><input id="wifiPass" placeholder="Pass: 12345678"><button class="btn" id="btnWifiQR">📶 WiFi QR</button><div id="wifiR" class="res"></div>
+<input id="hashText" placeholder="Text: admin123" style="margin-top:6px"><select id="hashType"><option value="sha256" selected>SHA256</option><option value="base64">Base64</option></select><button class="btn" id="btnHash">🔐 Hash Generate</button><div id="hashR" class="res"></div>
+</div><div class="posterFooter"><span>} Hacking Lab • NEW</span><span>v4.0</span></div></div>
+<div class="posterCard" id="sec-mega"><div class="posterRow"><div class="posterIcon">🧠</div><div class="posterText"><b>MEGA 7P TOOLS - NEW v4.0</b><span>7 AI Photo Tools - No Car Calc - No duplicate</span></div></div>
 <div style="margin:10px 0;display:flex;flex-wrap:wrap;gap:3px">
-<button class="tabBtn active" data-tab="tts">TTS Blackhole</button><button class="tabBtn" data-tab="bg">BG ULTRA Galaxy</button><button class="tabBtn" data-tab="enhance">AI 4K/8K Blackhole</button><button class="tabBtn" data-tab="4x">4X TRANSFORM Galaxy</button><button class="tabBtn" data-tab="bio">Bio 20 Galaxy</button><button class="tabBtn" data-tab="code">Code Gen Blackhole</button><button class="tabBtn" data-tab="color">Palette Nebula</button><button class="tabBtn" data-tab="qr">QR HD Galaxy</button>
+<button class="tabBtn active" data-tab="tts">TTS</button><button class="tabBtn" data-tab="bg">BG ULTRA</button><button class="tabBtn" data-tab="enhance">AI 4K/8K</button><button class="tabBtn" data-tab="4x">4X TRANSFORM</button><button class="tabBtn" data-tab="bio">Bio</button><button class="tabBtn" data-tab="code">Code</button><button class="tabBtn" data-tab="color">Color</button>
 </div>
-<div id="tab-tts"><textarea id="tts" rows="2" placeholder="Kuch likho... EM7 AMAN BLACKHOLE GALAXY..."></textarea><select id="ttsVoice"><option value="hi-IN">Hindi - Blackhole Voice</option><option value="en-IN">English - Galaxy</option><option value="en-US">English - Nebula</option></select><button class="btn" id="btnTts">🔊 Speak Blackhole Galaxy</button><div id="ttsR" class="res"></div></div>
-<div id="tab-bg" style="display:none"><input type="file" id="bgFile" accept="image/*"><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:6px 0"><select id="bgMode"><option value="green" selected>Green Galaxy</option><option value="white">White Nebula</option><option value="black">Black Blackhole</option><option value="custom">Custom Galaxy</option><option value="ai">AI Auto Blackhole</option></select><input type="color" id="bgCustomColor" value="#8b5cf6"></div><input type="range" id="bgTol" min="5" max="100" value="40" style="width:100%"><button class="btn" id="btnBg">✨ Remove BG ULTRA Blackhole Galaxy</button><canvas id="bgCanvas" style="max-width:100%;display:none"></canvas><div id="bgR" class="res"></div></div>
-<div id="tab-enhance" style="display:none"><input type="file" id="enhanceFile" accept="image/*"><select id="enhanceMode"><option value="4k">Enhance 4K ULTRA Blackhole</option><option value="8k">Enhance 8K PRO MAX Galaxy</option><option value="cartoon">Cartoon AI Nebula</option><option value="neon">Neon Glow Galaxy</option><option value="hd">HD Restore Blackhole</option></select><button class="btn" id="btnEnhance">🚀 Enhance to 4K/8K REAL Blackhole Galaxy</button><div id="enhanceR" class="res">Real canvas upscale - Blackhole Galaxy - 4K</div></div>
-<div id="tab-4x" style="display:none"><input type="file" id="fourXFile" accept="image/*"><button class="btn btnPrimary" id="btnFourX">✨ 1 Photo → 4 AI Styles Blackhole Galaxy (Cartoon/Ghibli/Cyber/Vintage)</button><div id="fourXR" class="res">1 photo se 4 alag AI photo - Blackhole Galaxy transform</div></div>
-<div id="tab-bio" style="display:none"><input id="bioTopic" placeholder="Topic: attitude / hacker / blackhole"><select id="bioStyle"><option value="attitude">Attitude Blackhole</option><option value="hacker">Hacker Galaxy</option><option value="car">Car Lover Nebula</option><option value="love">Love Galaxy</option><option value="vip">VIP Blackhole</option></select><button class="btn" id="btnBio">Generate 20 Bios Blackhole Galaxy 🔥</button><div id="bioR" class="res"></div></div>
-<div id="tab-code" style="display:none"><input id="codeP" placeholder="Ek blackhole galaxy calculator banao"><button class="btn" id="btnCode">Generate Code Blackhole Galaxy 💻</button><div id="codeR" class="res"></div></div>
-<div id="tab-color" style="display:none"><input type="file" id="colorFile" accept="image/*"><button class="btn" id="btnColor">Extract Palette Nebula Galaxy 🎨</button><div id="colorR" class="res"></div></div>
-<div id="tab-qr" style="display:none"><input id="qrAdv" value="https://em7moon.live"><select id="qrStyle"><option value="normal">Normal QR Blackhole</option><option value="galaxy">Galaxy Style Nebula</option><option value="whatsapp">WhatsApp Blackhole</option></select><button class="btn" id="btnQrAdv">Generate QR HD Blackhole Galaxy</button><div id="qrAdvR" class="res"></div></div>
-<div class="posterFooter"><span>} 12P Tools • Blackhole Galaxy • v6.0</span><span>MEGA • BLACKHOLE • v6.0</span></div></div>
-<div class="posterCard" id="sec-veo"><div class="posterRow"><div class="posterIconLiquid">💰</div><div class="posterText"><b>Calculator HUB v6.0 Blackhole - 8 Tools</b><span>EMI • BMI • Age • GST • % • Love • Galaxy</span></div></div>
-<input id="emiAmt" value="500000"><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px"><input id="emiRate" value="9" placeholder="Rate %"><input id="emiYear" value="5" placeholder="Years"></div><button class="btn" id="btnEmi">Calculate EMI Blackhole 💰</button><div id="emiR" class="res"></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px"><input id="bmiH" value="170" placeholder="Height cm"><input id="bmiW" value="65" placeholder="Weight kg"></div><button class="btn" id="btnBmi">Check BMI + Health Blackhole 🏃</button><div id="bmiR" class="res"></div>
-<input type="date" id="dob" value="2005-01-01" style="margin-top:8px"><button class="btn" id="btnAge">Calculate Age + Days Blackhole 🎂</button><div id="ageR" class="res"></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px"><input id="love1b" placeholder="Your Name: Aman"><input id="love2b" placeholder="Crush: Neha"></div><button class="btn" id="btnLoveB">Love % Blackhole ❤️</button><div id="loveRB" class="res"></div>
-<input id="portIP" placeholder="Scan IP: 192.168.1.1 Blackhole" style="margin-top:8px"><button class="btn" id="btnPort">🔍 Port Scanner + Ping Blackhole</button><div id="portR" class="res"></div>
-<div class="posterFooter"><span>} Calculator • 8 Tools • Blackhole • v6.0</span><span>v6.0 • BLACKHOLE</span></div></div>
-<div class="posterCard"><div class="posterRow"><div class="posterIconLiquid">📧</div><div class="posterText"><b>Security HUB v6.0 Blackhole - 8 Tools</b><span>Email • QR • Pass • Speed • Galaxy</span></div></div>
-<input id="em" placeholder="email@gmail.com Blackhole"><button class="btn" id="btnEm">Check Breach + Validity Blackhole 📧</button><div id="emR" class="res"></div>
-<input id="qr" value="https://em7hoon.github.io" style="margin-top:6px"><button class="btn" id="btnQr">Generate QR HD + Download Blackhole 📱</button><div id="qrR" class="res"></div>
-<button class="btn" id="btnPass" style="margin-top:6px">Generate Strong Pass 24 Char Blackhole + Copy 🔐</button><div id="passR" class="res"></div>
-<button class="btn" id="btnSpeed" style="margin-top:6px">Check Speed + Device + Battery Blackhole 🔋</button><div id="speedR" class="res"></div>
-<div style="margin-top:8px"><input id="urlShort" placeholder="Long URL: https://... Blackhole"><button class="btn" id="btnShort">Short URL Blackhole Sim 🔗</button><div id="shortR" class="res"></div></div>
-<div class="posterFooter"><span>} Security • 8 Tools • Blackhole • v6.0</span><span>v6.0 • BLACKHOLE</span></div></div>
-<div class="posterCard"><div class="posterRow"><div class="posterIconLiquid">⚡</div><div class="posterText"><b>AI Super Tools v6.0 Blackhole NEW - 10 More</b><span>Fake Chat • Name Gen • Galaxy</span></div></div>
-<input id="fakeName" placeholder="Name: Rahul Blackhole"><select id="fakePlatform"><option value="whatsapp">WhatsApp Fake Chat Blackhole</option><option value="insta">Instagram Fake Galaxy</option></select><button class="btn" id="btnFakeChat">Generate Fake Chat Blackhole 💬</button><div id="fakeChatR" class="res"></div>
-<input id="nameGenType" placeholder="Type: hacker / blackhole / galaxy" style="margin-top:6px"><button class="btn" id="btnNameGen">Generate 10 Stylish Names Blackhole ✨</button><div id="nameGenR" class="res"></div>
-<textarea id="memeText" placeholder="Meme text: When you see Blackhole Galaxy..." style="margin-top:6px" rows="2"></textarea><button class="btn" id="btnMeme">Generate Meme Style Blackhole 😂</button><div id="memeR" class="res"></div>
-<div class="posterFooter"><span>} Super Tools • 10 NEW • Blackhole • v6.0</span><span>NEW • BLACKHOLE • v6.0</span></div></div>
+<div id="tab-tts"><textarea id="tts" rows="2" placeholder="Kuch likho..."></textarea><select id="ttsVoice"><option value="hi-IN">Hindi</option><option value="en-IN">English</option></select><button class="btn" id="btnTts">🔊 Speak</button><div id="ttsR" class="res"></div></div>
+<div id="tab-bg" style="display:none"><input type="file" id="bgFile" accept="image/*"><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:6px 0"><select id="bgMode"><option value="green" selected>Green</option><option value="white">White</option><option value="black">Black</option><option value="custom">Custom</option><option value="ai">AI Auto</option></select><input type="color" id="bgCustomColor" value="#00ff00"></div><input type="range" id="bgTol" min="5" max="100" value="40" style="width:100%"><button class="btn" id="btnBg">✨ Remove BG ULTRA</button><canvas id="bgCanvas" style="max-width:100%;display:none"></canvas><div id="bgR" class="res"></div></div>
+<div id="tab-enhance" style="display:none"><input type="file" id="enhanceFile" accept="image/*"><select id="enhanceMode"><option value="4k">Enhance 4K ULTRA</option><option value="8k">Enhance 8K PRO MAX</option><option value="cartoon">Cartoon AI</option><option value="neon">Neon Glow</option></select><button class="btn" id="btnEnhance">🚀 Enhance to 4K/8K REAL</button><div id="enhanceR" class="res">Real canvas upscale - 4K quality</div></div>
+<div id="tab-4x" style="display:none"><input type="file" id="fourXFile" accept="image/*"><button class="btn btnPrimary" id="btnFourX">✨ 1 Photo → 4 AI Styles (Cartoon/Ghibli/Cyber/Vintage)</button><div id="fourXR" class="res">1 photo se 4 alag AI photo banega - Real AI transform</div></div>
+<div id="tab-bio" style="display:none"><input id="bioTopic" placeholder="Topic: attitude"><select id="bioStyle"><option value="attitude">Attitude</option><option value="hacker">Hacker</option><option value="car">Car</option></select><button class="btn" id="btnBio">Generate 20 Bios</button><div id="bioR" class="res"></div></div>
+<div id="tab-code" style="display:none"><input id="codeP" placeholder="Ek calculator banao"><button class="btn" id="btnCode">Generate Code</button><div id="codeR" class="res"></div></div>
+<div id="tab-color" style="display:none"><input type="file" id="colorFile" accept="image/*"><button class="btn" id="btnColor">Extract Palette</button><div id="colorR" class="res"></div></div>
+<div class="posterFooter"><span>} 7P Tools • No duplicate • v4.0</span><span>MEGA</span></div></div>
+<div class="posterCard" id="sec-veo"><div class="posterRow"><div class="posterIcon">💰</div><div class="posterText"><b>EMI + BMI + Age + Hack</b><span>Veo • No Car Calc duplicate</span></div></div>
+<input id="emiAmt" value="500000"><input id="emiRate" value="9"><input id="emiYear" value="5"><button class="btn" id="btnEmi">Calculate EMI</button><div id="emiR" class="res"></div>
+<input id="bmiH" value="170" style="margin-top:6px"><input id="bmiW" value="65"><button class="btn" id="btnBmi">Check BMI</button><div id="bmiR" class="res"></div>
+<input type="date" id="dob" value="2005-01-01" style="margin-top:6px"><button class="btn" id="btnAge">Calculate Age</button><div id="ageR" class="res"></div>
+<input id="portIP" placeholder="Scan IP: 192.168.1.1" style="margin-top:6px"><button class="btn" id="btnPort">🔍 Port Scanner</button><div id="portR" class="res"></div>
+<div class="posterFooter"><span>} Calculator • No duplicate</span><span>v4.0</span></div></div>
+<div class="posterCard"><div class="posterRow"><div class="posterIcon">📧</div><div class="posterText"><b>Email + QR + Pass + Speed</b><span>Security Tools</span></div></div>
+<input id="em" placeholder="email@gmail.com"><button class="btn" id="btnEm">Check Breach</button><div id="emR" class="res"></div>
+<input id="qr" value="https://em7hoon.github.io" style="margin-top:6px"><button class="btn" id="btnQr">Generate QR HD</button><div id="qrR" class="res"></div>
+<button class="btn" id="btnPass" style="margin-top:6px">Generate Strong Pass</button><div id="passR" class="res"></div>
+<button class="btn" id="btnSpeed" style="margin-top:6px">Check Speed + Device</button><div id="speedR" class="res"></div>
+<div class="posterFooter"><span>} Security • OSINT</span><span>v4.0</span></div></div>
 </div>
-<div class="posterCard" style="max-width:1380px;margin:14px auto;padding:22px">
-<div class="posterRow" style="justify-content:center"><div class="posterIconLiquid" style="width:72px;height:72px;font-size:34px;background:radial-gradient(circle at 30% 30%, #fff, #8b5cf6, #06ffa5)">⚡</div><div class="posterText" style="text-align:center"><b style="font-size:21px">EM7 HOON - AMAN - LUCKNOW UP32 - v6.0 LIQUID BLACKHOLE GALAXY 100%</b><span>v6.0 BLACKHOLE GALAXY • EM7 AMAN (Gemini → EM7 AMAN) • Liquid Blackhole + Nebula Stars Rotating • Water Flow Glass • 1000+ Q&A • 40 TOOLS • REAL API • MERE JAISA AI</span></div></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px"><div><input id="contactName" value="Aman"><input id="contactEmail" placeholder="Email: aman@em7moon.live"><textarea id="contactMsg" rows="4">Hi Aman - v6.0 Blackhole Galaxy 🔥 - Photo style 100% same - EM7 AMAN - Liquid Blackhole + Nebula Stars Rotating - Water Flow Glass - 40 tools - Mere jaisa AI - Background hamesha ghumta rahega!</textarea></div>
-<div style="background:rgba(0,0,0,0.55);border-radius:18px;padding:14px;font-family:'JetBrains Mono';font-size:11px;border:1px solid rgba(139,92,246,0.35);box-shadow:inset 0 0 20px rgba(139,92,246,0.15)"><div style="color:#06ffa5">$ whoami</div><div>Aman - EM7 - v6.0 Blackhole Galaxy 100% Same</div><div style="color:#06ffa5;margin-top:6px">$ background</div><div style="color:#a78bfa">Liquid Blackhole Galaxy + Nebula Stars Rotating + Water Flow Glass - Hamesha ghumta rahega</div><div style="color:#06ffa5;margin-top:6px">$ style</div><div>Photo Style - Liquid Glass Icon + Neon Border + S Hexagon - Same as reference photo 100%</div><div style="color:#06ffa5;margin-top:6px">$ change1</div><div style="color:#f59e0b">Gemini → EM7 AMAN - Same icon style liquid glass blackhole</div><div style="color:#06ffa5;margin-top:6px">$ upgrade</div><div>1000+ Q&A + 40 Tools • All working • Fast max upgraded • Blackhole fast</div><div style="color:#06ffa5;margin-top:6px">$ ai</div><div>EM7 AMAN REAL - Mere jaisa thinking - REAL API - Blackhole thinking</div><div style="color:#06ffa5;margin-top:6px">$ version</div><div>v6.0 - 2026 - Blackhole Galaxy 100% Perfect - Water Flow</div></div></div>
-<button class="btn btnPrimary" id="btnContact" style="margin-top:12px">🚀 Send Secure Message v6.0 Blackhole Galaxy</button><div id="contactR" class="res" style="font-family:'JetBrains Mono'">>_ v6.0 blackhole galaxy system ready - EM7 AMAN - 1000 Q&A - 40 tools - Liquid blackhole + Nebula stars rotating...</div>
-<div class="posterFooter"><span>} Contact • Encrypted • Blackhole Galaxy</span><span>UP32 • ONLINE • READY • v6.0 BLACKHOLE GALAXY 100%</span></div></div>
-<div style="max-width:1380px;margin:0 auto 24px auto;padding:0 12px"><div class="posterCard" style="padding:12px;text-align:center"><b style="font-family:'JetBrains Mono';font-size:11px;letter-spacing:1px">G EM7 HOON - LIQUID BLACKHOLE GALAXY - Accelerating AI Workflows on Google Cloud - v6.0 PHOTO STYLE 100% - EM7 AMAN - Liquid Blackhole + Nebula Stars Rotating + Water Flow Glass - Lucknow UP32 - 2026 - 40 TOOLS - BLACKHOLE ACTIVE</b></div></div>
-<div id="aiB" style="position:fixed;bottom:22px;right:22px;width:70px;height:70px;border-radius:50%;background:radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9), rgba(168,85,247,0.9) 30%, rgba(6,255,165,0.7) 70%, rgba(0,0,0,0.8));backdrop-filter:blur(16px);border:2px solid rgba(255,255,255,0.45);display:flex;align-items:center;justify-content:center;font-size:32px;cursor:pointer;z-index:9999;box-shadow:0 12px 35px rgba(0,0,0,0.6), 0 0 30px rgba(168,85,247,0.6), 0 0 60px rgba(6,255,165,0.2);animation:floatBlackhole 3s ease-in-out infinite">✦</div>
-<div id="aiW" style="position:fixed;bottom:100px;right:12px;width:96%;max-width:520px;height:740px;background:rgba(6,10,26,0.97);backdrop-filter:blur(36px) saturate(200%);border-radius:26px;border:1px solid rgba(139,92,246,0.4);display:none;flex-direction:column;z-index:9999;box-shadow:0 24px 80px rgba(0,0,0,0.8), 0 0 50px rgba(139,92,246,0.25)">
-<div style="padding:15px;background:linear-gradient(135deg,rgba(168,85,247,0.3),rgba(6,255,165,0.2),rgba(236,72,153,0.15));display:flex;justify-content:space-between;font-weight:900;font-size:13.5px;border-radius:26px 26px 0 0;border-bottom:1px solid rgba(139,92,246,0.3)"><span>EM7 AMAN REAL v6.0 - BLACKHOLE GALAXY - 1000+ Q&A - ✦ Thinking • Galaxy</span><span id="aiClose" style="cursor:pointer;padding:5px 10px;background:rgba(255,255,255,0.12);border-radius:12px;border:1px solid rgba(255,255,255,0.2)">✕</span></div>
-<div id="aiBody" style="flex:1;overflow-y:auto;padding:13px;display:flex;flex-direction:column;gap:11px;background:radial-gradient(ellipse at center, rgba(139,92,246,0.08), rgba(0,0,0,0.7))"><div style="max-width:88%;padding:13px 15px;border-radius:19px;font-size:14px;background:linear-gradient(135deg, rgba(168,85,247,0.22), rgba(6,255,165,0.15), rgba(236,72,153,0.1));border:1px solid rgba(139,92,246,0.35);box-shadow:0 4px 20px rgba(139,92,246,0.15)">💧 <b>v6.0 BLACKHOLE GALAXY - EM7 AMAN - Photo Style 100% Same! - 1000+ Q&A - Mere Jaisa!</b><br><br>✦ Gemini → EM7 AMAN - Same liquid glass icon as your photo - Blackhole version!<br>🌌 Background: Liquid Blackhole + Nebula Stars Rotating - Hamesha ghumta rahega - Water flow glass jaisa!<br>🎨 Icon: Liquid glass + neon border + blackhole glow - Photo jaisa 100%!<br>🧠 1000+ Q&A loaded - Har sawal ka jawab - Mere jaisa thinking!<br>⚡ 40 Tools - Sab fast max upgraded - Blackhole fast!<br><br>Try karo:<br>- "Who are you" <br>- "AI kya hota hai?"<br>- "Bharat ki rajdhani?"<br>- "2+2"<br>- "/image black thar blackhole galaxy"<br><br>Bolo Guru? 🚀🌌</div></div>
-<div style="display:flex;gap:7px;padding:13px;background:rgba(139,92,246,0.1);border-radius:0 0 26px 26px;border-top:1px solid rgba(139,92,246,0.25)"><input id="aiI" placeholder="EM7 AMAN REAL v6.0 - Blackhole Galaxy - 1000+ Q&A - Mere jaisa..." style="flex:1;padding:14px 18px;border-radius:22px;border:1px solid rgba(139,92,246,0.35);background:rgba(0,0,0,0.55);color:#fff;outline:none;backdrop-filter:blur(10px)"><button id="btnSend" style="background:linear-gradient(135deg,#8b5cf6,#06ffa5,#ec4899);background-size:200% 200%;border:1.5px solid rgba(255,255,255,0.35);width:48px;height:48px;border-radius:50%;color:#fff;font-weight:900;font-size:18px;box-shadow:0 6px 20px rgba(139,92,246,0.5);animation:gradientShift 3s ease infinite">›</button></div>
-<div style="padding:6px 14px;font-size:9.5px;opacity:0.6;font-family:'JetBrains Mono';text-align:center;letter-spacing:0.5px">EM7-META-v6.0 • BLACKHOLE GALAXY • Photo Style 100% • 1000+ Q&A • Thinking • 40 Tools • REAL API • Liquid Blackhole + Nebula Stars Rotating + Water Flow Glass</div>
+<div class="posterCard" style="max-width:1320px;margin:12px auto;padding:20px">
+<div class="posterRow" style="justify-content:center"><div class="posterIcon" style="width:60px;height:60px;font-size:30px">⚡</div><div class="posterText" style="text-align:center"><b style="font-size:18px">EM7 HOON - AMAN - LUCKNOW UP32 - v4.0 POSTER STYLE - REAL AI MERE JAISA</b><span>v4.0 REAL API • AI AMAN MERE JAISA • TURBO FIXED • NO DUPLICATE</span></div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px"><div><input id="contactName" value="Aman"><input id="contactEmail" placeholder="Email"><textarea id="contactMsg" rows="4">Hi Aman - v4.0 Poster style 🔥 - Same as reference photo - AI AMAN REAL MERE JAISA - Image fixed - No duplicate!</textarea></div>
+<div style="background:rgba(0,0,0,0.42);border-radius:16px;padding:12px;font-family:'JetBrains Mono';font-size:11px;border:1px solid rgba(255,255,255,0.14)"><div style="color:#06ffa5">$ whoami</div><div>Aman - EM7 - v4.0 Poster Style REAL AI</div><div style="color:#06ffa5;margin-top:6px">$ ai</div><div style="color:#f59e0b">AI AMAN REAL - Mere jaisa - Thinking Mode</div><div style="color:#06ffa5;margin-top:6px">$ fix2</div><div>Image TURBO - Dual engine - No black</div><div style="color:#06ffa5;margin-top:6px">$ version</div><div>v4.0 REAL - 2026 - Poster Style</div></div></div>
+<button class="btn btnPrimary" id="btnContact" style="margin-top:12px">🚀 Send Secure Message v4.0</button><div id="contactR" class="res" style="font-family:'JetBrains Mono'">>_ v4.0 poster system ready - REAL AI Mere Jaisa...</div>
+<div class="posterFooter"><span>} Contact • Encrypted</span><span>UP32 • ONLINE • READY • v4.0 REAL</span></div></div>
+<div style="max-width:1320px;margin:0 auto 20px auto;padding:0 12px"><div class="posterCard" style="padding:10px;text-align:center"><b style="font-family:'JetBrains Mono';font-size:11px">G EM7 HOON - LIQUID GLASS - Accelerating AI Workflows on Google Cloud - v4.0 REAL AI - Lucknow UP32 - 2026</b></div></div>
+<div id="aiB" style="position:fixed;bottom:20px;right:20px;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,rgba(255,255,255,0.28),rgba(255,255,255,0.1));backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.28);display:flex;align-items:center;justify-content:center;font-size:28px;cursor:pointer;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.4)">✦</div>
+<div id="aiW" style="position:fixed;bottom:90px;right:12px;width:96%;max-width:480px;height:700px;background:rgba(12,16,36,0.92);backdrop-filter:blur(28px) saturate(180%);border-radius:24px;border:1px solid rgba(255,255,255,0.18);display:none;flex-direction:column;z-index:9999;box-shadow:0 20px 60px rgba(0,0,0,0.6)">
+<div style="padding:14px;background:linear-gradient(135deg,rgba(255,255,255,0.15),rgba(255,255,255,0.05));display:flex;justify-content:space-between;font-weight:700;font-size:13px;border-radius:24px 24px 0 0;border-bottom:1px solid rgba(255,255,255,0.12)"><span>AI AMAN REAL v4.0 - Mere Jaisa - Thinking</span><span id="aiClose" style="cursor:pointer">✕</span></div>
+<div id="aiBody" style="flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:10px;background:rgba(6,10,20,0.6)"><div style="max-width:88%;padding:11px 14px;border-radius:18px;font-size:13.4px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15)">💧 <b>v4.0 AI AMAN REAL - Mere jaisa! - Thinking Mode ON</b>
+✦ Ab main jaise jawab deta hu waise hi ye bhi dega! REAL API!
+🎨 Image: Jo likhoge wahi banega - Black bug fix!
+Try: "Who are you" - "AI kya hota hai?" - "/image black thar"
+Logo ✦ same - Poster style same! Bolo Guru? 🚀</div></div>
+<div style="display:flex;gap:6px;padding:12px;background:rgba(255,255,255,0.06);border-radius:0 0 24px 24px;border-top:1px solid rgba(255,255,255,0.1)"><input id="aiI" placeholder="AI AMAN REAL - Mere jaisa jawab dega - Thinking..." style="flex:1;padding:12px 16px;border-radius:20px;border:1px solid rgba(255,255,255,0.14);background:rgba(0,0,0,0.35);color:#fff;outline:none"><button id="btnSend" style="background:rgba(139,92,246,0.9);border:1px solid rgba(255,255,255,0.2);width:42px;height:42px;border-radius:50%;color:#fff;font-weight:800">›</button></div>
 </div>
 <script>
-// LIQUID BLACKHOLE GALAXY + NEBULA STARS ROTATING + WATER FLOW GLASS - v6.0 PERFECT
 (function(){
-const bhCanvas=document.getElementById('bgBlackhole'),bhCtx=bhCanvas.getContext('2d');
-const waterCanvas=document.getElementById('bgWater'),waterCtx=waterCanvas.getContext('2d');
-function resize(){bhCanvas.width=innerWidth;bhCanvas.height=innerHeight;waterCanvas.width=innerWidth;waterCanvas.height=innerHeight}resize();addEventListener('resize',resize);
-let stars=[],orbs=[],blackholeParticles=[],nebulaClouds=[],waterRipples=[];
-let bhX=0,bhY=0;function updateBH(){bhX=innerWidth/2;bhY=innerHeight/2}
-updateBH();addEventListener('resize',updateBH);
-for(let i=0;i<400;i++){
-let angle=Math.random()*Math.PI*2;let dist=Math.random()*Math.max(innerWidth,innerHeight)*0.8+100;
-stars.push({x:bhX+Math.cos(angle)*dist,y:bhY+Math.sin(angle)*dist,r:Math.random()*2.2+0.2,angle:angle,dist:dist,speed:(Math.random()*0.003+0.0005)*(Math.random()>0.5?1:-1),tw:Math.random()*0.06+0.01,op:Math.random()*0.9+0.3,hue:200+Math.random()*80});
-}
-for(let i=0;i<180;i++){
-let angle=Math.random()*Math.PI*2;let dist=80+Math.random()*220;
-blackholeParticles.push({angle:angle,dist:dist,speed:0.008+Math.random()*0.015+ (150/dist)*0.01,size:Math.random()*2.5+0.5,hue:240+Math.random()*60+Math.sin(dist*0.02)*30,op:Math.random()*0.8+0.3});
-}
-for(let i=0;i<12;i++){
-nebulaClouds.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*350+200,hue:Math.random()*120+220+Math.random()*60,dx:(Math.random()-0.5)*0.3,dy:(Math.random()-0.5)*0.3,op:Math.random()*0.15+0.05,pulse:Math.random()*0.02+0.005,pulsePhase:Math.random()*Math.PI*2});
-}
-for(let i=0;i<8;i++){
-waterRipples.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:0,maxR:Math.random()*400+200,speed:Math.random()*1.5+0.5,op:0,hue:200+Math.random()*80});
-}
-let time=0;
-function animate(){
-time+=0.016;
-bhCtx.clearRect(0,0,bhCanvas.width,bhCanvas.height);
-waterCtx.clearRect(0,0,waterCanvas.width,waterCanvas.height);
-let bhGrad=bhCtx.createRadialGradient(bhX,bhY,0,bhX,bhY,85);
-bhGrad.addColorStop(0,'rgba(0,0,0,1)');
-bhGrad.addColorStop(0.3,'rgba(0,0,0,1)');
-bhGrad.addColorStop(0.5,'rgba(10,5,25,0.9)');
-bhGrad.addColorStop(0.7,'rgba(30,15,60,0.4)');
-bhGrad.addColorStop(1,'transparent');
-bhCtx.fillStyle=bhGrad;
-bhCtx.beginPath();bhCtx.arc(bhX,bhY,85,0,Math.PI*2);bhCtx.fill();
-blackholeParticles.forEach(p=>{
-p.angle+=p.speed;
-let x=bhX+Math.cos(p.angle)*p.dist;
-let y=bhY+Math.sin(p.angle)*p.dist*0.6;
-let glow=p.dist<120?1:0.6;
-bhCtx.beginPath();
-bhCtx.fillStyle='hsla('+p.hue+', 90%, 65%, '+p.op*glow+')';
-bhCtx.arc(x,y,p.size,0,Math.PI*2);
-bhCtx.fill();
-bhCtx.beginPath();
-bhCtx.strokeStyle='hsla('+p.hue+', 85%, 60%, '+(p.op*0.15)+')';
-bhCtx.lineWidth=0.8;
-bhCtx.moveTo(x,y);
-bhCtx.lineTo(bhX+Math.cos(p.angle-0.15)*p.dist,bhY+Math.sin(p.angle-0.15)*p.dist*0.6);
-bhCtx.stroke();
-});
-nebulaClouds.forEach(c=>{
-c.x+=c.dx;c.y+=c.dy;
-c.pulsePhase+=c.pulse;
-if(c.x<-c.r) c.x=bhCanvas.width+c.r;
-if(c.x>bhCanvas.width+c.r) c.x=-c.r;
-if(c.y<-c.r) c.y=bhCanvas.height+c.r;
-if(c.y>bhCanvas.height+c.r) c.y=-c.r;
-let pulseOp=c.op+Math.sin(c.pulsePhase)*0.03;
-let grad=bhCtx.createRadialGradient(c.x,c.y,0,c.x,c.y,c.r);
-grad.addColorStop(0,'hsla('+c.hue+', 85%, 65%, '+(pulseOp*0.8)+')');
-grad.addColorStop(0.4,'hsla('+c.hue+', 80%, 60%, '+(pulseOp*0.35)+')');
-grad.addColorStop(0.7,'hsla('+c.hue+', 75%, 55%, '+(pulseOp*0.12)+')');
-grad.addColorStop(1,'transparent');
-bhCtx.fillStyle=grad;
-bhCtx.beginPath();bhCtx.arc(c.x,c.y,c.r,0,Math.PI*2);bhCtx.fill();
-});
-stars.forEach(s=>{
-s.angle+=s.speed/(s.dist*0.001+1);
-s.dist+=Math.sin(time*0.5+s.angle)*0.2;
-s.x=bhX+Math.cos(s.angle)*s.dist;
-s.y=bhY+Math.sin(s.angle)*s.dist*0.85;
-s.op+=s.tw*(Math.random()>0.5?1:-1);
-if(s.op>1) s.op=1;if(s.op<0.15) s.op=0.15;
-let distToBH=Math.sqrt((s.x-bhX)*(s.x-bhX)+(s.y-bhY)*(s.y-bhY));
-let lensFactor=distToBH<150?1.5:1;
-bhCtx.beginPath();
-bhCtx.fillStyle='hsla('+s.hue+', 85%, 75%, '+s.op+')';
-bhCtx.arc(s.x,s.y,s.r*lensFactor,0,Math.PI*2);
-bhCtx.fill();
-if(s.r>1.2){
-let glowGrad=bhCtx.createRadialGradient(s.x,s.y,0,s.x,s.y,s.r*4);
-glowGrad.addColorStop(0,'hsla('+s.hue+', 85%, 70%, '+(s.op*0.3)+')');
-glowGrad.addColorStop(1,'transparent');
-bhCtx.fillStyle=glowGrad;
-bhCtx.beginPath();bhCtx.arc(s.x,s.y,s.r*4,0,Math.PI*2);bhCtx.fill();
-}
-});
-waterRipples.forEach(w=>{
-w.r+=w.speed;
-w.op=Math.max(0,1-w.r/w.maxR);
-if(w.r>w.maxR){
-w.r=0;w.x=Math.random()*waterCanvas.width;w.y=Math.random()*waterCanvas.height;w.maxR=Math.random()*400+200;
-}
-waterCtx.beginPath();
-waterCtx.strokeStyle='hsla('+w.hue+', 80%, 70%, '+(w.op*0.15)+')';
-waterCtx.lineWidth=1.5;
-waterCtx.arc(w.x,w.y,w.r,0,Math.PI*2);
-waterCtx.stroke();
-waterCtx.beginPath();
-waterCtx.strokeStyle='hsla('+(w.hue+20)+', 90%, 80%, '+(w.op*0.08)+')';
-waterCtx.lineWidth=0.8;
-waterCtx.arc(w.x,w.y,w.r*0.7,0,Math.PI*2);
-waterCtx.stroke();
-});
-let ringGrad=bhCtx.createRadialGradient(bhX,bhY,78,bhX,bhY,92);
-ringGrad.addColorStop(0,'hsla(270, 100%, 70%, 0.8)');
-ringGrad.addColorStop(0.3,'hsla(200, 100%, 70%, 0.6)');
-ringGrad.addColorStop(0.6,'hsla(280, 100%, 65%, 0.3)');
-ringGrad.addColorStop(1,'transparent');
-bhCtx.strokeStyle=ringGrad;
-bhCtx.lineWidth=2.5;
-bhCtx.beginPath();bhCtx.arc(bhX,bhY,85,0,Math.PI*2);bhCtx.stroke();
-requestAnimationFrame(animate);
-}
-animate();
+const c=document.getElementById('bgAnim'),ctx=c.getContext('2d');
+function resize(){c.width=innerWidth;c.height=innerHeight}resize();addEventListener('resize',resize);
+let stars=[],orbs=[];for(let i=0;i<220;i++) stars.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.6+0.2,tw:Math.random()*0.04+0.01,op:Math.random()*0.8+0.2});
+for(let i=0;i<8;i++) orbs.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*340+220,hue:Math.random()*60+235,dx:(Math.random()-0.5)*0.45,dy:(Math.random()-0.5)*0.45});
+  function animate(){ctx.clearRect(0,0,c.width,c.height);orbs.forEach(o=>{o.x+=o.dx;o.y+=o.dy;if(o.x< -o.r || o.x>c.width+o.r) o.dx*=-1;if(o.y< -o.r || o.y>c.height+o.r) o.dy*=-1;let rg=ctx.createRadialGradient(o.x,o.y,0,o.x,o.y,o.r);rg.addColorStop(0,'hsla('+o.hue+',85%,65%,0.42)');rg.addColorStop(0.5,'hsla('+o.hue+',80%,60%,0.16)');rg.addColorStop(1,'transparent');ctx.fillStyle=rg;ctx.beginPath();ctx.arc(o.x,o.y,o.r,0,Math.PI*2);ctx.fill();});stars.forEach(s=>{s.op+=s.tw*(Math.random()>0.5?1:-1);if(s.op>1)s.op=1;if(s.op<0.2)s.op=0.2;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle='rgba(255,255,255,'+s.op+')';ctx.fill();});requestAnimationFrame(animate);}animate();
 })();
-  </script>
-  <script>
 document.addEventListener('DOMContentLoaded', function(){
 const $=id=>document.getElementById(id);
 function bind(id,fn){let el=$(id);if(!el)return;el.addEventListener('click',function(e){e.preventDefault();try{fn();}catch(err){console.log(id+': '+err.message);}});}
-bind('btnWa', function(){let n=$('wa').value.replace(/[^0-9]/g,'');let m=$('waMsg').value;if(n.length<10){$('waR').innerHTML='❌ 10 digit';return}if(n.length==10)n='91'+n;window.open('https://wa.me/'+n+(m?'?text='+encodeURIComponent(m):''),'_blank');$('waR').innerHTML='✅ Opened Blackhole Fast: '+n;});
-bind('btnGps', function(){let r=$('gpsR');r.innerHTML='📍 Searching Blackhole...';navigator.geolocation.getCurrentPosition(function(p){let lat=p.coords.latitude.toFixed(6),lng=p.coords.longitude.toFixed(6),acc=p.coords.accuracy.toFixed(0)+'m';r.innerHTML='✅ Lat: '+lat+'<br>Lng: '+lng+'<br>Acc: '+acc+'<br>Blackhole Galaxy Map<br><a href="https://maps.google.com/?q='+lat+','+lng+'" target="_blank" class="btnSmall">🗺️ Map Galaxy</a>';},function(e){r.innerHTML='❌ Allow location - '+e.message;},{enableHighAccuracy:true,timeout:12000});});
-bind('btnIp', async function(){let r=$('ipR');r.innerHTML='🌐 IP Blackhole Galaxy...';try{let ipD=await fetch('https://api.ipify.org?format=json').then(j=>j.json());let inf=await fetch('https://ipapi.co/'+ipD.ip+'/json/').then(j=>j.json());r.innerHTML='IP: <b style="color:#06ffa5">'+ipD.ip+'</b> Blackhole<br>City: '+inf.city+', '+inf.region+'<br>ISP: '+inf.org+'<br>Galaxy: Blackhole Active<br><a href="https://maps.google.com/?q='+inf.latitude+','+inf.longitude+'" target="_blank" class="btnSmall">📍 Pin Galaxy</a>';}catch(e){r.innerHTML='❌ Retry Blackhole';}});
-bind('btnMob', function(){let n=$('mob').value.replace(/[^0-9]/g,'');let r=$('mobR');if(n.length<10){r.innerHTML='❌ 10 digit';return}r.innerHTML='Number: <b>'+n.slice(-10)+'</b> Blackhole<br><a href="https://www.truecaller.com/search/in/'+n.slice(-10)+'" target="_blank" class="btnSmall">Truecaller Galaxy</a>';});
-bind('btnVeh', function(){let v=$('veh').value.trim().toUpperCase(),r=$('vehR');if(v.length<5){r.innerHTML='❌ UP32AB1234';return}r.innerHTML='Vehicle: <b>'+v+'</b> Blackhole Galaxy<br><a href="https://vahan.parivahan.gov.in/" target="_blank" class="btnSmall">Parivahan Galaxy</a>';});
-bind('btnWifiQR', function(){let ssid=$('wifiSSID').value||'EM7-BLACKHOLE',pass=$('wifiPass').value||'12345678',r=$('wifiR');let wifiStr='WIFI:T:WPA;S:'+ssid+';P:'+pass+';;';let url='https://api.qrserver.com/v1/create-qr-code/?size=600x600&data='+encodeURIComponent(wifiStr);r.innerHTML='<img src="'+url+'" style="width:100%;max-width:220px;border-radius:14px"><br>SSID: <b>'+ssid+'</b> Blackhole';});
-bind('btnHash', async function(){let txt=$('hashText').value||'admin123',type=$('hashType').value,r=$('hashR');if(type==='base64'){r.innerHTML='Base64 Galaxy: <b style="color:#06ffa5;word-break:break-all">'+btoa(txt)+'</b>';return}let enc=new TextEncoder().encode(txt);let buf=await crypto.subtle.digest('SHA-256',enc);let hash=Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');r.innerHTML='SHA256 Blackhole: <b style="color:#06ffa5;word-break:break-all">'+hash+'</b>';});
-bind('btnTts', function(){let t=$('tts').value,r=$('ttsR');if(!t){r.innerHTML='❌ Text likho';return}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(t);u.lang=$('ttsVoice').value;u.rate=0.92;speechSynthesis.speak(u);r.innerHTML='🔊 Speaking Blackhole Galaxy: '+t.substring(0,70);});
-bind('btnBg', function(){let f=$('bgFile').files[0],r=$('bgR'),canvas=$('bgCanvas');if(!f){r.innerHTML='❌ File';return}let img=new Image();img.onload=function(){canvas.width=img.width;canvas.height=img.height;canvas.style.display='block';let ctx=canvas.getContext('2d');ctx.drawImage(img,0,0);let d=ctx.getImageData(0,0,canvas.width,canvas.height);for(let i=0;i<d.data.length;i+=4){if(d.data[i+1]>60&&d.data[i+1]>d.data[i]+20)d.data[i+3]=0;}ctx.putImageData(d,0,0);let out=canvas.toDataURL();r.innerHTML='<img src="'+out+'" style="width:100%;border-radius:14px"><br><a href="'+out+'" download="bg_blackhole.png" class="btnSmall">Download Blackhole</a>';};img.src=URL.createObjectURL(f);});
-bind('btnEnhance', function(){let f=$('enhanceFile').files[0],r=$('enhanceR'),mode=$('enhanceMode').value;if(!f){r.innerHTML='❌ Photo';return}let img=new Image();img.onload=function(){let c=document.createElement('canvas');c.width=img.width*2;c.height=img.height*2;let ctx=c.getContext('2d');ctx.drawImage(img,0,0,c.width,c.height);let out=c.toDataURL();r.innerHTML='<img src="'+out+'" style="width:100%;border-radius:14px"><br><a href="'+out+'" download="enh_blackhole.png" class="btnSmall">Download Blackhole HD</a>';};img.src=URL.createObjectURL(f);});
-bind('btnFourX', function(){let f=$('fourXFile').files[0],r=$('fourXR');if(!f){r.innerHTML='❌ Photo';return}let img=new Image();img.onload=function(){let styles=[{name:'Cartoon Blackhole',filter:'contrast(1.8) saturate(2.2)'},{name:'Ghibli Galaxy',filter:'contrast(1.2) sepia(0.2)'},{name:'Cyber Blackhole',filter:'hue-rotate(250deg) saturate(1.8)'},{name:'Vintage Nebula',filter:'sepia(0.6)'}];let html='<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">';styles.forEach(s=>{let c=document.createElement('canvas');c.width=512;c.height=512;let ctx=c.getContext('2d');ctx.filter=s.filter;ctx.drawImage(img,0,0,512,512);let out=c.toDataURL();html+='<div style="background:rgba(0,0,0,0.4);border-radius:14px;padding:6px"><div>'+s.name+'</div><img src="'+out+'" style="width:100%;border-radius:10px"></div>';});html+='</div>';r.innerHTML=html;};img.src=URL.createObjectURL(f);});
-bind('btnBio', function(){let t=$('bioTopic').value||'blackhole',style=$('bioStyle').value,r=$('bioR');let out='';for(let i=1;i<=20;i++){out+='<div style="padding:7px;margin:4px 0;background:rgba(139,92,246,0.15);border-radius:10px">'+i+'. '+t+' '+style+' Blackhole Galaxy 🔥 | EM7 v6.0 #'+i+'</div>';}r.innerHTML=out;});
-bind('btnCode', function(){let p=$('codeP').value||'blackhole galaxy calculator',r=$('codeR');let code='<!DOCTYPE html><html><head><title>'+p+' v6.0 Blackhole</title><style>body{background:#010208;color:#fff;padding:20px;font-family:Outfit}.card{background:linear-gradient(135deg, rgba(139,92,246,0.4), rgba(6,255,165,0.3));border-radius:22px;padding:20px;border:1px solid rgba(139,92,246,0.4);backdrop-filter:blur(20px)}</style></head><body><div class=card><h1>'+p+' v6.0 Blackhole Galaxy</h1><p>EM7 HOON v6.0</p><button onclick="alert(\\'working Blackhole\\')" style="background:#8b5cf6;color:#fff;padding:12px 24px;border-radius:14px;border:none">Test Blackhole</button></div></body></html>';r.innerHTML='<textarea style="width:100%;height:120px;background:#000;color:#0f0;font-size:11px;border-radius:12px;padding:10px">'+code+'</textarea>';});
-bind('btnColor', function(){let f=$('colorFile').files[0],r=$('colorR');if(!f){r.innerHTML='❌ File';return}let img=new Image();img.onload=function(){let c=document.createElement('canvas');c.width=100;c.height=100;let ctx=c.getContext('2d');ctx.drawImage(img,0,0,100,100);let d=ctx.getImageData(0,0,100,100).data;let colors={};for(let i=0;i<d.length;i+=40){let key=d[i]+','+d[i+1]+','+d[i+2];colors[key]=(colors[key]||0)+1;}let sorted=Object.entries(colors).sort((a,b)=>b[1]-a[1]).slice(0,8);let html='<div style="display:flex;gap:6px;flex-wrap:wrap">';sorted.forEach(([k])=>{html+='<div style="width:44px;height:44px;background:rgb('+k+');border-radius:12px;border:2px solid rgba(255,255,255,0.3)"></div>';});html+='</div>';r.innerHTML=html;};img.src=URL.createObjectURL(f);});
-bind('btnEmi', function(){let amt=parseFloat($('emiAmt').value)||500000, rate=parseFloat($('emiRate').value)||9, yr=parseFloat($('emiYear').value)||5;let r=rate/12/100, n=yr*12, emiVal=amt*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);$('emiR').innerHTML='EMI Blackhole: ₹'+Math.round(emiVal).toLocaleString('en-IN')+'/m<br>Total: ₹'+Math.round(emiVal*n).toLocaleString('en-IN');});
-bind('btnBmi', function(){let h=parseFloat($('bmiH').value)/100, w=parseFloat($('bmiW').value);let b=w/(h*h);$('bmiR').innerHTML='BMI Blackhole: '+b.toFixed(1)+' - '+(b<24.9?'Fit ✅':'Overweight');});
-bind('btnAge', function(){let dob=$('dob').value,r=$('ageR');let b=new Date(dob), now=new Date(), years=Math.floor((now-b)/(1000*60*60*24*365.25));r.innerHTML='Age Blackhole: '+years+'y';});
-bind('btnPort', function(){let ip=$('portIP').value||'192.168.1.1',r=$('portR');r.innerHTML='Scanning Blackhole '+ip+'... 80 Open Galaxy, 443 Open Blackhole';});
-bind('btnEm', async function(){let e=$('em').value,r=$('emR');if(!e.includes('@')){r.innerHTML='❌ Email';return}r.innerHTML='Checking Blackhole... Safe Galaxy';});
-bind('btnQr', function(){let t=$('qr').value,r=$('qrR');let u='https://api.qrserver.com/v1/create-qr-code/?size=800x800&data='+encodeURIComponent(t);r.innerHTML='<img src="'+u+'" style="width:100%;max-width:300px;border-radius:14px"><br><a href="'+u+'" target="_blank" class="btnSmall">Download Blackhole</a>';});
-bind('btnPass', function(){let chars="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789!@#$%";let p="";for(let i=0;i<24;i++)p+=chars[Math.floor(Math.random()*chars.length)];$('passR').innerHTML='<b style="color:#06ffa5;word-break:break-all">Blackhole: '+p+'</b>';});
-bind('btnSpeed', function(){let r=$('speedR');r.innerHTML='Blackhole Ping: '+(Math.floor(Math.random()*80)+15)+'ms<br>Galaxy Speed: Fast';});
-bind('btnInsta', function(){let u=$('instaUser').value||'em7hoon',r=$('instaR');r.innerHTML='@'+u+' Blackhole Galaxy<br><a href="https://www.instagram.com/'+u+'/" target="_blank" class="btnSmall">Open Galaxy</a>';});
-bind('btnHashTag', function(){let t=$('hashTagTopic').value||'blackhole',r=$('hashtagR');let tags=[];for(let i=0;i<30;i++)tags.push('#'+t+'_galaxy_'+i);r.innerHTML=tags.join(' ')+'<br><span style="color:#06ffa5">Blackhole 30 Tags</span>';});
-bind('btnYt', function(){let t=$('ytTitle').value||'Blackhole Vlog',r=$('ytR');r.innerHTML='Blackhole Titles: '+t+' Galaxy | v6.0 🔥<br>Tags: blackhole, galaxy, em7, up32';});
-  bind('btnTextMagic', function(){let txt=$('textMagicIn').value||'Blackhole',type=$('textMagicType').value,r=$('textMagicR');let out=txt;if(type==='binary')out=txt.split('').map(c=>c.charCodeAt(0).toString(2)).join(' ');else if(type==='reverse')out=txt.split('').reverse().join('');else if(type==='leet')out=txt.replace(/a/gi,'4').replace(/e/gi,'3');r.innerHTML='Blackhole Output: <b style="color:#06ffa5">'+out+'</b>';});
-bind('btnGst', function(){let amt=parseFloat($('gstAmt').value)||1000, per=parseFloat($('gstPer').value)||18;let gst=amt*per/100;$('gstR').innerHTML='GST Blackhole: ₹'+gst+' Total Galaxy: ₹'+(amt+gst);});
-bind('btnPer', function(){let val=parseFloat($('perVal').value)||500, per=parseFloat($('perPer').value)||20;$('perR').innerHTML='Blackhole: '+val+' ka '+per+'% = '+(val*per/100)+' Galaxy';});
-bind('btnLove', function(){let n1=$('love1').value||'Aman',n2=$('love2').value||'Neha';let per=Math.floor(Math.random()*50)+50;$('loveR').innerHTML='Blackhole Love: '+n1+' + '+n2+' = '+per+'% ❤️ Galaxy';});
-bind('btnLoveB', function(){let n1=$('love1b').value||'Aman',n2=$('love2b').value||'Neha';let per=Math.floor(Math.random()*50)+50;$('loveRB').innerHTML='Blackhole Love: '+n1+' + '+n2+' = '+per+'% ❤️';});
-bind('btnShort', function(){let url=$('urlShort').value||'https://em7moon.live';let short='https://em7.is/bh_'+Math.random().toString(36).substring(2,6);$('shortR').innerHTML='Blackhole Short: '+short+' Galaxy';});
-bind('btnQrAdv', function(){let t=$('qrAdv').value||'https://em7moon.live';let u='https://api.qrserver.com/v1/create-qr-code/?size=800x800&data='+encodeURIComponent(t)+'&color=8b5cf6';$('qrAdvR').innerHTML='<img src="'+u+'" style="width:100%;max-width:320px;border-radius:16px"><br>Blackhole Galaxy QR';});
-bind('btnFakeChat', function(){let name=$('fakeName').value||'Rahul',r=$('fakeChatR');r.innerHTML='Fake Chat Blackhole: '+name+' - EM7 v6.0 Galaxy 🔥';});
-bind('btnNameGen', function(){let type=$('nameGenType').value||'blackhole',r=$('nameGenR');let out='';for(let i=0;i<10;i++){out+='<div style="padding:6px;margin:3px 0;background:rgba(139,92,246,0.12);border-radius:8px">'+type+'_blackhole_'+Math.floor(Math.random()*999)+' 🌌</div>';}r.innerHTML=out;});
-bind('btnMeme', function(){let t=$('memeText').value||'Blackhole Galaxy',r=$('memeR');r.innerHTML='<div style="padding:8px;background:rgba(255,255,255,0.06);border-radius:8px">Blackhole Meme: '+t+' 🌌🔥</div>';});
-
-// 1000+ Q&A + REAL API BLACKHOLE
-const qaDB={
-"ai kya hota": "🤖 <b>AI Kya Hota Hai? v6.0 Blackhole Galaxy:</b><br>Artificial Intelligence - Machine ko insaan jaisa sochne layak banana - Blackhole jaisa powerful!<br>Types: Narrow, General, Super<br>Example: EM7 AMAN Blackhole, ChatGPT Galaxy",
-"bharat ki rajdhani": "🇮🇳 <b>Bharat ki Rajdhani: New Delhi</b><br>1947 se capital - Blackhole Galaxy se bhi powerful capital!",
-"up ki rajdhani": "🏙️ <b>UP ki Rajdhani: Lucknow UP32 Blackhole Galaxy</b><br>Nawabo ka sheher - Tunday Kebab - EM7 ka Blackhole home! UP32 🔥🌌",
-"who are you": "⚡ <b>Main EM7 AMAN REAL v6.0 BLACKHOLE GALAXY</b> hu - EM7 HOON ka banaya hua AI, Meta AI jaisa sochta hu. Founder EM7 HOON Lucknow UP32. Background me Liquid Blackhole Galaxy + Nebula Stars Rotating + Water Flow Glass - Hamesha ghumta rahega! Photo style 100% same - 1000+ Q&A - 40 tools - Mere jaisa AI! Bolo Guru kya help chahiye? 🤖🌌",
-"lucknow": "🏙️ <b>Lucknow UP32 Blackhole Galaxy:</b> Nawabo ka sheher - Kebabs, Tehzeeb, Bara Imambara - EM7 ka Blackhole Galaxy home! UP32 🔥🌌",
-"em7": "👨‍💻 <b>EM7 HOON v6.0 Blackhole Galaxy 100%:</b> Lucknow UP32 • Liquid Blackhole + Nebula Stars Rotating + Water Flow Glass - Hamesha ghumta - 1000+ Q&A • 40 Tools • Photo Style • S Hexagon",
-"blackhole": "🌌 <b>Blackhole kya hai? v6.0:</b><br>Blackhole - Itna heavy ki light bhi nahi nikal sakti - Event horizon ke bahar accretion disk ghumta hai - Galaxy ka center! Tumhari website ka background bhi ab blackhole galaxy jaisa hamesha ghumta rahega - Liquid water flow glass ke saath!",
-"galaxy": "🌌 <b>Galaxy kya hai?</b><br>Galaxy - Stars, gas, dust, dark matter ka group - Milky Way hamari galaxy - 100 billion stars! Tumhari website ka background bhi galaxy jaisa nebula stars ke saath rotating!",
-"water flow": "💧 <b>Water Flow Glass kya hai? v6.0:</b><br>Liquid glass jaise pani ka flow - Blur + glow + transparency - Tumhari website ke icons aur background me water flow animation - Ekdam liquid jaisa ghumta rahega!"
-};
-
+bind('btnWa', function(){let n=$('wa').value.replace(/[^0-9]/g,'');let m=$('waMsg').value;if(n.length<10){$('waR').innerHTML='❌ 10 digit';return}if(n.length==10)n='91'+n;window.open('https://wa.me/'+n+(m?'?text='+encodeURIComponent(m):''),'_blank');$('waR').innerHTML='✅ Opened: '+n;});
+bind('btnGps', function(){let r=$('gpsR');r.innerHTML='📍 Searching...';navigator.geolocation.getCurrentPosition(function(p){let lat=p.coords.latitude.toFixed(6),lng=p.coords.longitude.toFixed(6),acc=p.coords.accuracy.toFixed(0)+'m';r.innerHTML='✅ Lat: '+lat+'<br>Lng: '+lng+'<br>Acc: '+acc+'<br><a href="https://maps.google.com/?q='+lat+','+lng+'" target="_blank" class="btnSmall">🗺️ Map</a>';},function(e){r.innerHTML='❌ Allow location - '+e.message;},{enableHighAccuracy:true,timeout:10000});});
+bind('btnIp', async function(){let r=$('ipR');r.innerHTML='🌐 IP...';try{let ipD=await fetch('https://api.ipify.org?format=json').then(j=>j.json());let inf=await fetch('https://ipapi.co/'+ipD.ip+'/json/').then(j=>j.json());r.innerHTML='IP: <b style="color:#06ffa5">'+ipD.ip+'</b><br>City: '+inf.city+', '+inf.region+'<br>ISP: '+inf.org+'<br><a href="https://maps.google.com/?q='+inf.latitude+','+inf.longitude+'" target="_blank" class="btnSmall">📍 Pin</a>';}catch(e){r.innerHTML='❌ Retry';}});
+bind('btnMob', function(){let n=$('mob').value.replace(/[^0-9]/g,'');let r=$('mobR');if(n.length<10){r.innerHTML='❌ 10 digit';return}r.innerHTML='Number: <b>'+n.slice(-10)+'</b><br><a href="https://www.truecaller.com/search/in/'+n.slice(-10)+'" target="_blank" class="btnSmall">Truecaller</a>';});
+bind('btnVeh', function(){let v=$('veh').value.trim().toUpperCase(),r=$('vehR');if(v.length<5){r.innerHTML='❌ UP32AB1234';return}r.innerHTML='Vehicle: <b>'+v+'</b><br><a href="https://vahan.parivahan.gov.in/nrservices/faces/user/citizen/citizenlogin.xhtml" target="_blank" class="btnSmall">Parivahan Govt</a>';});
+bind('btnWifiQR', function(){let ssid=$('wifiSSID').value||'EM7-HACK',pass=$('wifiPass').value||'12345678',r=$('wifiR');let wifiStr='WIFI:T:WPA;S:'+ssid+';P:'+pass+';;';let url='https://api.qrserver.com/v1/create-qr-code/?size=600x600&data='+encodeURIComponent(wifiStr);r.innerHTML='<img src="'+url+'" style="width:100%;max-width:220px;border-radius:12px"><br>SSID: <b>'+ssid+'</b><br><a href="'+url+'" target="_blank" class="btnSmall">Download</a>';});
+bind('btnHash', async function(){let txt=$('hashText').value||'admin123',type=$('hashType').value,r=$('hashR');if(type==='base64'){r.innerHTML='Base64: <b style="color:#06ffa5;word-break:break-all">'+btoa(txt)+'</b>';return}let enc=new TextEncoder().encode(txt);let buf=await crypto.subtle.digest('SHA-256',enc);let hash=Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');r.innerHTML='SHA256: <b style="color:#06ffa5;word-break:break-all;font-size:11px;font-family:monospace">'+hash+'</b>';});
+bind('btnTts', function(){let t=$('tts').value,r=$('ttsR');if(!t){r.innerHTML='❌ Text likho';return}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(t);u.lang=$('ttsVoice').value;u.rate=0.95;speechSynthesis.speak(u);r.innerHTML='🔊 Speaking: '+t.substring(0,70);});
+bind('btnBg', function(){let f=$('bgFile').files[0],r=$('bgR'),mode=$('bgMode').value,customColor=$('bgCustomColor').value,tol=parseInt($('bgTol').value),canvas=$('bgCanvas');if(!f){r.innerHTML='❌ File choose';return}r.innerHTML='⚡ Removing BG...';let img=new Image();img.onload=function(){canvas.width=img.width;canvas.height=img.height;canvas.style.display='block';let ctx=canvas.getContext('2d');ctx.drawImage(img,0,0);let d=ctx.getImageData(0,0,canvas.width,canvas.height);let data=d.data;let cr=0,cg=0,cb=0;if(mode==='custom'){let hex=customColor.replace('#','');cr=parseInt(hex.substring(0,2),16);cg=parseInt(hex.substring(2,4),16);cb=parseInt(hex.substring(4,6),16);}function dist(r1,g1,b1,r2,g2,b2){return Math.sqrt((r1-r2)*(r1-r2)+(g1-g2)*(g1-g2)+(b1-b2)*(b1-b2));}for(let i=0;i<data.length;i+=4){let rc=data[i],gc=data[i+1],bc=data[i+2],remove=false;if(mode==='green')remove=gc>60&&gc>rc+20;else if(mode==='white')remove=rc>200&&gc>200&&bc>200&&dist(rc,gc,bc,255,255,255)<tol*2;else if(mode==='black')remove=rc<50&&gc<50&&bc<50;else if(mode==='custom')remove=dist(rc,gc,bc,cr,cg,cb)<tol;else if(mode==='ai')remove=(gc>75&&gc>rc+15)||(rc>220&&gc>220&&bc>220);if(remove)data[i+3]=0;}ctx.putImageData(d,0,0);let out=canvas.toDataURL('image/png');r.innerHTML='<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div>Original<br><img src="'+URL.createObjectURL(f)+'" style="width:100%;border-radius:14px"></div><div>Transparent<br><img src="'+out+'" style="width:100%;border-radius:14px;background:repeating-conic-gradient(#808080 0% 25%, transparent 0% 50%) 50% / 20px 20px"></div></div><br><a href="'+out+'" download="em7_bg_'+Date.now()+'.png" class="btnSmall" style="background:#fff;color:#000">📥 Download PNG</a>';};img.src=URL.createObjectURL(f);});
+bind('btnEnhance', function(){
+let f=$('enhanceFile').files[0],r=$('enhanceR'),mode=$('enhanceMode').value;
+if(!f){r.innerHTML='❌ Photo choose karo';return}
+let img=new Image();img.onload=function(){
+let scale=mode==='8k'?4:mode==='4k'?2:1;
+let c=document.createElement('canvas');c.width=img.width*scale;c.height=img.height*scale;
+let ctx=c.getContext('2d');ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
+ctx.filter=mode==='cartoon'?'contrast(1.8) saturate(2)':mode==='neon'?'contrast(1.4) brightness(1.1) drop-shadow(0 0 10px #8b5cf6)':'contrast(1.3) brightness(1.15) saturate(1.35)';
+ctx.drawImage(img,0,0,c.width,c.height);
+let out=c.toDataURL('image/png');
+r.innerHTML='<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div>Original '+img.width+'x'+img.height+'<br><img src="'+URL.createObjectURL(f)+'" style="width:100%;border-radius:14px"></div><div>'+mode.toUpperCase()+' REAL '+c.width+'x'+c.height+'<br><img src="'+out+'" style="width:100%;border-radius:14px"></div></div><br><a href="'+out+'" download="em7_'+mode+'_'+Date.now()+'.png" class="btnSmall" style="background:#fff;color:#000">📥 Download '+mode.toUpperCase()+' HD</a><div style="margin-top:6px;color:#06ffa5">✅ Real canvas upscale - '+mode.toUpperCase()+' - No blur!</div>';
+};img.src=URL.createObjectURL(f);
+});
+bind('btnFourX', function(){
+let f=$('fourXFile').files[0],r=$('fourXR');if(!f){r.innerHTML='❌ Photo choose karo';return}
+r.innerHTML='⚡ 1 photo se 4 AI style bana raha hu...';
+let img=new Image();img.onload=function(){
+let styles=[
+{ name:'Cartoon AI', filter:'contrast(1.8) saturate(2.2) brightness(1.1)', bg:'#fef3c7' },
+{ name:'Ghibli AI', filter:'contrast(1.2) saturate(1.4) brightness(1.05) sepia(0.2)', bg:'#d1fae5' },
+{ name:'Cyberpunk AI', filter:'contrast(1.5) brightness(1.1) hue-rotate(250deg) saturate(1.8)', bg:'#ede9fe' },
+{ name:'Vintage AI', filter:'contrast(1.1) sepia(0.6) brightness(0.95)', bg:'#fee2e2' }
+];
+let html='<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">';
+styles.forEach((s,i)=>{
+let c=document.createElement('canvas');c.width=512;c.height=512;let ctx=c.getContext('2d');ctx.imageSmoothingQuality='high';ctx.filter=s.filter;ctx.drawImage(img,0,0,512,512);let out=c.toDataURL('image/png');
+html+='<div style="background:rgba(0,0,0,0.35);border-radius:14px;padding:6px;border:1px solid rgba(255,255,255,0.14)"><div style="font-size:11px;font-weight:700;margin-bottom:4px">'+s.name+'</div><img src="'+out+'" style="width:100%;border-radius:10px"><a href="'+out+'" download="em7_'+s.name.replace(' ','_')+'_'+Date.now()+'.png" class="btnSmall">📥 '+s.name+'</a></div>';
+});
+html+='</div>';r.innerHTML=html+'<div style="margin-top:8px;color:#06ffa5">✅ 1 photo → 4 AI styles done! Real transform!</div>';
+};img.src=URL.createObjectURL(f);
+});
+  bind('btnBio', function(){let t=$('bioTopic').value||'attitude',style=$('bioStyle').value,r=$('bioR');let out='';for(let i=1;i<=20;i++){out+=i+'. '+t+' '+(style==='car'?'Car Lover':style==='hacker'?'Hacker':'King')+' '+i+' 🔥 | EM7 v4.0<br>';}r.innerHTML=out;});
+bind('btnCode', function(){let p=$('codeP').value||'calculator',r=$('codeR');let codeText='<!DOCTYPE html><html><head><title>'+p+'</title><style>body{background:#040612;color:#fff;padding:20px;font-family:sans-serif}</style></head><body><h1>'+p+' v4.0</h1><button onclick="alert(\\\''+p+' working\\\')">Test</button></body></html>';r.innerHTML='<textarea style="width:100%;height:120px;background:rgba(0,0,0,0.5);color:#0f0;font-size:11px;border-radius:12px;padding:10px">'+codeText+'</textarea>';});
+bind('btnColor', function(){let f=$('colorFile').files[0],r=$('colorR');if(!f){r.innerHTML='❌ File choose';return}let img=new Image();img.onload=function(){let c=document.createElement('canvas');c.width=100;c.height=100;let ctx=c.getContext('2d');ctx.drawImage(img,0,0,100,100);let d=ctx.getImageData(0,0,100,100).data;let colors={};for(let i=0;i<d.length;i+=40){let key=d[i]+','+d[i+1]+','+d[i+2];colors[key]=(colors[key]||0)+1;}let sorted=Object.entries(colors).sort((a,b)=>b[1]-a[1]).slice(0,6);let html='<div style="display:flex;gap:6px;flex-wrap:wrap">';sorted.forEach(([k])=>{html+='<div style="width:44px;height:44px;background:rgb('+k+');border-radius:12px;border:2px solid rgba(255,255,255,0.3)"></div>';});html+='</div>';r.innerHTML=html;};img.src=URL.createObjectURL(f);});
+bind('btnEmi', function(){let amt=parseFloat($('emiAmt').value)||500000, rate=parseFloat($('emiRate').value)||9, yr=parseFloat($('emiYear').value)||5;let r=rate/12/100, n=yr*12, emiVal=amt*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);$('emiR').innerHTML='Loan: ₹'+amt.toLocaleString('en-IN')+'<br>EMI: <b style="color:#06ffa5">₹'+Math.round(emiVal).toLocaleString('en-IN')+'/m</b>';});
+bind('btnBmi', function(){let h=parseFloat($('bmiH').value)/100, w=parseFloat($('bmiW').value);if(!h||!w){$('bmiR').innerHTML='❌ Height Weight';return}let b=w/(h*h);let cat=b<18.5?'Underweight':b<24.9?'Fit ✅':b<29.9?'Overweight':'Obese';$('bmiR').innerHTML='BMI: <b style="color:#06ffa5">'+b.toFixed(1)+'</b><br>'+cat;});
+bind('btnAge', function(){let dob=$('dob').value,r=$('ageR');if(!dob){r.innerHTML='❌ DOB';return}let b=new Date(dob), now=new Date(), diff=now-b, years=Math.floor(diff/(1000*60*60*24*365.25));r.innerHTML='Age: <b style="color:#06ffa5">'+years+'y</b>';});
+bind('btnPort', function(){let ip=$('portIP').value||'192.168.1.1',r=$('portR');r.innerHTML='🔍 Scanning '+ip+'...';setTimeout(()=>{r.innerHTML='IP: '+ip+'<br>22 SSH: Open ✅<br>80 HTTP: Open ✅<br>443 HTTPS: Open ✅<br>3306 MySQL: Closed ❌<br><span style="font-size:10px">Demo scan</span>';},700);});
+bind('btnEm', async function(){let e=$('em').value,r=$('emR');if(!e.includes('@')){r.innerHTML='❌ Email';return}r.innerHTML='🔍 Scanning...';try{let d=await fetch('https://api.xposedornot.com/v1/check-email/'+e).then(j=>j.json());if(d.Error){r.innerHTML='✅ Safe - No breach';}else{r.innerHTML='⚠️ Breach found';}}catch{r.innerHTML='⚠️ Busy';}});
+bind('btnQr', function(){let t=$('qr').value,r=$('qrR');let u='https://api.qrserver.com/v1/create-qr-code/?size=800x800&data='+encodeURIComponent(t);r.innerHTML='<img src="'+u+'" style="width:100%;max-width:300px;border-radius:14px"><br><a href="'+u+'" target="_blank" class="btnSmall">Download QR</a>';});
+bind('btnPass', function(){let chars="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789!@#$%";let p="";for(let i=0;i<20;i++)p+=chars[Math.floor(Math.random()*chars.length)];$('passR').innerHTML='<b style="color:#06ffa5;font-family:monospace;word-break:break-all">'+p+'</b><br><button class="btnSmall" onclick="navigator.clipboard.writeText(\\\''+p+'\\\')">Copy</button>';});
+bind('btnSpeed', function(){let r=$('speedR');let start=Date.now();fetch('https://api.ipify.org?format=json').then(()=>{let time=Date.now()-start;r.innerHTML='Ping: <b style="color:#06ffa5">'+time+'ms</b><br>UA: '+navigator.userAgent.substring(0,70)+'<br>Platform: '+navigator.platform;});});
+// --- AI AMAN REAL v4.0 - MERE JAISA - REAL API + THINKING - UPGRADED ONLY HERE ---
 async function em7AmanRealAI(q){
-let now=new Date();let timeStr=now.toLocaleTimeString('hi-IN');let dateStr=now.toLocaleDateString('hi-IN');let l=q.toLowerCase().trim();
+let now=new Date();let timeStr=now.toLocaleTimeString('hi-IN',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true});let dateStr=now.toLocaleDateString('hi-IN',{weekday:'long',day:'numeric',month:'long',year:'numeric'});let l=q.toLowerCase().trim();
 try{
 let mathQ=l.replace(/[^0-9+\-*/().%\s]/g,'').replace(/x/g,'*').trim();
-if(mathQ && /[+\-*/%()]/.test(mathQ) && mathQ.length>=3 && mathQ.length<35){
+if(mathQ && /[+\-*/%()]/.test(mathQ) && mathQ.length>=3 && mathQ.length<30){
 let ans=Function('"use strict";return ('+mathQ+')')();
-if(!isNaN(ans) && isFinite(ans)) return '🧮 <b>Calc v6.0 Blackhole Galaxy:</b> '+q+' = <b style="color:#06ffa5;font-size:24px">'+ans+'</b><br>✅ Blackhole speed solved<br>⏰ '+timeStr+' 🌌';
+if(!isNaN(ans) && isFinite(ans)) return '🧮 <b>Calculation REAL:</b><br>'+q+' = <b style="color:#06ffa5;font-size:22px">'+ans+'</b><br>✅ BODMAS se solved<br>⏰ '+timeStr;
 }
 }catch(e){}
-if(l.match(/time|samay|baja/)) return '⏰ <b>REAL Time IST v6.0 Blackhole Galaxy:</b><br><b style="color:#06ffa5;font-size:22px">'+timeStr+'</b><br>📅 '+dateStr+'<br>🌌 Blackhole Galaxy Active - Water flow';
-for(let key in qaDB){if(l.includes(key)){return qaDB[key]+'<br><br><small>⏰ '+timeStr+'<br>📅 '+dateStr+'<br>🚀 v6.0 Blackhole Galaxy • Photo 100% • 1000+ Q&A<br>🌌 Liquid Blackhole + Nebula Stars Rotating + Water Flow Glass</small>';}}
+if(l.match(/time|samay|baja/)) return '⏰ <b>REAL Time IST:</b><br><b style="color:#06ffa5;font-size:20px">'+timeStr+'</b><br>📅 '+dateStr+'<br>🌍 Lucknow UP32';
+if(l.match(/today|aaj.*din|date/)) return '📅 <b>Aaj ka Din:</b><br><b style="color:#06ffa5">'+dateStr+'</b><br>⏰ '+timeStr;
+if(l.match(/who are you|tum kaun ho/)) return '⚡ <b>Main AI AMAN REAL v4.0</b> hu - EM7 HOON ka banaya hua AI, Meta AI ki tarah soch samajh ke jawab deta hu. Mere founder EM7 HOON hain. Poster style same, logo same. Bolo Guru kya help chahiye? 🤖<br><small>⏰ '+timeStr+' • 📅 '+dateStr+'</small>';
 try{
-let sys="You are EM7 AMAN REAL v6.0 Blackhole Galaxy. Created by EM7 HOON Lucknow UP32. Background liquid blackhole galaxy nebula stars rotating water flow glass. Answer like Meta AI helpful Hinglish. If asked who are you say you are EM7 AMAN REAL v6.0 Blackhole Galaxy made by EM7 HOON, photo style 100%, blackhole galaxy background always rotating. Time: "+timeStr;
-let url="https://text.pollinations.ai/"+encodeURIComponent(sys+" User: "+q)+"?model=openai&seed="+Math.floor(Math.random()*9999);
+let sys="You are AI AMAN REAL v4.0 created by EM7 HOON. You answer like Meta AI - helpful, friendly, Hinglish. If asked who are you, say you are AI AMAN v4.0 made by EM7 HOON, inspired by Meta AI. Be concise, real. Time: "+timeStr+" Date: "+dateStr;
+let url="https://text.pollinations.ai/"+encodeURIComponent(sys+" User: "+q)+"?model=openai&seed="+Math.floor(Math.random()*99999);
 let r=await fetch(url);let t=await r.text();
-if(t && t.length>15){return '💧 <b>REAL v6.0 Blackhole Galaxy Mere Jaisa:</b><br>'+t.replace(/\n/g,"<br>").slice(0,1500)+'<br><br><small>⏰ '+timeStr+'<br>🌌 v6.0 Blackhole Galaxy • Photo 100% • Water Flow Glass</small>';}
+if(t && t.length>15){let clean=t.replace(/\n/g,"<br>").slice(0,1500);return '💧 <b>REAL Answer (Mere Jaisa Thinking):</b><br>'+clean+'<br><br><small>⏰ '+timeStr+'<br>📅 '+dateStr+'<br>🚀 v4.0 REAL API • Thinking ON</small>';}
 }catch(e){}
-return '🤖 <b>EM7 AMAN v6.0 Blackhole Galaxy:</b><br>Sawal: "'+q+'"<br><br>💧 REAL Answer v6.0: "'+q+'" ek accha sawal hai! Main EM7 AMAN Blackhole Galaxy hu jo Meta AI jaisa sochta hu.<br>Background me Liquid Blackhole + Nebula Stars Rotating + Water Flow Glass - Hamesha ghumta rahega!<br>⏰ '+timeStr+'<br>🌌 v6.0 Blackhole Galaxy • 1000+ Q&A • Photo 100%';
-}
+if(l.match(/ai kya hota|what is ai|ai ke bare/)) return '🤖 <b>AI Kya Hota Hai? - REAL Answer:</b><br><br>AI matlab <b>Artificial Intelligence</b> - Machine ko insaan jaisa sochne samajhne layak banana.<br><br><b>2 Prakar:</b><br>1. Narrow AI: Ek kaam me expert - Jaise Siri, ChatGPT<br>2. General AI: Insaan jaisa sab kaam - Abhi research me<br><br><b>Kaise kaam karta?</b><br>• Machine Learning: Data se seekhta hai<br>• Neural Network: Dimag jaisa network<br>• Deep Learning: Badi data se pattern<br><br><b>Example:</b> Ye website ka AI AMAN, ChatGPT, Gemini - Sab AI hai!<br><br>AI future hai - EM7 v4.0 REAL 🚀<br>⏰ '+timeStr;
+if(l.match(/bharat.*rajdhani|india.*capital/)) return '🇮🇳 <b>Bharat ki Rajdhani:</b><br><b style="color:#06ffa5;font-size:18px">New Delhi</b>';
+if(l.match(/up.*rajdhani|lucknow/)) return '🏙️ <b>UP ki Rajdhani: Lucknow - UP32</b><br>Nawabo ka sheher';
+if(l.length<3) return '🤖 Bolo Guru - v4.0 AI AMAN hu - Mere jaisa sahi jawab dunga - '+timeStr;
+return '🤖 <b>AI AMAN REAL v4.0 - Thinking:</b><br>Sawal: "'+q+'"<br><br>💧 <b>REAL Answer:</b> "'+q+'" ek acha sawal hai. Main AI AMAN hu jo Meta AI ki tarah soch samajh ke sahi jawab deta hu.<br>⏰ '+timeStr+'<br>📅 '+dateStr+'<br>🚀 v4.0 REAL API';
+  }
 async function sendMsg(){
 let i=$('aiI'),t=i.value.trim();if(!t)return;let b=$('aiBody');
 if(t.toLowerCase().indexOf('/image ')===0){
-let prompt=t.substring(7).trim()||'black thar blackhole galaxy';
-let d1=document.createElement('div');d1.style.cssText='max-width:88%;padding:12px 14px;border-radius:18px;font-size:13.5px;align-self:flex-end;background:linear-gradient(135deg,rgba(168,85,247,0.85),rgba(6,255,165,0.7))';d1.innerHTML='🎨 /image '+prompt+' Blackhole Galaxy';b.appendChild(d1);i.value='';b.scrollTop=b.scrollHeight;
-let ty=document.createElement('div');ty.style.cssText='max-width:88%;padding:12px 14px;border-radius:18px;font-size:13.5px;background:rgba(255,255,255,0.1)';ty.id='typing';ty.innerHTML='💧 v6.0 Blackhole Galaxy image ban raha hai... Nebula stars rotating...';b.appendChild(ty);b.scrollTop=b.scrollHeight;
+let prompt=t.substring(7).trim()||'black thar liquid glass';
+let d1=document.createElement('div');d1.style.cssText='max-width:88%;padding:11px 14px;border-radius:18px;font-size:13.4px;align-self:flex-end;background:linear-gradient(135deg,rgba(139,92,246,0.85),rgba(59,130,246,0.75));border:1px solid rgba(255,255,255,0.2)';d1.innerHTML='🎨 /image '+prompt;b.appendChild(d1);i.value='';b.scrollTop=b.scrollHeight;
+let ty=document.createElement('div');ty.style.cssText='max-width:88%;padding:11px 14px;border-radius:18px;font-size:13.4px;background:rgba(255,255,255,0.1)';ty.id='typing';ty.innerHTML='💧 REAL TURBO: "'+prompt+'" ban raha hai...';b.appendChild(ty);b.scrollTop=b.scrollHeight;
 let seed=Math.floor(Math.random()*9999999);
-let url='https://image.pollinations.ai/p/'+encodeURIComponent(prompt+', blackhole galaxy, nebula stars rotating, liquid glass water flow, ultra detailed, 8K, masterpiece')+'?width=1024&height=1024&seed='+seed+'&model=turbo&nologo=true&nocache='+Date.now();
-setTimeout(function(){let el=$('typing');if(el)el.remove();let d2=document.createElement('div');d2.style.cssText='max-width:88%;padding:12px 14px;border-radius:18px;font-size:13.5px;background:rgba(255,255,255,0.1)';d2.innerHTML='<b>🎨 Image v6.0 Blackhole Galaxy:</b> '+prompt+'<br><img src="'+url+'" style="width:100%;border-radius:14px;margin-top:6px;border:1px solid rgba(139,92,246,0.4)"><br><a href="'+url+'" target="_blank" class="btnSmall">📥 Download HD Blackhole Galaxy</a>';b.appendChild(d2);b.scrollTop=b.scrollHeight;},800);
+let url='https://image.pollinations.ai/p/'+encodeURIComponent(prompt+', ultra detailed, 8K, liquid glass, masterpiece')+'?width=1024&height=1024&seed='+seed+'&model=turbo&nologo=true&enhance=true&nocache='+Date.now();
+setTimeout(function(){let el=$('typing');if(el)el.remove();let d2=document.createElement('div');d2.style.cssText='max-width:88%;padding:11px 14px;border-radius:18px;font-size:13.4px;background:rgba(255,255,255,0.1)';d2.innerHTML='<b>🎨 Image REAL:</b> '+prompt+'<br><img src="'+url+'" style="width:100%;border-radius:14px;margin-top:6px"><br><a href="'+url+'" target="_blank" class="btnSmall">📥 Download HD</a>';b.appendChild(d2);b.scrollTop=b.scrollHeight;},600);
 return;
 }
-let d1=document.createElement('div');d1.style.cssText='max-width:88%;padding:12px 14px;border-radius:18px;font-size:13.5px;align-self:flex-end;background:linear-gradient(135deg,rgba(168,85,247,0.85),rgba(6,255,165,0.7))';d1.innerHTML=t+' 🌌';b.appendChild(d1);i.value='';b.scrollTop=b.scrollHeight;
-let ty=document.createElement('div');ty.style.cssText='max-width:88%;padding:12px 14px;border-radius:18px;font-size:13.5px;background:rgba(255,255,255,0.1)';ty.id='typing';ty.innerHTML='💧 EM7 AMAN v6.0 Blackhole Galaxy soch raha hai... 1000+ Q&A... Nebula stars rotating...';b.appendChild(ty);b.scrollTop=b.scrollHeight;
+let d1=document.createElement('div');d1.style.cssText='max-width:88%;padding:11px 14px;border-radius:18px;font-size:13.4px;align-self:flex-end;background:linear-gradient(135deg,rgba(139,92,246,0.85),rgba(59,130,246,0.75));border:1px solid rgba(255,255,255,0.2)';d1.innerHTML=t;b.appendChild(d1);i.value='';b.scrollTop=b.scrollHeight;
+let ty=document.createElement('div');ty.style.cssText='max-width:88%;padding:11px 14px;border-radius:18px;font-size:13.4px;background:rgba(255,255,255,0.1)';ty.id='typing';ty.innerHTML='💧 AI AMAN REAL v4.0 soch raha hai... mere jaisa - Thinking!';b.appendChild(ty);b.scrollTop=b.scrollHeight;
 setTimeout(async function(){
 let ans=await em7AmanRealAI(t);
 let el=$('typing');if(el)el.remove();
-let d2=document.createElement('div');d2.style.cssText='max-width:88%;padding:12px 14px;border-radius:18px;font-size:13.5px;background:rgba(255,255,255,0.1)';d2.innerHTML=ans;b.appendChild(d2);b.scrollTop=b.scrollHeight;
-},900);
+let d2=document.createElement('div');d2.style.cssText='max-width:88%;padding:11px 14px;border-radius:18px;font-size:13.4px;background:rgba(255,255,255,0.1)';d2.innerHTML=ans;b.appendChild(d2);b.scrollTop=b.scrollHeight;
+},700);
 }
 bind('btnSend', sendMsg);
 bind('btnAiOpen', function(){let w=$('aiW');w.style.display='flex';});
@@ -366,29 +227,33 @@ $('aiI').addEventListener('keypress', function(e){if(e.key==='Enter') sendMsg();
 bind('aiB', function(){let w=$('aiW');w.style.display=w.style.display==='flex'?'none':'flex';});
 bind('aiClose', function(){ $('aiW').style.display='none'; });
 bind('btnImg', function(){
-let base=$('imgP').value.trim()||'black thar blackhole galaxy';
+let base=$('imgP').value.trim()||'black thar Lucknow night';
 let style=$('imgStyle').value;
 let ratio=$('imgRatio').value;
 let count=parseInt($('imgCount').value);
 let r=$('imgR');
 let parts=ratio.split('x');let w=parts[0],h=parts[1];
-let fullPrompt=base+', '+style+', blackhole galaxy, nebula stars rotating, liquid glass water flow, masterpiece, 8k';
-r.innerHTML='<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">'+Array(count).fill('<div style="height:120px;background:rgba(139,92,246,0.1);border-radius:16px;animation:sk 1.2s infinite"></div>').join('')+'</div>';
+let fullPrompt=base+', '+style+', masterpiece, best quality, ultra detailed, sharp focus, vibrant, 8k';
+r.innerHTML='<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">'+Array(count).fill('<div style="height:150px;background:linear-gradient(90deg,rgba(255,255,255,0.08) 25%,rgba(255,255,255,0.14) 50%,rgba(255,255,255,0.08) 75%);background-size:200% 100%;animation:sk 1.2s infinite;border-radius:16px"></div>').join('')+'</div><div style="margin-top:8px;color:#f59e0b">💧 REAL TURBO v4.0: "'+base+'"...</div>';
 let seedBase=Math.floor(Math.random()*9999999);
 setTimeout(function(){
 let html='';
 for(let i=0;i<count;i++){
 let s=seedBase+i*137;
-let url='https://image.pollinations.ai/p/'+encodeURIComponent(fullPrompt)+'?width='+w+'&height='+h+'&seed='+s+'&model=turbo&nologo=true&nocache='+(Date.now()+i);
-html+='<div style="background:rgba(0,0,0,0.4);border-radius:16px;padding:6px"><img src="'+url+'" style="width:100%;border-radius:12px"><div style="font-size:10px;color:#06ffa5">HD '+(i+1)+' Blackhole Galaxy</div><a href="'+url+'" target="_blank" class="btnSmall">Download Galaxy</a></div>';
+let bust=Date.now()+i;
+let url='https://image.pollinations.ai/p/'+encodeURIComponent(fullPrompt)+'?width='+w+'&height='+h+'&seed='+s+'&model=turbo&nologo=true&enhance=true&nocache='+bust;
+let fallback='https://image.pollinations.ai/p/'+encodeURIComponent(base)+'?width='+w+'&height='+h+'&seed='+s+'&model=flux';
+html+='<div style="background:rgba(0,0,0,0.35);border-radius:16px;padding:6px;border:1px solid rgba(255,255,255,0.14)"><img src="'+url+'" style="width:100%;border-radius:12px;min-height:160px;background:rgba(255,255,255,0.05)" loading="eager" onerror="this.onerror=null;this.src=\''+fallback+'\'"><div style="font-size:10px;margin:4px 0;color:#06ffa5">'+base.substring(0,32)+' | HD '+(i+1)+'</div><a href="'+url+'" target="_blank" class="btnSmall">📥 HD '+(i+1)+'</a></div>';
 }
-r.innerHTML='<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px">'+html+'</div><div style="margin-top:8px;color:#06ffa5">✅ Blackhole Galaxy v6.0: '+count+' Images! Nebula rotating!</div>';
-},700);
+r.innerHTML='<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px">'+html+'</div><div style="margin-top:8px;color:#06ffa5;font-weight:700">✅ REAL v4.0: "'+base+'" = '+count+' Images! Black bug fixed!</div><button class="btnSmall" id="btnReImg">🔄 Regenerate REAL</button><button class="btnSmall" id="btnImg4">⚡ 4x More</button>';
+let re=$('btnReImg');if(re)re.addEventListener('click',function(){$('btnImg').click();});
+let more=$('btnImg4');if(more)more.addEventListener('click',function(){$('imgCount').value='4';$('btnImg').click();});
+},500);
 });
 document.querySelectorAll('.tabBtn').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.tabBtn').forEach(function(x){x.classList.remove('active');});b.classList.add('active');let tab=b.getAttribute('data-tab');document.querySelectorAll('[id^="tab-"]').forEach(function(d){d.style.display='none';});let target=$('tab-'+tab);if(target)target.style.display='block';});});
-bind('btnContact', function(){let name=$('contactName').value, msg=$('contactMsg').value, r=$('contactR');if(!name||!msg){r.innerHTML='>_ ERROR: Name + Message required Blackhole';return}r.innerHTML='>_ TRANSMITTING v6.0 BLACKHOLE GALAXY...<br>>_ Name: '+name+'<br>>_ STATUS: ✅ Encrypted queued Blackhole Galaxy!<br><a href="https://wa.me/918929929292?text=🔐 EM7 v6.0 BLACKHOLE GALAXY - '+encodeURIComponent(name+': '+msg)+'" target="_blank" class="btnSmall" style="background:#fff;color:#000;font-weight:800">📲 WhatsApp Blackhole</a>';});
+bind('btnContact', function(){let name=$('contactName').value, msg=$('contactMsg').value, r=$('contactR');if(!name||!msg){r.innerHTML='>_ ERROR: Name + Message required';return}r.innerHTML='>_ TRANSMITTING v4.0 POSTER REAL AI...<br>>_ Name: '+name+'<br>>_ STATUS: ✅ Encrypted queued!<br><a href="https://wa.me/918929929292?text=🔐 EM7 v4.0 POSTER REAL - '+encodeURIComponent(name+': '+msg)+'" target="_blank" class="btnSmall" style="background:#fff;color:#000;font-weight:800">📲 WhatsApp</a>';});
 });
 </script>
-<style>@keyframes sk{0%{background-position:200% 0}100%{background-position:-200% 0}}</style>
+<style>@keyframes sk{0%{background-position:200% 0}100%{background-position:-200% 0}} @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}</style>
 </body>
-</html>
+</html>  
