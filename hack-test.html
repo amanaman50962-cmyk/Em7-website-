@@ -1,21 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head><title>EM7 Hack Lab - Legal Test</title></head>
-<body style="background:black;color:lime;font-family:monospace;padding:20px">
-<h1>EM7 HOON - VULNERABLE LAB (Apni Site Ka Lab)</h1>
-<p>Yahan apna naam daal ke hack test kar:</p>
-<input id="input" placeholder="Yahan kuch likh... <script>alert(1)</script>">
-<button onclick="hackMe()">Test Kar</button>
-<div id="output" style="margin-top:20px;border:1px solid lime;padding:10px"></div>
-
-<script>
-// YE CODE JAAN BUJH KE GALAT HAI - BUG WALA
-function hackMe(){
-  var userData = document.getElementById('input').value
-  document.getElementById('output').innerHTML = "Hello " + userData // BUG IS HERE - innerHTML
-}
-</script>
-
-<p style="color:red">Note: Ye page sirf seekhne ke liye hai, apni site pe test karne ke liye.</p>
-</body>
-</html>
+git add hack-test.html
+git commit -m "EM7 Hack Lab V2"
+git push
