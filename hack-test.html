@@ -1,3 +1,30 @@
-git add hack-test.html
-git commit -m "EM7 Hack Lab V2"
-git push
+<!DOCTYPE html>
+<html>
+<head><title>EM7 HACK LAB V2 - Authorized Test</title>
+<style>
+body{background:#000;color:#0f0;font-family:monospace;padding:20px}
+.box{border:1px solid #0f0;padding:15px;margin:10px 0}
+button{background:#0f0;color:#000;padding:10px 20px;border:none;cursor:pointer;font-weight:bold}
+input{width:90%;padding:8px;background:#111;color:#0f0;border:1px solid #0f0}
+</style>
+</head>
+<body>
+<h1>🔥 EM7 HACK LAB - 90 DAYS CHALLENGE 🔥</h1>
+<p>Lucknow Cyber Security | Authorized Testing Only</p>
+<div class="box">
+<h3>[1] XSS Tester</h3>
+<input id="x" placeholder="<script>alert(1)</script>">
+<button onclick="document.getElementById('r').innerHTML=document.getElementById('x').value">TEST</button>
+<div id="r" style="margin-top:10px;border:1px dashed #0f0;padding:10px">Output here...</div>
+</div>
+<div class="box">
+<h3>[2] SQLi Tester</h3>
+<input value="' OR '1'='1">
+<button onclick="alert('SQL Payload Copied! Use in your target')">TEST</button>
+</div>
+<div class="box">
+<h3>✅ Status: All Tests Are For Educational Purpose Only</h3>
+</div>
+<script>console.log("EM7 Hoon - System Ready")</script>
+</body>
+</html>
