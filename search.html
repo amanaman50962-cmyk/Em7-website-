@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head><title>EM7 Search</title></head>
-<body style="background:white; color:black; font-family:Arial; padding:20px;">
-<h1>EM7 Shoes Store - Search</h1>
-<div id="result" style="font-size:20px; margin-top:20px; border:1px solid black; padding:10px;"></div>
+<head><title>EM7 Shoes Store</title></head>
+<body style="font-family:Arial; padding:15px; background:#f2f2f2;">
+<h1>EM7 Shoes Store 👟</h1>
+
+<input type="text" id="s" placeholder="Shoes search karo" style="padding:10px; width:70%;">
+<button onclick="go()" style="padding:10px;">Search</button>
+
+<div style="margin-top:20px; background:white; padding:10px;">
+<h3>Products</h3>
+<p>1. Nike Air - Rs 5000 - <a href="order.html?id=101">Buy / View Order</a></p>
+<p>2. Adidas Run - Rs 4000 - <a href="order.html?id=102">Buy / View Order</a></p>
+</div>
 
 <script>
-let q = new URLSearchParams(window.location.search).get('q');
-if(q){
-  document.getElementById('result').innerHTML = "You searched for: " + q;
-} else {
-  document.getElementById('result').innerHTML = "Search karo ?q=shoes likh ke";
+function go(){
+  let val = document.getElementById('s').value;
+  window.location = "search.html?q=" + val;
 }
 </script>
 </body>
