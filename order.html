@@ -1,7 +1,8 @@
-
 <script>
 let params = new URLSearchParams(window.location.search);
 let id = params.get('id');
-let orders = {101:"Aman ka order - T-Shirt 500rs", 102:"Rahul ka order - Shoes 2000rs - Phone 98xxxxxx10", 103:"Admin ka secret order - 10000rs"}
-document.write(orders[id] || "Order nahi mila");
+let loggedInUser = "101"; // maan le Aman login hai
+if(id !== loggedInUser){ document.write("Access Denied - Ye tera order nahi hai!"); }
+else { document.write("Aman ka order - T-Shirt 500rs"); }
 </script>
+
