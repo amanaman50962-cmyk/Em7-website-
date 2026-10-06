@@ -1,1 +1,54 @@
-
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI AMAN APP - REAL v4.0</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=JetBrains+Mono:wght@500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Outfit',sans-serif}
+body{background:#040612;color:#fff;height:100vh;display:flex;flex-direction:column}
+#bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(ellipse at 20% 10%, rgba(139,92,246,0.5) 0%, transparent 50%),radial-gradient(ellipse at 80% 20%, rgba(6,255,165,0.35) 0%, transparent 50%),linear-gradient(135deg,#040612,#0e0c22)}
+.top{padding:14px;text-align:center;background:rgba(8,10,24,0.7);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,0.14)}
+.top h1{background:linear-gradient(90deg,#fff,#c4b5fd,#6ee7b7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:22px;font-weight:800}
+.top p{font-family:'JetBrains Mono';font-size:10px;opacity:0.7}
+#chat{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:10px}
+.m{max-width:85%;padding:12px 14px;border-radius:18px;font-size:14px;line-height:1.5;word-break:break-word}
+.u{align-self:flex-end;background:linear-gradient(135deg,#8b5cf6,#3b82f6)}
+.a{align-self:flex-start;background:rgba(255,255,255,0.12);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.15)}
+.bar{display:flex;gap:8px;padding:12px;background:rgba(255,255,255,0.06);border-top:1px solid rgba(255,255,255,0.12)}
+.bar input{flex:1;padding:14px 18px;border-radius:24px;border:1px solid rgba(255,255,255,0.15);background:rgba(0,0,0,0.4);color:#fff;outline:none}
+.bar button{width:48px;height:48px;border-radius:50%;border:none;background:linear-gradient(135deg,#8b5cf6,#3b82f6);color:#fff;font-size:20px}
+</style>
+</head>
+<body>
+<div id="bg"></div>
+<div class="top"><h1>✦ AI AMAN REAL v4.0</h1><p>POSTER STYLE • THINKING MODE • UP32 • REAL API</p></div>
+<div id="chat"><div class="m a">💧 AI AMAN Ready! Bolo Guru kya puchna hai?</div></div>
+<div class="bar"><input id="inp" placeholder="/image black thar ya koi sawal..."><button id="send">›</button></div>
+<script>
+async function em7AmanRealAI(q){
+ let timeStr=new Date().toLocaleTimeString('hi-IN');let l=q.toLowerCase();
+ if(l.includes('who are you')) return '⚡ Main AI AMAN REAL v4.0 hu - EM7 HOON ne banaya hai, Lucknow UP32.';
+ try{
+  let sys="You are AI AMAN REAL v4.0 created by EM7 HOON. Answer like Meta AI Hinglish. Time: "+timeStr;
+  let url="https://text.pollinations.ai/"+encodeURIComponent(sys+" User: "+q)+"?model=openai&seed="+Math.floor(Math.random()*99999);
+  let r=await fetch(url);let t=await r.text();
+  return '💧 REAL: <br>'+t.slice(0,1500);
+ }catch(e){return 'Network slow hai Guru, dubara try kar!';}
+}
+async function send(){
+ let inp=document.getElementById('inp');let t=inp.value.trim();if(!t)return;
+ let chat=document.getElementById('chat');let u=document.createElement('div');u.className='m u';u.textContent=t;chat.appendChild(u);inp.value='';
+ if(t.startsWith('/image ')){
+  let prompt=t.slice(7);let ty=document.createElement('div');ty.className='m a';ty.textContent='Generating...';chat.appendChild(ty);
+  let url='https://image.pollinations.ai/p/'+encodeURIComponent(prompt+' ultra realistic 8k')+'?width=1024&height=1024&seed='+Math.floor(Math.random()*99999)+'&model=turbo&nologo=true';
+  setTimeout(()=>{ty.innerHTML='<b>Image:</b> '+prompt+'<br><img src="'+url+'" style="width:100%;border-radius:12px">';},600);return;
+ }
+ let ty=document.createElement('div');ty.className='m a';ty.textContent='Thinking...';chat.appendChild(ty);
+ let ans=await em7AmanRealAI(t);ty.innerHTML=ans;
+}
+document.getElementById('send').onclick=send;
+document.getElementById('inp').addEventListener('keypress',e=>{if(e.key==='Enter')send();});
+</script>
+</body>
+</html>
